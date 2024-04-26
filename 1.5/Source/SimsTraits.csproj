@@ -67,7 +67,7 @@
     <Compile Include="HarmonyPatches\Pawn_InteractionsTracker_CheckSocialFightStart_Patch.cs" />
     <Compile Include="SimsTraitsMod.cs" />
     <Compile Include="ST_DefOf.cs" />
-    <Compile Include="HarmonyPatches\Thought_MemorySocial_Init_Patch.cs" />
+    <Compile Include="HarmonyPatches\MemoryThoughtHandler_TryGainMemory_Patch.cs" />
     <Compile Include="TraitUtils.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
