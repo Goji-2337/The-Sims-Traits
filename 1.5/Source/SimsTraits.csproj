@@ -62,11 +62,12 @@
     <Publicize Include="Assembly-CSharp" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="InteractionWorker_KindWords_RandomSelectionWeight_Patch.cs" />
-    <Compile Include="InteractionWorker_RomanceAttempt_SuccessChance_Patch.cs" />
+    <Compile Include="HarmonyPatches\InteractionWorker_KindWords_RandomSelectionWeight_Patch.cs" />
+    <Compile Include="HarmonyPatches\InteractionWorker_RomanceAttempt_SuccessChance_Patch.cs" />
+    <Compile Include="HarmonyPatches\Pawn_InteractionsTracker_CheckSocialFightStart_Patch.cs" />
     <Compile Include="SimsTraitsMod.cs" />
     <Compile Include="ST_DefOf.cs" />
-    <Compile Include="Thought_MemorySocial_Init_Patch.cs" />
+    <Compile Include="HarmonyPatches\Thought_MemorySocial_Init_Patch.cs" />
     <Compile Include="TraitUtils.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

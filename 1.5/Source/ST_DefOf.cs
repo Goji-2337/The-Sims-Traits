@@ -7,5 +7,6 @@ namespace SimsTraits
     {
         public static TraitDef ST_Manipulative;
         public static ThoughtDef Insulted, Slighted;
+        public static InteractionDef Slight;
     }
 }

@@ -8,9 +8,12 @@ namespace SimsTraits
     {
         public static void Postfix(Thought_MemorySocial __instance)
         {
-            if (__instance.def == ST_DefOf.Insulted || __instance.def == ST_DefOf.Slighted)
+            if (__instance.otherPawn.HasTrait(ST_DefOf.ST_Manipulative))
             {
-                __instance.opinionOffset = -__instance.opinionOffset;
+                if (__instance.def == ST_DefOf.Insulted || __instance.def == ST_DefOf.Slighted)
+                {
+                    __instance.opinionOffset = -__instance.opinionOffset;
+                }
             }
         }
     }
