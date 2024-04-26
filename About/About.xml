@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ModMetaData>
+  <name>The Sims Traits</name>
+  <author>Goji</author>
+  <packageId>Goji.TheSimsTraits</packageId>
+  <description>Adds traits from The Sims games.</description>
+  <supportedVersions>
+    <li>1.5</li>
+  </supportedVersions>
+	<loadAfter>
+		<li>Ludeon.RimWorld</li>
+	</loadAfter>
+</ModMetaData>
