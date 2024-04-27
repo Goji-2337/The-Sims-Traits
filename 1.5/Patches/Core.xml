@@ -6,11 +6,11 @@
 				<xpath>Defs/ThoughtDef[defName="Pretty"]/stages</xpath>
 				<value>
 					<li>
-						<label>placeholder</label>
+						<label>Physically alluring</label>
 						<baseOpinionOffset>60</baseOpinionOffset>
 					</li>
 					<li>
-						<label>placeholder2</label>
+						<label>Otherworldly beauty</label>
 						<baseOpinionOffset>80</baseOpinionOffset>
 					</li>
 				</value>
@@ -19,11 +19,11 @@
 				<xpath>Defs/ThoughtDef[defName="Ugly"]/stages</xpath>
 				<value>
 					<li>
-						<label>placeholder</label>
+						<label>Physically abhorrent</label>
 						<baseOpinionOffset>-60</baseOpinionOffset>
 					</li>
 					<li>
-						<label>placeholder2</label>
+						<label>Nightmare fuel</label>
 						<baseOpinionOffset>-80</baseOpinionOffset>
 					</li>
 				</value>
