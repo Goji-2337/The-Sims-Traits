@@ -13,5 +13,18 @@
 		</degreeDatas>
 	</TraitDef>
 
+	<TraitDef>
+		<defName>ST_Naive</defName>
+		<commonality>1</commonality>
+		<degreeDatas>
+			<li>
+				<label>naive</label>
+				<description>{PAWN_nameDef} placeholder.</description>
+				<statFactors>
+					<CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">2</CertaintyLossFactor>
+				</statFactors>
+			</li>
+		</degreeDatas>
+	</TraitDef>
 
 </Defs>

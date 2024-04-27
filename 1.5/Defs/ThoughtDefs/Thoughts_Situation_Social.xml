@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThoughtDef>
+    <defName>ST_Naive</defName>
+    <thoughtClass>SimsTraits.Thought_Naive</thoughtClass>
+    <workerClass>SimsTraits.ThoughtWorker_Naive</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>I like {OTHERPAWN_objective}</label>
+        <baseOpinionOffset>25</baseOpinionOffset>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+</Defs>

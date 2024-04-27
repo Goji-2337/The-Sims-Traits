@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
-	<ST.BeingScolded>being scolded by {PAWN_nameDef}</ST.BeingScolded>
+	<ST.BeingScolded>being scolded by {PAWN_nameDef}.</ST.BeingScolded>
 </LanguageData>
