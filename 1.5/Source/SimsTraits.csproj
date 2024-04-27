@@ -65,10 +65,14 @@
     <Compile Include="HarmonyPatches\InteractionWorker_KindWords_RandomSelectionWeight_Patch.cs" />
     <Compile Include="HarmonyPatches\InteractionWorker_RomanceAttempt_SuccessChance_Patch.cs" />
     <Compile Include="HarmonyPatches\Pawn_InteractionsTracker_CheckSocialFightStart_Patch.cs" />
+    <Compile Include="HarmonyPatches\ThoughtWorker_Ugly_CurrentSocialStateInternal_Patch.cs" />
+    <Compile Include="ThoughtWorker_Naive.cs" />
+    <Compile Include="HarmonyPatches\ThoughtWorker_Pretty_CurrentSocialStateInternal_Patch.cs" />
     <Compile Include="SimsTraitsMod.cs" />
     <Compile Include="ST_DefOf.cs" />
     <Compile Include="HarmonyPatches\MemoryThoughtHandler_TryGainMemory_Patch.cs" />
-    <Compile Include="ThoughtWorker_Naive.cs" />
+    <Compile Include="Thought_Naive.cs" />
+    <Compile Include="ThoughtWorker_Narcissist.cs" />
     <Compile Include="TraitUtils.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

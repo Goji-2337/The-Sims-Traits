@@ -6,6 +6,9 @@
     <thoughtClass>SimsTraits.Thought_Naive</thoughtClass>
     <workerClass>SimsTraits.ThoughtWorker_Naive</workerClass>
     <validWhileDespawned>true</validWhileDespawned>
+    <requiredTraits>
+      <li>ST_Naive</li>
+    </requiredTraits>
     <stages>
       <li>
         <label>I like {OTHERPAWN_objective}</label>

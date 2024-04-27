@@ -27,4 +27,15 @@
 		</degreeDatas>
 	</TraitDef>
 
+	<TraitDef>
+		<defName>ST_Narcissist</defName>
+		<commonality>1</commonality>
+		<degreeDatas>
+			<li>
+				<label>narcissist</label>
+				<description>{PAWN_nameDef} placeholder.</description>
+			</li>
+		</degreeDatas>
+	</TraitDef>
+
 </Defs>
