@@ -13,6 +13,10 @@
         <li>talkedabout(p=4)->cried about</li>
         <li>talkedabout->lamented about</li>
         <li>talkedabout->wept about</li>
+		
+        <li>subject(INITIATOR_cubeInterest==false)->[TalkTopicLight]</li>
+        <li>subject(INITIATOR_cubeInterest==true)->[TalkTopicCube]</li>
+
       </rulesStrings>
     </logRulesInitiator>
   </InteractionDef>
