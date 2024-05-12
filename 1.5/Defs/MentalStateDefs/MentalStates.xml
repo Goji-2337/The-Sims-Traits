@@ -4,7 +4,7 @@
   <MentalFitDef>
     <defName>ST_GoofballGiggling</defName>
     <label>giggling</label>
-    <mentalState>Giggling</mentalState>
+    <mentalState>ST_GoofballGiggling</mentalState>
     <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
     <mtbDaysMoodCurve>
       <points>
@@ -36,7 +36,6 @@
     <maxTicksBeforeRecovery>1200</maxTicksBeforeRecovery>
     <recoveryMtbDays>Infinity</recoveryMtbDays>
     <stopsJobs>false</stopsJobs>
-	
   </MentalStateDef>
 
 </Defs>

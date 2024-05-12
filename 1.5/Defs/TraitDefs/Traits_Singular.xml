@@ -71,7 +71,7 @@
 		</degreeDatas>
 	</TraitDef>
 
-	<TraitDef>
+	<TraitDef MayRequire="Ludeon.RimWorld.Biotech">
 		<defName>ST_Goofball</defName>
 		<commonality>1</commonality>
 		<degreeDatas>
@@ -82,4 +82,17 @@
 		</degreeDatas>
 	</TraitDef>
 
+	<TraitDef>
+		<defName>ST_Loyal</defName>
+		<commonality>1</commonality>
+		<degreeDatas>
+			<li>
+				<label>loyal</label>
+				<description>{PAWN_nameDef} placeholder.</description>
+				<statFactors>
+					<CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0.5</CertaintyLossFactor>
+				</statFactors>
+			</li>
+		</degreeDatas>
+	</TraitDef>
 </Defs>
