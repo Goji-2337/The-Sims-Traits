@@ -5,7 +5,7 @@
     <defName>ST_Cry</defName>
     <label>cry</label>
     <workerClass>SimsTraits.InteractionWorker_Cry</workerClass>
-    <symbol>Things/Mote/SpeechSymbols/Insult</symbol>
+    <symbol>UI/Icons/Cry</symbol>
     <recipientThought>ST_EmotionallyDrained</recipientThought>
     <logRulesInitiator>
       <rulesStrings>

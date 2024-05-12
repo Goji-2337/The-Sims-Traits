@@ -13,6 +13,10 @@ namespace SimsTraits
             {
                 return 0f;
             }
+            if (initiator.HasTrait(ST_DefOf.ST_Emotional) is false)
+            {
+                return 0f;
+            }
             return 0.007f;
         }
 
