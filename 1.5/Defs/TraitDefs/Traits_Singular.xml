@@ -38,20 +38,23 @@
 		</degreeDatas>
 	</TraitDef>
 
-
-For any foods else, if they are not made of at least two different ingredients, they are categorised into disliked food
-
-Block birthday event for this pawn - the one give you negative health condition at older age
-
-Agreeing meme - Flesh purity from base game, Healthcare from VE
-Disagree meme: Blindsight from base game, Holy Diseases from VE
-
 	<TraitDef>
 		<defName>ST_HealthFreak</defName>
 		<commonality>1</commonality>
 		<degreeDatas>
 			<li>
 				<label>health freak</label>
+				<description>{PAWN_nameDef} placeholder.</description>
+			</li>
+		</degreeDatas>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>ST_Emotional</defName>
+		<commonality>1</commonality>
+		<degreeDatas>
+			<li>
+				<label>emotional</label>
 				<description>{PAWN_nameDef} placeholder.</description>
 			</li>
 		</degreeDatas>
