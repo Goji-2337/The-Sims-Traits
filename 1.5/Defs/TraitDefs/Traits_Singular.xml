@@ -60,4 +60,15 @@
 		</degreeDatas>
 	</TraitDef>
 
+	<TraitDef>
+		<defName>ST_Paranoid</defName>
+		<commonality>1</commonality>
+		<degreeDatas>
+			<li>
+				<label>paranoid</label>
+				<description>{PAWN_nameDef} placeholder.</description>
+			</li>
+		</degreeDatas>
+	</TraitDef>
+
 </Defs>
