@@ -106,4 +106,15 @@
 			</li>
 		</degreeDatas>
 	</TraitDef>
+	
+	<TraitDef>
+		<defName>ST_Insane</defName>
+		<commonality>1</commonality>
+		<degreeDatas>
+			<li>
+				<label>insane</label>
+				<description>{PAWN_nameDef} placeholder.</description>
+			</li>
+		</degreeDatas>
+	</TraitDef>
 </Defs>
