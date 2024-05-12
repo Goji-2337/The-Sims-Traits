@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Ideology Expanded - Memes and Structures</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/MemeDef[defName="VME_Healthcare"]/agreeableTraits</xpath>
+                    <match Class="PatchOperationAdd">
+                        <xpath>Defs/MemeDef[defName="VME_Healthcare"]/agreeableTraits</xpath>
+                        <value>
+							<li>ST_HealthFreak</li>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/MemeDef[defName="VME_Healthcare"]</xpath>
+                        <value>
+                            <agreeableTraits>
+								<li>ST_HealthFreak</li>
+                            </agreeableTraits>
+                        </value>
+                    </nomatch>
+                </li>
+				
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/MemeDef[defName="VME_HolyDiseases"]/disagreeableTraits</xpath>
+                    <match Class="PatchOperationAdd">
+                        <xpath>Defs/MemeDef[defName="VME_HolyDiseases"]/disagreeableTraits</xpath>
+                        <value>
+							<li>ST_HealthFreak</li>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/MemeDef[defName="VME_HolyDiseases"]</xpath>
+                        <value>
+                            <disagreeableTraits>
+								<li>ST_HealthFreak</li>
+                            </disagreeableTraits>
+                        </value>
+                    </nomatch>
+                </li>
+
+			</operations>
+		</match>
+	</Operation>
+</Patch>

@@ -28,6 +28,73 @@
 					</li>
 				</value>
 			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThoughtDef[defName="AteNutrientPasteMeal"]/nullifyingTraits</xpath>
+				<value>
+					<li>ST_HealthFreak</li>
+				</value>
+			</li>
+
+			<li Class="PatchOperationConditional">
+				<xpath>Defs/ThoughtDef[defName="AteLavishMeal"]/nullifyingTraits</xpath>
+				<match Class="PatchOperationAdd">
+					<xpath>Defs/ThoughtDef[defName="AteLavishMeal"]/nullifyingTraits</xpath>
+					<value>
+						<li>ST_HealthFreak</li>
+					</value>
+				</match>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>Defs/ThoughtDef[defName="AteLavishMeal"]</xpath>
+					<value>
+						<nullifyingTraits>
+							<li>ST_HealthFreak</li>
+						</nullifyingTraits>
+					</value>
+				</nomatch>
+			</li>
+
+			<li Class="PatchOperationConditional">
+				<xpath>Defs/ThoughtDef[defName="AteFineMeal"]/nullifyingTraits</xpath>
+				<match Class="PatchOperationAdd">
+					<xpath>Defs/ThoughtDef[defName="AteFineMeal"]/nullifyingTraits</xpath>
+					<value>
+						<li>ST_HealthFreak</li>
+					</value>
+				</match>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>Defs/ThoughtDef[defName="AteFineMeal"]</xpath>
+					<value>
+						<nullifyingTraits>
+							<li>ST_HealthFreak</li>
+						</nullifyingTraits>
+					</value>
+				</nomatch>
+			</li>
+
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/MemeDef[defName="FleshPurity"]/agreeableTraits</xpath>
+				<value>
+					<li>ST_HealthFreak</li>
+				</value>
+			</li>
+
+			<li Class="PatchOperationConditional">
+				<xpath>Defs/MemeDef[defName="Blindsight"]/disagreeableTraits</xpath>
+				<match Class="PatchOperationAdd">
+					<xpath>Defs/MemeDef[defName="Blindsight"]/disagreeableTraits</xpath>
+					<value>
+						<li>ST_HealthFreak</li>
+					</value>
+				</match>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>Defs/MemeDef[defName="Blindsight"]</xpath>
+					<value>
+						<disagreeableTraits>
+							<li>ST_HealthFreak</li>
+						</disagreeableTraits>
+					</value>
+				</nomatch>
+			</li>
 		</operations>
 	</Operation>
 </Patch>
