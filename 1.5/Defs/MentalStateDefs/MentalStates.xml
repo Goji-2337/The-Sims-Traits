@@ -1,41 +1,4 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <MentalFitDef>
-    <defName>ST_GoofballGiggling</defName>
-    <label>giggling</label>
-    <mentalState>ST_GoofballGiggling</mentalState>
-    <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
-    <mtbDaysMoodCurve>
-      <points>
-        <li>(0, 8)</li>
-        <li>(0.25, 4)</li>
-        <li>(0.50, 1)</li>
-        <li>(0.75, 0.5)</li>
-        <li>(1.00, 0.25)</li>
-      </points>
-    </mtbDaysMoodCurve>
-  </MentalFitDef>
-
-  <MentalStateDef ParentName="BaseBabyMentalFit">
-    <defName>ST_GoofballGiggling</defName>
-    <stateClass>SimsTraits.MentalState_GoofballGiggling</stateClass>
-    <baseInspectLine>Mental state: Giggling</baseInspectLine>
-    <stateEffecter>BabyGiggling</stateEffecter>
-    <category>Misc</category>
-    <downedCanDo>true</downedCanDo>
-    <inCaravanCanDo>true</inCaravanCanDo>
-    <unspawnedNotInCaravanCanDo>true</unspawnedNotInCaravanCanDo>
-    <requiredCapacities>
-      <li>Talking</li>
-    </requiredCapacities>
-    <recoverFromCollapsingExhausted>false</recoverFromCollapsingExhausted>
-    <recoverFromDowned>false</recoverFromDowned>
-    <recoverFromSleep>false</recoverFromSleep>
-    <minTicksBeforeRecovery>1200</minTicksBeforeRecovery>
-    <maxTicksBeforeRecovery>1200</maxTicksBeforeRecovery>
-    <recoveryMtbDays>Infinity</recoveryMtbDays>
-    <stopsJobs>false</stopsJobs>
-  </MentalStateDef>
-
 </Defs>

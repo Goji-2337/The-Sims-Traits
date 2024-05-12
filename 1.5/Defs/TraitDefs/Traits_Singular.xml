@@ -95,4 +95,15 @@
 			</li>
 		</degreeDatas>
 	</TraitDef>
+	
+	<TraitDef>
+		<defName>ST_PartyAnimal</defName>
+		<commonality>1</commonality>
+		<degreeDatas>
+			<li>
+				<label>party animal</label>
+				<description>{PAWN_nameDef} placeholder.</description>
+			</li>
+		</degreeDatas>
+	</TraitDef>
 </Defs>

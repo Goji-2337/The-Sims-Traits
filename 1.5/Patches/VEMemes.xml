@@ -42,6 +42,24 @@
                     </nomatch>
                 </li>
 
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/MemeDef[defName="VME_PartyLife"]/agreeableTraits</xpath>
+                    <match Class="PatchOperationAdd">
+                        <xpath>Defs/MemeDef[defName="VME_PartyLife"]/agreeableTraits</xpath>
+                        <value>
+							<li>ST_PartyAnimal</li>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/MemeDef[defName="VME_PartyLife"]</xpath>
+                        <value>
+                            <agreeableTraits>
+								<li>ST_PartyAnimal</li>
+                            </agreeableTraits>
+                        </value>
+                    </nomatch>
+                </li>
+				
 			</operations>
 		</match>
 	</Operation>
