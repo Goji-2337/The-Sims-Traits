@@ -14,4 +14,16 @@
     </stages>
   </ThoughtDef>
 
+  <ThoughtDef ParentName="BaseHeardBaby">
+    <defName>ST_GigglingGoofball</defName>
+    <icon>Things/Mote/Childcare/BabyGiggling/BabyGigglingIcon</icon>
+    <stages>
+      <li>
+        <label>goofball giggling</label>
+        <description>{OTHERPAWN_pronoun}'s so funny!</description>
+        <baseMoodEffect>4</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
 </Defs>
