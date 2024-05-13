@@ -131,4 +131,15 @@
 			<li>Social</li>
 		</requiredWorkTags>
 	</TraitDef>
+	
+	<TraitDef>
+		<defName>ST_Grumpy</defName>
+		<commonality>1</commonality>
+		<degreeDatas>
+			<li>
+				<label>grumpy</label>
+				<description>{PAWN_nameDef} placeholder.</description>
+			</li>
+		</degreeDatas>
+	</TraitDef>
 </Defs>
