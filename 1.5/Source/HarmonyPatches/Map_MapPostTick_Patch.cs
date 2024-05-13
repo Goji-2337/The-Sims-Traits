@@ -56,7 +56,8 @@ namespace SimsTraits
                         }
                         var randomMemory = DefDatabase<ThoughtDef>.AllDefs
                             .Where(x => x.IsMemory && x.IsSocial is false && ThoughtUtility.CanGetThought(pawn, x)).RandomElement();
-                        var memory = ThoughtMaker.MakeThought(randomMemory, null);
+                        var notNullStage = randomMemory.stages.Where(x => x != null).RandomElement();
+                        var memory = ThoughtMaker.MakeThought(randomMemory, randomMemory.stages.IndexOf(notNullStage));
                         memory.durationTicksOverride = GenDate.TicksPerDay;
                         pawn.needs.mood?.thoughts?.memories.TryGainMemory(memory);
                         memories[pawn] = Find.TickManager.TicksGame;
