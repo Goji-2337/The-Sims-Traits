@@ -59,7 +59,24 @@
                         </value>
                     </nomatch>
                 </li>
-				
+
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/MemeDef[defName="VME_Aristocratic"]/agreeableTraits</xpath>
+                    <match Class="PatchOperationAdd">
+                        <xpath>Defs/MemeDef[defName="VME_Aristocratic"]/agreeableTraits</xpath>
+                        <value>
+							<li>ST_Proper</li>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/MemeDef[defName="VME_Aristocratic"]</xpath>
+                        <value>
+                            <agreeableTraits>
+								<li>ST_Proper</li>
+                            </agreeableTraits>
+                        </value>
+                    </nomatch>
+                </li>
 			</operations>
 		</match>
 	</Operation>

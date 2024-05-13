@@ -37,6 +37,133 @@
 						<li>ST_PartyAnimal</li>
 					</value>
 				</li>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThoughtDef[@Name="AnyBodyPartCovered_Disapproved"]/nullifyingTraits</xpath>
+					<match Class="PatchOperationAdd">
+						<xpath>Defs/ThoughtDef[@Name="AnyBodyPartCovered_Disapproved"]/nullifyingTraits</xpath>
+						<value>
+							<li>ST_Proper</li>
+						</value>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ThoughtDef[@Name="AnyBodyPartCovered_Disapproved"]</xpath>
+						<value>
+							<nullifyingTraits>
+								<li>ST_Proper</li>
+							</nullifyingTraits>
+						</value>
+					</nomatch>
+				</li>
+
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThoughtDef[defName="AnyBodyPartCovered_Disapproved_Memory"]/nullifyingTraits</xpath>
+					<match Class="PatchOperationAdd">
+						<xpath>Defs/ThoughtDef[defName="AnyBodyPartCovered_Disapproved_Memory"]/nullifyingTraits</xpath>
+						<value>
+							<li>ST_Proper</li>
+						</value>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ThoughtDef[defName="AnyBodyPartCovered_Disapproved_Memory"]</xpath>
+						<value>
+							<nullifyingTraits>
+								<li>ST_Proper</li>
+							</nullifyingTraits>
+						</value>
+					</nomatch>
+				</li>
+
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThoughtDef[@Name="AnyBodyPartCovered_Disapproved_Social"]/nullifyingTraits</xpath>
+					<match Class="PatchOperationAdd">
+						<xpath>Defs/ThoughtDef[@Name="AnyBodyPartCovered_Disapproved_Social"]/nullifyingTraits</xpath>
+						<value>
+							<li>ST_Proper</li>
+						</value>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ThoughtDef[@Name="AnyBodyPartCovered_Disapproved_Social"]</xpath>
+						<value>
+							<nullifyingTraits>
+								<li>ST_Proper</li>
+							</nullifyingTraits>
+						</value>
+					</nomatch>
+				</li>
+
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThoughtDef[@Name="AnyBodyPartButGroinCovered_Disapproved"]/nullifyingTraits</xpath>
+					<match Class="PatchOperationAdd">
+						<xpath>Defs/ThoughtDef[@Name="AnyBodyPartButGroinCovered_Disapproved"]/nullifyingTraits</xpath>
+						<value>
+							<li>ST_Proper</li>
+						</value>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ThoughtDef[@Name="AnyBodyPartButGroinCovered_Disapproved"]</xpath>
+						<value>
+							<nullifyingTraits>
+								<li>ST_Proper</li>
+							</nullifyingTraits>
+						</value>
+					</nomatch>
+				</li>
+
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThoughtDef[defName="AnyBodyPartButGroinCovered_Disapproved_Memory"]/nullifyingTraits</xpath>
+					<match Class="PatchOperationAdd">
+						<xpath>Defs/ThoughtDef[defName="AnyBodyPartButGroinCovered_Disapproved_Memory"]/nullifyingTraits</xpath>
+						<value>
+							<li>ST_Proper</li>
+						</value>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ThoughtDef[defName="AnyBodyPartButGroinCovered_Disapproved_Memory"]</xpath>
+						<value>
+							<nullifyingTraits>
+								<li>ST_Proper</li>
+							</nullifyingTraits>
+						</value>
+					</nomatch>
+				</li>
+
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/ThoughtDef[@Name="AnyBodyPartButGroinCovered_Disapproved_Social"]/nullifyingTraits</xpath>
+					<match Class="PatchOperationAdd">
+						<xpath>Defs/ThoughtDef[@Name="AnyBodyPartButGroinCovered_Disapproved_Social"]/nullifyingTraits</xpath>
+						<value>
+							<li>ST_Proper</li>
+						</value>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/ThoughtDef[@Name="AnyBodyPartButGroinCovered_Disapproved_Social"]</xpath>
+						<value>
+							<nullifyingTraits>
+								<li>ST_Proper</li>
+							</nullifyingTraits>
+						</value>
+					</nomatch>
+				</li>
+
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/MemeDef[defName="Nudism"]/disagreeableTraits</xpath>
+					<match Class="PatchOperationAdd">
+						<xpath>Defs/MemeDef[defName="Nudism"]/disagreeableTraits</xpath>
+						<value>
+							<li>ST_Proper</li>
+						</value>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/MemeDef[defName="Nudism"]</xpath>
+						<value>
+							<disagreeableTraits>
+								<li>ST_Proper</li>
+							</disagreeableTraits>
+						</value>
+					</nomatch>
+				</li>
+				
 			</operations>
 		</match>
 	</Operation>
