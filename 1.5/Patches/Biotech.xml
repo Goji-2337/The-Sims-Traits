@@ -61,6 +61,25 @@
 
 					</value>
 				</li>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/MemeDef[defName="Bloodfeeding"]/disagreeableTraits</xpath>
+					<match Class="PatchOperationAdd">
+						<xpath>Defs/MemeDef[defName="Bloodfeeding"]/disagreeableTraits</xpath>
+						<value>
+							<li>ST_Vegan</li>
+						</value>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/MemeDef[defName="Bloodfeeding"]</xpath>
+						<value>
+							<disagreeableTraits>
+								<li>ST_Vegan</li>
+							</disagreeableTraits>
+						</value>
+					</nomatch>
+				</li>
+				
 			</operations>
 		</match>
 	</Operation>

@@ -164,4 +164,15 @@
 			</li>
 		</degreeDatas>
 	</TraitDef>
+
+	<TraitDef>
+		<defName>ST_Vegan</defName>
+		<commonality>1</commonality>
+		<degreeDatas>
+			<li>
+				<label>vegan</label>
+				<description>{PAWN_nameDef} placeholder.</description>
+			</li>
+		</degreeDatas>
+	</TraitDef>
 </Defs>

@@ -95,6 +95,33 @@
                         </value>
                     </nomatch>
                 </li>
+				
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Vanilla Fishing Expanded</li>
+					</mods>
+					<match Class="PatchOperationSequence">
+						<operations>
+							<li Class="PatchOperationConditional">
+								<xpath>Defs/MemeDef[defName="VME_Angler"]/disagreeableTraits</xpath>
+								<match Class="PatchOperationAdd">
+									<xpath>Defs/MemeDef[defName="VME_Angler"]/disagreeableTraits</xpath>
+									<value>
+										<li>ST_Vegan</li>
+									</value>
+								</match>
+								<nomatch Class="PatchOperationAdd">
+									<xpath>Defs/MemeDef[defName="VME_Angler"]</xpath>
+									<value>
+										<disagreeableTraits>
+											<li>ST_Vegan</li>
+										</disagreeableTraits>
+									</value>
+								</nomatch>
+							</li>
+						</operations>
+					</match>
+				</li>
 			</operations>
 		</match>
 	</Operation>
