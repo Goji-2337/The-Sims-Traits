@@ -142,4 +142,26 @@
 			</li>
 		</degreeDatas>
 	</TraitDef>
+	
+	<TraitDef>
+		<defName>ST_Shy</defName>
+		<commonality>1</commonality>
+		<degreeDatas>
+			<li>
+				<label>shy</label>
+				<description>{PAWN_nameDef} placeholder.</description>
+			</li>
+		</degreeDatas>
+	</TraitDef>
+	
+	<TraitDef>
+		<defName>ST_Materialistic</defName>
+		<commonality>1</commonality>
+		<degreeDatas>
+			<li>
+				<label>materialistic</label>
+				<description>{PAWN_nameDef} placeholder.</description>
+			</li>
+		</degreeDatas>
+	</TraitDef>
 </Defs>

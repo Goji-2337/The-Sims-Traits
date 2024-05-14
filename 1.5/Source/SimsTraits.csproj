@@ -64,9 +64,11 @@
   <ItemGroup>
     <Compile Include="HarmonyPatches\AgeInjuryUtility_GenerateRandomOldAgeInjuries_Patch.cs" />
     <Compile Include="HarmonyPatches\AgeInjuryUtility_RandomHediffsToGainOnBirthday_Patch.cs" />
+    <Compile Include="HarmonyPatches\InteractionUtility_CanInitiateInteraction_Patch.cs" />
     <Compile Include="HarmonyPatches\InteractionWorker_KindWords_RandomSelectionWeight_Patch.cs" />
     <Compile Include="HarmonyPatches\InteractionWorker_RomanceAttempt_SuccessChance_Patch.cs" />
     <Compile Include="HarmonyPatches\JobGiver_Berserk_FindAttackTarget_Patch.cs" />
+    <Compile Include="HarmonyPatches\JoyGiver_GetChance_Patch.cs" />
     <Compile Include="HarmonyPatches\LetterStack_ReceiveLetter_Patch.cs" />
     <Compile Include="HarmonyPatches\Map_MapPostTick_Patch.cs" />
     <Compile Include="HarmonyPatches\MentalFitDef_CalculateMTBDays_Patch.cs" />
@@ -74,9 +76,12 @@
     <Compile Include="HarmonyPatches\MentalState_InsultingSpree_Patch.cs" />
     <Compile Include="HarmonyPatches\MentalState_MurderousRage_TryFindNewTarget_Patch.cs" />
     <Compile Include="HarmonyPatches\MentalState_TantrumRandom_ChooseNextTarget_Patch.cs" />
+    <Compile Include="HarmonyPatches\Need_Joy_GainJoy_Patch.cs" />
     <Compile Include="HarmonyPatches\Pawn_InteractionsTracker_TryInteractWith_Patch.cs" />
     <Compile Include="HarmonyPatches\Pawn_RelationsTracker_OpinionOf_Patch.cs" />
     <Compile Include="HarmonyPatches\RitualOutcomeComp_ParticipantCount_GetQualityFactor_Patch.cs" />
+    <Compile Include="HarmonyPatches\ThoughtWorker_ApparelDamaged_CurrentStateInternal_Patch.cs" />
+    <Compile Include="HarmonyPatches\TradeDeal_TryExecute_Patch.cs" />
     <Compile Include="InteractionWorker_Breakup_RandomSelectionWeight_Patch.cs" />
     <Compile Include="MentalState_GoofballGiggling.cs" />
     <Compile Include="HarmonyPatches\Pawn_InteractionsTracker_CheckSocialFightStart_Patch.cs" />

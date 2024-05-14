@@ -77,6 +77,24 @@
                         </value>
                     </nomatch>
                 </li>
+				
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/MemeDef[defName="VME_Trader"]/agreeableTraits</xpath>
+                    <match Class="PatchOperationAdd">
+                        <xpath>Defs/MemeDef[defName="VME_Trader"]/agreeableTraits</xpath>
+                        <value>
+							<li>ST_Materialistic</li>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/MemeDef[defName="VME_Trader"]</xpath>
+                        <value>
+                            <agreeableTraits>
+								<li>ST_Materialistic</li>
+                            </agreeableTraits>
+                        </value>
+                    </nomatch>
+                </li>
 			</operations>
 		</match>
 	</Operation>

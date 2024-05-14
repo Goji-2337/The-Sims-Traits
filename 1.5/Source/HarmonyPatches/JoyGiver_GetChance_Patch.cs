@@ -1,0 +1,18 @@
+﻿using HarmonyLib;
+using RimWorld;
+using Verse;
+
+namespace SimsTraits
+{
+    [HarmonyPatch(typeof(JoyGiver), "GetChance")]
+    public static class JoyGiver_GetChance_Patch
+    {
+        public static void Postfix(ref float __result, JoyGiver __instance, Pawn pawn)
+        {
+            if (__instance.def.joyKind == JoyKindDefOf.Meditative && pawn.HasTrait(ST_DefOf.ST_Shy))
+            {
+                __result *= 2f;
+            }
+        }
+    }
+}
