@@ -70,6 +70,96 @@
 					</value>
 				</nomatch>
 			</li>
+			
+			<li Class="PatchOperationConditional">
+				<xpath>Defs/ThoughtDef[defName="RebuffedMyRomanceAttempt"]/nullifyingTraits</xpath>
+				<match Class="PatchOperationAdd">
+					<xpath>Defs/ThoughtDef[defName="RebuffedMyRomanceAttempt"]/nullifyingTraits</xpath>
+					<value>
+						<li>ST_NonCommital</li>
+					</value>
+				</match>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>Defs/ThoughtDef[defName="RebuffedMyRomanceAttempt"]</xpath>
+					<value>
+						<nullifyingTraits>
+							<li>ST_NonCommital</li>
+						</nullifyingTraits>
+					</value>
+				</nomatch>
+			</li>
+
+			<li Class="PatchOperationConditional">
+				<xpath>Defs/ThoughtDef[defName="BrokeUpWithMe"]/nullifyingTraits</xpath>
+				<match Class="PatchOperationAdd">
+					<xpath>Defs/ThoughtDef[defName="BrokeUpWithMe"]/nullifyingTraits</xpath>
+					<value>
+						<li>ST_NonCommital</li>
+					</value>
+				</match>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>Defs/ThoughtDef[defName="BrokeUpWithMe"]</xpath>
+					<value>
+						<nullifyingTraits>
+							<li>ST_NonCommital</li>
+						</nullifyingTraits>
+					</value>
+				</nomatch>
+			</li>
+			
+			<li Class="PatchOperationConditional">
+				<xpath>Defs/ThoughtDef[defName="CheatedOnMe"]/nullifyingTraits</xpath>
+				<match Class="PatchOperationAdd">
+					<xpath>Defs/ThoughtDef[defName="CheatedOnMe"]/nullifyingTraits</xpath>
+					<value>
+						<li>ST_NonCommital</li>
+					</value>
+				</match>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>Defs/ThoughtDef[defName="CheatedOnMe"]</xpath>
+					<value>
+						<nullifyingTraits>
+							<li>ST_NonCommital</li>
+						</nullifyingTraits>
+					</value>
+				</nomatch>
+			</li>
+			
+			<li Class="PatchOperationConditional">
+				<xpath>Defs/ThoughtDef[defName="DivorcedMe"]/nullifyingTraits</xpath>
+				<match Class="PatchOperationAdd">
+					<xpath>Defs/ThoughtDef[defName="DivorcedMe"]/nullifyingTraits</xpath>
+					<value>
+						<li>ST_NonCommital</li>
+					</value>
+				</match>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>Defs/ThoughtDef[defName="DivorcedMe"]</xpath>
+					<value>
+						<nullifyingTraits>
+							<li>ST_NonCommital</li>
+						</nullifyingTraits>
+					</value>
+				</nomatch>
+			</li>
+			
+			<li Class="PatchOperationConditional">
+				<xpath>Defs/ThoughtDef[defName="RejectedMyProposal"]/nullifyingTraits</xpath>
+				<match Class="PatchOperationAdd">
+					<xpath>Defs/ThoughtDef[defName="RejectedMyProposal"]/nullifyingTraits</xpath>
+					<value>
+						<li>ST_NonCommital</li>
+					</value>
+				</match>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>Defs/ThoughtDef[defName="RejectedMyProposal"]</xpath>
+					<value>
+						<nullifyingTraits>
+							<li>ST_NonCommital</li>
+						</nullifyingTraits>
+					</value>
+				</nomatch>
+			</li>
 		</operations>
 	</Operation>
 </Patch>
