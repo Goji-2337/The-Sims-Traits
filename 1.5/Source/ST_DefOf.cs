@@ -8,7 +8,7 @@ namespace SimsTraits
     {
         public static TraitDef ST_Manipulative, ST_Naive, ST_Narcissist, ST_HealthFreak, ST_Emotional,
             ST_Paranoid, ST_Loyal, ST_PartyAnimal, ST_Insane, ST_Proper, ST_Grumpy, ST_Shy, ST_Materialistic,
-            ST_Vegan;
+            ST_Vegan, ST_Devout;
         [MayRequireBiotech] public static TraitDef ST_Goofball;
         [MayRequireBiotech] public static ThoughtDef ST_GigglingGoofball;
         public static ThoughtDef Insulted, Slighted, ST_ParanoidThought, ST_LoyalThought, KindWordsMood, ST_NewStuff;
@@ -16,5 +16,6 @@ namespace SimsTraits
         public static SoundDef LetterArrive_BadUrgentBig, LetterArrive_BadUrgent, LetterArrive_BadUrgentSmall, LetterArrive_Good;
         public static HediffDef ST_AdrenalineRush;
         [MayRequireBiotech] public static MentalFitDef ST_GoofballGiggling;
+        public static JoyGiverDef Pray;
     }
 }

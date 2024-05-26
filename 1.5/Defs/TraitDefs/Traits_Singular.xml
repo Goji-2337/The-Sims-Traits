@@ -175,4 +175,18 @@
 			</li>
 		</degreeDatas>
 	</TraitDef>
+	
+	<TraitDef>
+		<defName>ST_Devout</defName>
+		<commonality>1</commonality>
+		<degreeDatas>
+			<li>
+				<label>devout</label>
+				<description>{PAWN_nameDef} placeholder.</description>
+				<statFactors>
+					<CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0.01</CertaintyLossFactor>
+				</statFactors>
+			</li>
+		</degreeDatas>
+	</TraitDef>
 </Defs>

@@ -307,7 +307,24 @@
 						</value>
 					</nomatch>
 				</li>
-				
+
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/MemeDef[defName="Proselytizer"]/agreeableTraits</xpath>
+					<match Class="PatchOperationAdd">
+						<xpath>Defs/MemeDef[defName="Proselytizer"]/agreeableTraits</xpath>
+						<value>
+							<li>ST_Devout</li>
+						</value>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/MemeDef[defName="Proselytizer"]</xpath>
+						<value>
+							<agreeableTraits>
+								<li>ST_Devout</li>
+							</agreeableTraits>
+						</value>
+					</nomatch>
+				</li>
 			</operations>
 		</match>
 	</Operation>

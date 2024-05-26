@@ -9,9 +9,16 @@ namespace SimsTraits
     {
         public static void Postfix(ref float __result, JoyGiver __instance, Pawn pawn)
         {
-            if (__instance.def.joyKind == JoyKindDefOf.Meditative && pawn.HasTrait(ST_DefOf.ST_Shy))
+            if (__instance.def.joyKind == JoyKindDefOf.Meditative)
             {
-                __result *= 2f;
+                if (pawn.HasTrait(ST_DefOf.ST_Shy))
+                {
+                    __result *= 2f;
+                }
+                if (pawn.HasTrait(ST_DefOf.ST_Devout) && __instance.def != ST_DefOf.Pray) 
+                {
+                    __result = 0f;
+                }
             }
         }
     }
