@@ -24,6 +24,8 @@ namespace SimsTraits
             yield return AccessTools.Method(typeof(FloatMenuMakerMap), "AddHumanlikeOrders");
             yield return AccessTools.Method(typeof(Alert_RoyalNoAcceptableFood), "get_Targets");
             yield return AccessTools.Method(typeof(Alert_RoyalNoAcceptableFood), "GetExplanation");
+            yield return AccessTools.Method(typeof(Pawn), "GetDisabledWorkTypes");
+            yield return AccessTools.Method(typeof(Pawn), "GetReasonsForDisabledWorkType");
         }
 
         public static void Prefix()
@@ -50,7 +52,7 @@ namespace SimsTraits
         public static int methodsLookingInto;
         public static void Postfix(Pawn_RoyaltyTracker __instance, ref List<RoyalTitle> __result)
         {
-            if (methodsLookingInto > 0 || __instance.titles.Any())
+            if (methodsLookingInto > 0 || (__instance.titles?.Any() ?? false))
             {
                 if (__instance.pawn.HasTrait(ST_DefOf.ST_HighMaintenance))
                 {
@@ -81,7 +83,7 @@ namespace SimsTraits
                     faction = __result?.faction ?? Faction.OfEmpire,
                     pawn = __instance.pawn,
                     receivedTick = GenTicks.TicksGame,
-                    conceited = RoyalTitleUtility.ShouldBecomeConceitedOnNewTitle(__instance.pawn),
+                    conceited = __result?.conceited ?? RoyalTitleUtility.ShouldBecomeConceitedOnNewTitle(__instance.pawn),
                 };
             }
             else
@@ -95,7 +97,7 @@ namespace SimsTraits
                         faction = __result.faction,
                         pawn = __instance.pawn,
                         receivedTick = GenTicks.TicksGame,
-                        conceited = RoyalTitleUtility.ShouldBecomeConceitedOnNewTitle(__instance.pawn),
+                        conceited = __result.conceited,
                     };
                 }
             }
