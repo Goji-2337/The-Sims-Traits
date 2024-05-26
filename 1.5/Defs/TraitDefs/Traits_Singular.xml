@@ -228,4 +228,15 @@
 			</li>
 		</degreeDatas>
 	</TraitDef>
+	
+	<TraitDef>
+		<defName>ST_FamilyOriented</defName>
+		<commonality>1</commonality>
+		<degreeDatas>
+			<li>
+				<label>family oriented</label>
+				<description>{PAWN_nameDef} placeholder.</description>
+			</li>
+		</degreeDatas>
+	</TraitDef>
 </Defs>

@@ -9,7 +9,7 @@ namespace SimsTraits
     {
         public static void Postfix(ref float __result, Pawn initiator, Pawn recipient)
         {
-            if (initiator.HasTrait(ST_DefOf.ST_Loyal))
+            if (initiator.HasTrait(ST_DefOf.ST_Loyal) || initiator.HasTrait(ST_DefOf.ST_FamilyOriented))
             {
                 __result = 0;
             }

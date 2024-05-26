@@ -82,6 +82,8 @@
     <Compile Include="HarmonyPatches\MentalState_MurderousRage_TryFindNewTarget_Patch.cs" />
     <Compile Include="HarmonyPatches\MentalState_TantrumRandom_ChooseNextTarget_Patch.cs" />
     <Compile Include="HarmonyPatches\Need_Joy_GainJoy_Patch.cs" />
+    <Compile Include="HarmonyPatches\PawnDiedOrDownedThoughtsUtility_AppendThoughts_ForHumanlike_Patch.cs" />
+    <Compile Include="HarmonyPatches\Pawn_AgeTracker_TryChildGrowthMoment_Patch.cs" />
     <Compile Include="HarmonyPatches\Pawn_InteractionsTracker_TryInteractWith_Patch.cs" />
     <Compile Include="HarmonyPatches\Pawn_RelationsTracker_OpinionOf_Patch.cs" />
     <Compile Include="HarmonyPatches\Pawn_RoyaltyTracker_GainFavor_Patch.cs" />

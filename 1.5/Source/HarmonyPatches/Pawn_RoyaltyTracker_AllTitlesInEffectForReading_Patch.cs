@@ -52,7 +52,7 @@ namespace SimsTraits
         public static int methodsLookingInto;
         public static void Postfix(Pawn_RoyaltyTracker __instance, ref List<RoyalTitle> __result)
         {
-            if (methodsLookingInto > 0 || (__instance.titles?.Any() ?? false))
+            if (methodsLookingInto > 0)
             {
                 if (__instance.pawn.HasTrait(ST_DefOf.ST_HighMaintenance))
                 {
