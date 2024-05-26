@@ -239,4 +239,15 @@
 			</li>
 		</degreeDatas>
 	</TraitDef>
+	
+	<TraitDef>
+		<defName>ST_SteadyHand</defName>
+		<commonality>1</commonality>
+		<degreeDatas>
+			<li>
+				<label>steady hand</label>
+				<description>{PAWN_nameDef} placeholder.</description>
+			</li>
+		</degreeDatas>
+	</TraitDef>
 </Defs>
