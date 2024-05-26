@@ -9,6 +9,8 @@ namespace SimsTraits
         public static TraitDef ST_Manipulative, ST_Naive, ST_Narcissist, ST_HealthFreak, ST_Emotional,
             ST_Paranoid, ST_Loyal, ST_PartyAnimal, ST_Insane, ST_Proper, ST_Grumpy, ST_Shy, ST_Materialistic,
             ST_Vegan, ST_Devout, ST_Procrastinator, ST_NonCommital;
+        [MayRequireRoyalty] public static TraitDef ST_HighMaintenance;
+        [MayRequireRoyalty] public static RoyalTitleDef Acolyte;
         [MayRequireBiotech] public static TraitDef ST_Goofball;
         [MayRequireBiotech] public static ThoughtDef ST_GigglingGoofball;
         public static ThoughtDef Insulted, Slighted, ST_ParanoidThought, ST_LoyalThought, KindWordsMood, ST_NewStuff;

@@ -122,6 +122,33 @@
 						</operations>
 					</match>
 				</li>
+				
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Royalty</li>
+					</mods>
+					<match Class="PatchOperationSequence">
+						<operations>
+							<li Class="PatchOperationConditional">
+								<xpath>Defs/MemeDef[defName="VME_Aristocratic"]/agreeableTraits</xpath>
+								<match Class="PatchOperationAdd">
+									<xpath>Defs/MemeDef[defName="VME_Aristocratic"]/agreeableTraits</xpath>
+									<value>
+										<li>ST_HighMaintenance</li>
+									</value>
+								</match>
+								<nomatch Class="PatchOperationAdd">
+									<xpath>Defs/MemeDef[defName="VME_Aristocratic"]</xpath>
+									<value>
+										<agreeableTraits>
+											<li>ST_HighMaintenance</li>
+										</agreeableTraits>
+									</value>
+								</nomatch>
+							</li>
+						</operations>
+					</match>
+				</li>
 			</operations>
 		</match>
 	</Operation>

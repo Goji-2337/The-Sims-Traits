@@ -84,6 +84,8 @@
     <Compile Include="HarmonyPatches\Need_Joy_GainJoy_Patch.cs" />
     <Compile Include="HarmonyPatches\Pawn_InteractionsTracker_TryInteractWith_Patch.cs" />
     <Compile Include="HarmonyPatches\Pawn_RelationsTracker_OpinionOf_Patch.cs" />
+    <Compile Include="HarmonyPatches\Pawn_RoyaltyTracker_GainFavor_Patch.cs" />
+    <Compile Include="HarmonyPatches\Pawn_RoyaltyTracker_AllTitlesInEffectForReading_Patch.cs" />
     <Compile Include="HarmonyPatches\QualityUtility_GenerateQualityCreatedByPawn_Patch.cs" />
     <Compile Include="HarmonyPatches\ReleaseAnimalToWildUtility_DoReleaseAnimal_Patch.cs" />
     <Compile Include="HarmonyPatches\RitualOutcomeComp_ParticipantCount_GetQualityFactor_Patch.cs" />

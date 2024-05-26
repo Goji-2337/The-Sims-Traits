@@ -217,4 +217,15 @@
 			</li>
 		</degreeDatas>
 	</TraitDef>
+	
+	<TraitDef MayRequire="Ludeon.RimWorld.Royalty">
+		<defName>ST_HighMaintenance</defName>
+		<commonality>1</commonality>
+		<degreeDatas>
+			<li>
+				<label>high maintenance</label>
+				<description>{PAWN_nameDef} placeholder.</description>
+			</li>
+		</degreeDatas>
+	</TraitDef>
 </Defs>
