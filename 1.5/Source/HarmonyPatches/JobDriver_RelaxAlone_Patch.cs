@@ -2,7 +2,6 @@
 using RimWorld;
 using System.Linq;
 using System.Reflection;
-using Verse;
 
 namespace SimsTraits
 {

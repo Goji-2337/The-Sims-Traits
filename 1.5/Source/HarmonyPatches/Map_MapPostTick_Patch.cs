@@ -19,6 +19,15 @@ namespace SimsTraits
             if (Find.TickManager.TicksGame % 60 == 0)
             {
                 var hour = GenLocalDate.HourOfDay(__instance.Tile);
+                var day = GenLocalDate.DayOfYear(__instance.Tile);
+                if (hour == 0 && day == 0)
+                {
+                    var nonCommitalPawns = __instance.GetPawns(ST_DefOf.ST_NonCommital);
+                    foreach (var pawn in nonCommitalPawns)
+                    {
+
+                    }
+                }
                 if (AcceptableGameConditionsToStartGathering(__instance, GatheringDefOf.Party))
                 {
                     if (Rand.MTBEventOccurs(15f, 60000f, 60f)) // every 15 day

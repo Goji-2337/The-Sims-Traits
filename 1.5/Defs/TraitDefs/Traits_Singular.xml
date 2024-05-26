@@ -189,4 +189,32 @@
 			</li>
 		</degreeDatas>
 	</TraitDef>
+	
+	<TraitDef>
+		<defName>ST_Procrastinator</defName>
+		<commonality>1</commonality>
+		<degreeDatas>
+			<li>
+				<label>procrastinator</label>
+				<description>{PAWN_nameDef} placeholder.</description>
+				<statOffsets>
+					<WorkSpeedGlobal>0.5</WorkSpeedGlobal>
+				</statOffsets>
+			</li>
+		</degreeDatas>
+	</TraitDef>
+	
+	<TraitDef>
+		<defName>ST_NonCommital</defName>
+		<commonality>1</commonality>
+		<degreeDatas>
+			<li>
+				<label>non-committal</label>
+				<description>{PAWN_nameDef} placeholder.</description>
+				<statFactors>
+					<CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">2</CertaintyLossFactor>
+				</statFactors>
+			</li>
+		</degreeDatas>
+	</TraitDef>
 </Defs>
