@@ -287,4 +287,22 @@
 			</li>
 		</degreeDatas>
 	</TraitDef>
+	
+	<TraitDef>
+		<defName>ST_Handy</defName>
+		<commonality>1</commonality>
+		<degreeDatas>
+			<li>
+				<label>handy</label>
+				<description>{PAWN_nameDef} placeholder.</description>
+				<skillGains>
+					<Construction>2</Construction>
+					<Crafting>2</Crafting>
+				</skillGains>
+			</li>
+		</degreeDatas>
+		<requiredWorkTags>
+			<li>Constructing</li>
+		</requiredWorkTags>
+	</TraitDef>
 </Defs>
