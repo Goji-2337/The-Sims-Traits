@@ -265,4 +265,15 @@
 			<li>Violent</li>
 		</requiredWorkTags>
 	</TraitDef>
+	
+	<TraitDef>
+		<defName>ST_Chatterbox</defName>
+		<commonality>1</commonality>
+		<degreeDatas>
+			<li>
+				<label>chatterbox</label>
+				<description>{PAWN_nameDef} placeholder.</description>
+			</li>
+		</degreeDatas>
+	</TraitDef>
 </Defs>
