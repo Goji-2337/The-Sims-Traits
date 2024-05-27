@@ -100,4 +100,15 @@
     </nullifyingHediffs>
   </ThoughtDef>
   
+   <ThoughtDef>
+    <defName>ST_NoPokerTable</defName>
+    <workerClass>SimsTraits.ThoughtWorker_NoPokerTable</workerClass>
+    <stages>
+      <li>
+        <label>No poker table</label>
+        <description>Just one game please, my fingers are itchy!</description>
+        <baseMoodEffect>-6</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
 </Defs>

@@ -333,4 +333,22 @@
 			<li>Intellectual</li>
 		</requiredWorkTags>
 	</TraitDef>
+	
+	<TraitDef>
+		<defName>ST_Gambler</defName>
+		<commonality>1</commonality>
+		<degreeDatas>
+			<li>
+				<label>gambler</label>
+				<description>{PAWN_nameDef} placeholder.</description>
+				<statOffsets>
+					<ShootingAccuracyPawn>7</ShootingAccuracyPawn>
+					<MeleeHitChance>7</MeleeHitChance>
+					<MeleeDodgeChance>7</MeleeDodgeChance>
+				</statOffsets>
+			</li>
+		</degreeDatas>
+	</TraitDef>
+	
 </Defs>
+

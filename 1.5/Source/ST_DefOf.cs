@@ -9,7 +9,7 @@ namespace SimsTraits
         public static TraitDef ST_Manipulative, ST_Naive, ST_Narcissist, ST_HealthFreak, ST_Emotional,
             ST_Paranoid, ST_Loyal, ST_PartyAnimal, ST_Insane, ST_Proper, ST_Grumpy, ST_Shy, ST_Materialistic,
             ST_Vegan, ST_Devout, ST_Procrastinator, ST_NonCommital, ST_FamilyOriented, ST_SteadyHand, ST_Daredevil,
-            ST_Chatterbox, ST_Bookworm, ST_Handy, ST_TechWhiz;
+            ST_Chatterbox, ST_Bookworm, ST_Handy, ST_TechWhiz, ST_Gambler;
         [MayRequireRoyalty] public static TraitDef ST_HighMaintenance, ST_Virtuoso;
         [MayRequireRoyalty] public static GatheringDef Concert;
         [MayRequireRoyalty] public static RoyalTitleDef Acolyte;
@@ -21,5 +21,6 @@ namespace SimsTraits
         public static HediffDef ST_AdrenalineRush, ST_AdrenalineRushShort, HeartAttack;
         [MayRequireBiotech] public static MentalFitDef ST_GoofballGiggling;
         public static JoyGiverDef Pray;
+        public static ThingDef PokerTable;
     }
 }

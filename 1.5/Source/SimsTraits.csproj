@@ -75,6 +75,7 @@
     <Compile Include="HarmonyPatches\InteractionWorker_RomanceAttempt_RomanceFactors_Patch.cs" />
     <Compile Include="HarmonyPatches\InteractionWorker_RomanceAttempt_SuccessChance_Patch.cs" />
     <Compile Include="HarmonyPatches\JobDriver_FixBrokenDownBuilding_Patch.cs" />
+    <Compile Include="HarmonyPatches\JobDriver_PlayPoker_ModifyPlayToil_Patch.cs" />
     <Compile Include="HarmonyPatches\JobDriver_RelaxAlone_Patch.cs" />
     <Compile Include="HarmonyPatches\JobDriver_Wear_Notify_Starting_Patch.cs" />
     <Compile Include="HarmonyPatches\JobGiver_Berserk_FindAttackTarget_Patch.cs" />
@@ -115,6 +116,7 @@
     <Compile Include="HarmonyPatches\Thought_MoodOffset_Patch.cs" />
     <Compile Include="InteractionWorker_Cry.cs" />
     <Compile Include="ThoughtWorker_LeatherApparel.cs" />
+    <Compile Include="ThoughtWorker_NoPokerTable.cs" />
     <Compile Include="ThoughtWorker_VeganVsCarnist.cs" />
     <Compile Include="ThoughtWorker_Naive.cs" />
     <Compile Include="HarmonyPatches\ThoughtWorker_Pretty_CurrentSocialStateInternal_Patch.cs" />
