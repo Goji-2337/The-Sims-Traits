@@ -20,6 +20,13 @@ namespace SimsTraits
                     __result = 0f;
                 }
             }
+            else if (__instance.def.joyKind == JoyKindDefOf.Reading)
+            {
+                if (pawn.HasTrait(ST_DefOf.ST_Bookworm))
+                {
+                    __result *= 2f;
+                }
+            }
         }
     }
 }

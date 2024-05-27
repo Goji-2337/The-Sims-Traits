@@ -42,8 +42,7 @@ namespace SimsTraits
                 }
                 if (otherPawn.HasTrait(ST_DefOf.ST_Chatterbox))
                 {
-                    socialMemory.moodOffset = AdjustOpinionOffset(socialMemory.moodOffset);
-                    socialMemory.opinionOffset = AdjustOpinionOffset(socialMemory.opinionOffset);
+                    socialMemory.opinionOffset = ChatterboxEffect(socialMemory.opinionOffset);
                 }
             }
             if (newThought.def == ST_DefOf.KindWordsMood && __instance.pawn.HasTrait(ST_DefOf.ST_Shy))
@@ -52,7 +51,7 @@ namespace SimsTraits
             }
         }
 
-        public static int AdjustOpinionOffset(this float __result)
+        public static int ChatterboxEffect(this float __result)
         {
             if (__result < -1)
             {

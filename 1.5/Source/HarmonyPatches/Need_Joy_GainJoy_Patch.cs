@@ -13,6 +13,11 @@ namespace SimsTraits
                 __instance.tolerances.tolerances[JoyKindDefOf.Meditative] = 0;
                 __instance.tolerances.bored[JoyKindDefOf.Meditative] = false;
             }
+            if (joyKind == JoyKindDefOf.Reading && __instance.pawn.HasTrait(ST_DefOf.ST_Bookworm))
+            {
+                __instance.tolerances.tolerances[JoyKindDefOf.Reading] = 0;
+                __instance.tolerances.bored[JoyKindDefOf.Reading] = false;
+            }
         }
     }
 }

@@ -149,6 +149,51 @@
 						</operations>
 					</match>
 				</li>
+				
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/MemeDef[defName="VME_Healthcare"]/agreeableTraits</xpath>
+                    <match Class="PatchOperationAdd">
+                        <xpath>Defs/MemeDef[defName="VME_Healthcare"]/agreeableTraits</xpath>
+                        <value>
+							<li>ST_HealthFreak</li>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/MemeDef[defName="VME_Healthcare"]</xpath>
+                        <value>
+                            <agreeableTraits>
+								<li>ST_HealthFreak</li>
+                            </agreeableTraits>
+                        </value>
+                    </nomatch>
+                </li>
+				
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Vanilla Books Expanded</li>
+					</mods>
+					<match Class="PatchOperationSequence">
+						<operations>
+							<li Class="PatchOperationConditional">
+								<xpath>Defs/MemeDef[defName="VME_Cultured"]/agreeableTraits</xpath>
+								<match Class="PatchOperationAdd">
+									<xpath>Defs/MemeDef[defName="VME_Cultured"]/agreeableTraits</xpath>
+									<value>
+										<li>ST_Bookworm</li>
+									</value>
+								</match>
+								<nomatch Class="PatchOperationAdd">
+									<xpath>Defs/MemeDef[defName="VME_Cultured"]</xpath>
+									<value>
+										<agreeableTraits>
+											<li>ST_Bookworm</li>
+										</agreeableTraits>
+									</value>
+								</nomatch>
+							</li>
+						</operations>
+					</match>
+				</li>
 			</operations>
 		</match>
 	</Operation>

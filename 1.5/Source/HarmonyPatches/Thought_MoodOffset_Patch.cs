@@ -13,6 +13,13 @@ namespace SimsTraits
             {
                 __result *= 1.15f;
             }
+            if (__instance is Thought_Memory memory)
+            {
+                if (memory.otherPawn.HasTrait(ST_DefOf.ST_Chatterbox))
+                {
+                    __result = __result.ChatterboxEffect();
+                }
+            }
         }
     }
 }
