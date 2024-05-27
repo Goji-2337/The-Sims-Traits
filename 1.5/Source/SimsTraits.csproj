@@ -64,6 +64,8 @@
   <ItemGroup>
     <Compile Include="HarmonyPatches\AgeInjuryUtility_GenerateRandomOldAgeInjuries_Patch.cs" />
     <Compile Include="HarmonyPatches\AgeInjuryUtility_RandomHediffsToGainOnBirthday_Patch.cs" />
+    <Compile Include="HarmonyPatches\HediffSet_AddDirect_Patch.cs" />
+    <Compile Include="HarmonyPatches\HostilityResponseModeUtility_DrawResponseButton_GenerateMenu_Patch.cs" />
     <Compile Include="HarmonyPatches\InteractionUtility_CanInitiateInteraction_Patch.cs" />
     <Compile Include="HarmonyPatches\InteractionWorker_KindWords_RandomSelectionWeight_Patch.cs" />
     <Compile Include="HarmonyPatches\InteractionWorker_RomanceAttempt_RandomSelectionWeight_Patch.cs" />
@@ -83,7 +85,9 @@
     <Compile Include="HarmonyPatches\MentalState_TantrumRandom_ChooseNextTarget_Patch.cs" />
     <Compile Include="HarmonyPatches\Need_Joy_GainJoy_Patch.cs" />
     <Compile Include="HarmonyPatches\PawnDiedOrDownedThoughtsUtility_AppendThoughts_ForHumanlike_Patch.cs" />
+    <Compile Include="HarmonyPatches\PawnGenerator_GeneratePawn_Patch.cs" />
     <Compile Include="HarmonyPatches\Pawn_AgeTracker_TryChildGrowthMoment_Patch.cs" />
+    <Compile Include="HarmonyPatches\Pawn_HealthTracker_AddHediff_Patch.cs" />
     <Compile Include="HarmonyPatches\Pawn_InteractionsTracker_TryInteractWith_Patch.cs" />
     <Compile Include="HarmonyPatches\Pawn_RelationsTracker_OpinionOf_Patch.cs" />
     <Compile Include="HarmonyPatches\Pawn_RoyaltyTracker_GainFavor_Patch.cs" />
@@ -92,6 +96,7 @@
     <Compile Include="HarmonyPatches\ReleaseAnimalToWildUtility_DoReleaseAnimal_Patch.cs" />
     <Compile Include="HarmonyPatches\RitualOutcomeComp_ParticipantCount_GetQualityFactor_Patch.cs" />
     <Compile Include="HarmonyPatches\Thing_Ingested_Patch.cs" />
+    <Compile Include="HarmonyPatches\Thing_TakeDamage_Patch.cs" />
     <Compile Include="HarmonyPatches\ThoughtWorker_ApparelDamaged_CurrentStateInternal_Patch.cs" />
     <Compile Include="HarmonyPatches\TradeDeal_TryExecute_Patch.cs" />
     <Compile Include="HarmonyPatches\InteractionWorker_Breakup_RandomSelectionWeight_Patch.cs" />

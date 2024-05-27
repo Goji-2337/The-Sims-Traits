@@ -8,7 +8,7 @@ namespace SimsTraits
     {
         public static TraitDef ST_Manipulative, ST_Naive, ST_Narcissist, ST_HealthFreak, ST_Emotional,
             ST_Paranoid, ST_Loyal, ST_PartyAnimal, ST_Insane, ST_Proper, ST_Grumpy, ST_Shy, ST_Materialistic,
-            ST_Vegan, ST_Devout, ST_Procrastinator, ST_NonCommital, ST_FamilyOriented, ST_SteadyHand;
+            ST_Vegan, ST_Devout, ST_Procrastinator, ST_NonCommital, ST_FamilyOriented, ST_SteadyHand, ST_Daredevil;
         [MayRequireRoyalty] public static TraitDef ST_HighMaintenance;
         [MayRequireRoyalty] public static RoyalTitleDef Acolyte;
         [MayRequireBiotech] public static TraitDef ST_Goofball;
@@ -16,7 +16,7 @@ namespace SimsTraits
         public static ThoughtDef Insulted, Slighted, ST_ParanoidThought, ST_LoyalThought, KindWordsMood, ST_NewStuff;
         public static InteractionDef Slight;
         public static SoundDef LetterArrive_BadUrgentBig, LetterArrive_BadUrgent, LetterArrive_BadUrgentSmall, LetterArrive_Good;
-        public static HediffDef ST_AdrenalineRush;
+        public static HediffDef ST_AdrenalineRush, ST_AdrenalineRushShort, HeartAttack;
         [MayRequireBiotech] public static MentalFitDef ST_GoofballGiggling;
         public static JoyGiverDef Pray;
     }

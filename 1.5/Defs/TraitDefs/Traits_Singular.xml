@@ -250,4 +250,19 @@
 			</li>
 		</degreeDatas>
 	</TraitDef>
+	
+	<TraitDef>
+		<defName>ST_Daredevil</defName>
+		<commonality>1</commonality>
+		<disabledWorkTags>Firefighting</disabledWorkTags>
+		<degreeDatas>
+			<li>
+				<label>daredevil</label>
+				<description>{PAWN_nameDef} placeholder.</description>
+			</li>
+		</degreeDatas>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+	</TraitDef>
 </Defs>
