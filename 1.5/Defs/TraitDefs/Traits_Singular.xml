@@ -305,4 +305,15 @@
 			<li>Constructing</li>
 		</requiredWorkTags>
 	</TraitDef>
+	
+	<TraitDef MayRequire="Ludeon.RimWorld.Royalty">
+		<defName>ST_Virtuoso</defName>
+		<commonality>1</commonality>
+		<degreeDatas>
+			<li>
+				<label>virtuoso</label>
+				<description>{PAWN_nameDef} placeholder.</description>
+			</li>
+		</degreeDatas>
+	</TraitDef>
 </Defs>

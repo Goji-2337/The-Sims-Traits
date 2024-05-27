@@ -10,7 +10,8 @@ namespace SimsTraits
             ST_Paranoid, ST_Loyal, ST_PartyAnimal, ST_Insane, ST_Proper, ST_Grumpy, ST_Shy, ST_Materialistic,
             ST_Vegan, ST_Devout, ST_Procrastinator, ST_NonCommital, ST_FamilyOriented, ST_SteadyHand, ST_Daredevil,
             ST_Chatterbox, ST_Bookworm, ST_Handy;
-        [MayRequireRoyalty] public static TraitDef ST_HighMaintenance;
+        [MayRequireRoyalty] public static TraitDef ST_HighMaintenance, ST_Virtuoso;
+        [MayRequireRoyalty] public static GatheringDef Concert;
         [MayRequireRoyalty] public static RoyalTitleDef Acolyte;
         [MayRequireBiotech] public static TraitDef ST_Goofball;
         [MayRequireBiotech] public static ThoughtDef ST_GigglingGoofball;
