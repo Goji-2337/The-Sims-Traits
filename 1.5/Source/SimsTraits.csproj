@@ -65,6 +65,7 @@
     <Compile Include="HarmonyPatches\AgeInjuryUtility_GenerateRandomOldAgeInjuries_Patch.cs" />
     <Compile Include="HarmonyPatches\AgeInjuryUtility_RandomHediffsToGainOnBirthday_Patch.cs" />
     <Compile Include="HarmonyPatches\BookUtility_GetReadingBonus_Patch.cs" />
+    <Compile Include="HarmonyPatches\CompBiocodable_IsBiocodedFor_Patch.cs" />
     <Compile Include="HarmonyPatches\GatheringsUtility_FindRandomGatheringOrganizer_CanOrganize_Patch.cs" />
     <Compile Include="HarmonyPatches\HediffSet_AddDirect_Patch.cs" />
     <Compile Include="HarmonyPatches\HostilityResponseModeUtility_DrawResponseButton_GenerateMenu_Patch.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="HarmonyPatches\InteractionWorker_RomanceAttempt_SuccessChance_Patch.cs" />
     <Compile Include="HarmonyPatches\JobDriver_FixBrokenDownBuilding_Patch.cs" />
     <Compile Include="HarmonyPatches\JobDriver_RelaxAlone_Patch.cs" />
+    <Compile Include="HarmonyPatches\JobDriver_Wear_Notify_Starting_Patch.cs" />
     <Compile Include="HarmonyPatches\JobGiver_Berserk_FindAttackTarget_Patch.cs" />
     <Compile Include="HarmonyPatches\JobGiver_Work_GetPriority_Patch.cs" />
     <Compile Include="HarmonyPatches\JoyGiver_GetChance_Patch.cs" />

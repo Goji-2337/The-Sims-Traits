@@ -316,4 +316,21 @@
 			</li>
 		</degreeDatas>
 	</TraitDef>
+	
+	<TraitDef>
+		<defName>ST_TechWhiz</defName>
+		<commonality>1</commonality>
+		<degreeDatas>
+			<li>
+				<label>tech whiz</label>
+				<description>{PAWN_nameDef} placeholder.</description>
+				<skillGains>
+					<Intellectual>4</Intellectual>
+				</skillGains>
+			</li>
+		</degreeDatas>
+		<requiredWorkTags>
+			<li>Intellectual</li>
+		</requiredWorkTags>
+	</TraitDef>
 </Defs>
