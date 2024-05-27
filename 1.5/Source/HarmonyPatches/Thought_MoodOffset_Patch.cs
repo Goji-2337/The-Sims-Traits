@@ -13,13 +13,6 @@ namespace SimsTraits
             {
                 __result *= 1.15f;
             }
-            if (__instance is Thought_MemorySocial)
-            {
-                if (__instance.pawn.HasTrait(ST_DefOf.ST_Chatterbox))
-                {
-                    __result = Mathf.Clamp(__result, -1f, 1f);
-                }
-            }
         }
     }
 }

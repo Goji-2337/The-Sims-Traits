@@ -31,17 +31,38 @@ namespace SimsTraits
 
         public static void Postfix(MemoryThoughtHandler __instance, Thought_Memory newThought, Pawn otherPawn)
         {
-            if (newThought is Thought_MemorySocial socialMemory && otherPawn.HasTrait(ST_DefOf.ST_Manipulative))
+            if (newThought is Thought_MemorySocial socialMemory)
             {
-                if (newThought.def == ST_DefOf.Insulted || newThought.def == ST_DefOf.Slighted)
+                if (otherPawn.HasTrait(ST_DefOf.ST_Manipulative))
                 {
-                    socialMemory.opinionOffset = -socialMemory.opinionOffset;
+                    if (newThought.def == ST_DefOf.Insulted || newThought.def == ST_DefOf.Slighted)
+                    {
+                        socialMemory.opinionOffset = -socialMemory.opinionOffset;
+                    }
+                }
+                if (otherPawn.HasTrait(ST_DefOf.ST_Chatterbox))
+                {
+                    socialMemory.moodOffset = AdjustOpinionOffset(socialMemory.moodOffset);
+                    socialMemory.opinionOffset = AdjustOpinionOffset(socialMemory.opinionOffset);
                 }
             }
             if (newThought.def == ST_DefOf.KindWordsMood && __instance.pawn.HasTrait(ST_DefOf.ST_Shy))
             {
                 newThought.durationTicksOverride = GenDate.TicksPerDay * 15;
             }
+        }
+
+        public static int AdjustOpinionOffset(this float __result)
+        {
+            if (__result < -1)
+            {
+                __result = -1;
+            }
+            else if (__result > 1)
+            {
+                __result = 1;
+            }
+            return (int)__result;
         }
     }
 }

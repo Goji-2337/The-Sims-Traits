@@ -99,7 +99,6 @@
     <Compile Include="HarmonyPatches\Thing_Ingested_Patch.cs" />
     <Compile Include="HarmonyPatches\Thing_TakeDamage_Patch.cs" />
     <Compile Include="HarmonyPatches\ThoughtWorker_ApparelDamaged_CurrentStateInternal_Patch.cs" />
-    <Compile Include="HarmonyPatches\Thought_MemorySocial_MoodOffset_Patch.cs" />
     <Compile Include="HarmonyPatches\TradeDeal_TryExecute_Patch.cs" />
     <Compile Include="HarmonyPatches\InteractionWorker_Breakup_RandomSelectionWeight_Patch.cs" />
     <Compile Include="HarmonyPatches\Verb_LaunchProjectile_TryCastShot_Patch.cs" />

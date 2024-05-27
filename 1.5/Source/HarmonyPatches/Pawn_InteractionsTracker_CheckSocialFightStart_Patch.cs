@@ -4,7 +4,6 @@ using Verse;
 
 namespace SimsTraits
 {
-
     [HarmonyPatch(typeof(Pawn_InteractionsTracker), "CheckSocialFightStart")]
     public static class Pawn_InteractionsTracker_CheckSocialFightStart_Patch
     {

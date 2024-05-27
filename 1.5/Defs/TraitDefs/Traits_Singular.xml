@@ -276,4 +276,15 @@
 			</li>
 		</degreeDatas>
 	</TraitDef>
+	
+	<TraitDef>
+		<defName>ST_Bookworm</defName>
+		<commonality>1</commonality>
+		<degreeDatas>
+			<li>
+				<label>bookworm</label>
+				<description>{PAWN_nameDef} placeholder.</description>
+			</li>
+		</degreeDatas>
+	</TraitDef>
 </Defs>
