@@ -360,5 +360,16 @@
 			</li>
 		</degreeDatas>
 	</TraitDef>
+	
+	<TraitDef>
+		<defName>ST_Nosy</defName>
+		<commonality>1</commonality>
+		<degreeDatas>
+			<li>
+				<label>nosy</label>
+				<description>{PAWN_nameDef} placeholder.</description>
+			</li>
+		</degreeDatas>
+	</TraitDef>
 </Defs>
 

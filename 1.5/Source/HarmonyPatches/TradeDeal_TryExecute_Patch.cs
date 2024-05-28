@@ -28,13 +28,38 @@ namespace SimsTraits
 
         public static void ResolveTrade(TradeDeal __instance, ref bool actuallyTraded)
         {
-            if (actuallyTraded && TradeSession.playerNegotiator.HasTrait(ST_DefOf.ST_Materialistic))
+            if (actuallyTraded)
             {
-                if (__instance.tradeables.Any(x => x.ActionToDo == TradeAction.PlayerBuys && x.CountToTransfer > 0))
+                if (TradeSession.playerNegotiator.HasTrait(ST_DefOf.ST_Materialistic))
                 {
-                    TradeSession.playerNegotiator.needs?.mood?.thoughts?.memories.TryGainMemory(ST_DefOf.ST_NewStuff);
+                    if (__instance.tradeables.Any(x => x.ActionToDo == TradeAction.PlayerBuys && x.CountToTransfer > 0))
+                    {
+                        TradeSession.playerNegotiator.needs?.mood?.thoughts?.memories.TryGainMemory(ST_DefOf.ST_NewStuff);
+                    }
+                }
+
+                if (TradeSession.playerNegotiator.HasTrait(ST_DefOf.ST_Nosy))
+                {
+                    TradeSession.playerNegotiator.TryGenerateRandomQuest(TradeSession.trader.Faction);
                 }
             }
+        }
+
+        public static void TryGenerateRandomQuest(this Pawn nosyPawn, Faction factionSource)
+        {
+            if (Rand.Chance(0.5f) && nosyPawn.GetLastNosyInteraction() is int nosyInteraction 
+                && (nosyInteraction == 0 || Find.TickManager.TicksGame >= nosyInteraction + (GenDate.TicksPerDay * 15)))
+            {
+                var points = StorytellerUtility.DefaultThreatPointsNow(nosyPawn.Map);
+                var questDef = NaturalRandomQuestChooser.ChooseNaturalRandomQuest(points, nosyPawn.Map);
+                Quest quest = QuestUtility.GenerateQuestAndMakeAvailable(questDef, points);
+                if (!quest.hidden && questDef.sendAvailableLetter)
+                {
+                    QuestUtility.SendLetterQuestAvailable(quest);
+                }
+                factionSource?.TryAffectGoodwillWith(nosyPawn.Faction, -5);
+            }
+            nosyPawn.SetNosyInteraction(Find.TickManager.TicksGame);
         }
     }
 }
