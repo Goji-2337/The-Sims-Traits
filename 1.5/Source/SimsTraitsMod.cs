@@ -5,9 +5,11 @@ namespace SimsTraits
 {
     public class SimsTraitsMod : Mod
     {
+        public static Harmony harmony;
         public SimsTraitsMod(ModContentPack pack) : base(pack)
         {
-            new Harmony("SimsTraitsMod").PatchAll();
+            harmony = new Harmony("SimsTraitsMod");
+            harmony.PatchAll();
         }
     }
 }

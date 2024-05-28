@@ -23,5 +23,6 @@ namespace SimsTraits
         [MayRequireBiotech] public static MentalFitDef ST_GoofballGiggling;
         public static JoyGiverDef Pray;
         public static ThingDef PokerTable;
+        public static NeedDef Joy;
     }
 }

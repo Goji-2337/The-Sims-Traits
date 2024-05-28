@@ -111,4 +111,18 @@
       </li>
     </stages>
   </ThoughtDef>
+  
+  <ThoughtDef>
+    <defName>ST_OneOfUs</defName>
+    <thoughtClass>Thought_SituationalSocial</thoughtClass>
+    <workerClass>SimsTraits.ThoughtWorker_OneOfUs</workerClass>
+    <developmentalStageFilter>Baby, Child</developmentalStageFilter>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>One of us</label>
+        <baseOpinionOffset>25</baseOpinionOffset>
+      </li>
+    </stages>
+  </ThoughtDef>
 </Defs>
