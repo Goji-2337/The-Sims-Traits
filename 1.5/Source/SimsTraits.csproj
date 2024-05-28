@@ -74,6 +74,7 @@
     <Compile Include="HarmonyPatches\InteractionWorker_RomanceAttempt_RandomSelectionWeight_Patch.cs" />
     <Compile Include="HarmonyPatches\InteractionWorker_RomanceAttempt_RomanceFactors_Patch.cs" />
     <Compile Include="HarmonyPatches\InteractionWorker_RomanceAttempt_SuccessChance_Patch.cs" />
+    <Compile Include="HarmonyPatches\JobDriver_Equip_MakeNewToils_Patch.cs" />
     <Compile Include="HarmonyPatches\JobDriver_FixBrokenDownBuilding_Patch.cs" />
     <Compile Include="HarmonyPatches\JobDriver_PlayPoker_ModifyPlayToil_Patch.cs" />
     <Compile Include="HarmonyPatches\JobDriver_RelaxAlone_Patch.cs" />
@@ -92,6 +93,7 @@
     <Compile Include="HarmonyPatches\Need_Joy_GainJoy_Patch.cs" />
     <Compile Include="HarmonyPatches\PawnDiedOrDownedThoughtsUtility_AppendThoughts_ForHumanlike_Patch.cs" />
     <Compile Include="HarmonyPatches\PawnGenerator_GeneratePawn_Patch.cs" />
+    <Compile Include="HarmonyPatches\PawnGenerator_GenerateTraitsFor_Patch.cs" />
     <Compile Include="HarmonyPatches\Pawn_AgeTracker_TryChildGrowthMoment_Patch.cs" />
     <Compile Include="HarmonyPatches\Pawn_HealthTracker_AddHediff_Patch.cs" />
     <Compile Include="HarmonyPatches\Pawn_InteractionsTracker_InteractionsTrackerTick_Patch.cs" />

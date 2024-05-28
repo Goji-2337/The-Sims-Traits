@@ -1,8 +1,7 @@
 ﻿using HarmonyLib;
 using RimWorld;
-using System.Collections.Generic;
-using System.Reflection.Emit;
 using Verse;
+using Verse.AI;
 
 namespace SimsTraits
 {
@@ -14,7 +13,7 @@ namespace SimsTraits
             __instance.duration += DelayDuration(__instance, __instance.Apparel);
         }
 
-        public static int DelayDuration(JobDriver_Wear job, Thing thing)
+        public static int DelayDuration(JobDriver job, Thing thing)
         {
             var comp = thing.TryGetComp<CompBiocodable>();
             if (comp != null && comp.CodedPawn != job.pawn)

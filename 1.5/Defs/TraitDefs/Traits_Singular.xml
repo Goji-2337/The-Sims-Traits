@@ -349,6 +349,16 @@
 			</li>
 		</degreeDatas>
 	</TraitDef>
-	
+
+	<TraitDef MayRequire="Ludeon.RimWorld.Biotech">
+		<defName>ST_Childish</defName>
+		<commonality>1</commonality>
+		<degreeDatas>
+			<li>
+				<label>childish</label>
+				<description>{PAWN_nameDef} placeholder.</description>
+			</li>
+		</degreeDatas>
+	</TraitDef>
 </Defs>
 

@@ -11,9 +11,10 @@ namespace SimsTraits
             ST_Vegan, ST_Devout, ST_Procrastinator, ST_NonCommital, ST_FamilyOriented, ST_SteadyHand, ST_Daredevil,
             ST_Chatterbox, ST_Bookworm, ST_Handy, ST_TechWhiz, ST_Gambler;
         [MayRequireRoyalty] public static TraitDef ST_HighMaintenance, ST_Virtuoso;
+        [MayRequireBiotech] public static TraitDef ST_Goofball, ST_Childish;
+
         [MayRequireRoyalty] public static GatheringDef Concert;
         [MayRequireRoyalty] public static RoyalTitleDef Acolyte;
-        [MayRequireBiotech] public static TraitDef ST_Goofball;
         [MayRequireBiotech] public static ThoughtDef ST_GigglingGoofball;
         public static ThoughtDef Insulted, Slighted, ST_ParanoidThought, ST_LoyalThought, KindWordsMood, ST_NewStuff;
         public static InteractionDef Slight;
