@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="HarmonyPatches\AgeInjuryUtility_GenerateRandomOldAgeInjuries_Patch.cs" />
     <Compile Include="HarmonyPatches\AgeInjuryUtility_RandomHediffsToGainOnBirthday_Patch.cs" />
+    <Compile Include="HarmonyPatches\BackCompatibility_BackCompatibleDefName_Patch.cs" />
     <Compile Include="HarmonyPatches\BookUtility_GetReadingBonus_Patch.cs" />
     <Compile Include="HarmonyPatches\CompBiocodable_IsBiocodedFor_Patch.cs" />
     <Compile Include="HarmonyPatches\GatheringsUtility_FindRandomGatheringOrganizer_CanOrganize_Patch.cs" />
@@ -90,6 +91,7 @@
     <Compile Include="HarmonyPatches\MentalBreakWorker_IdeoChange_CanInitiateInteraction_Patch.cs" />
     <Compile Include="HarmonyPatches\MentalFitDef_CalculateMTBDays_Patch.cs" />
     <Compile Include="HarmonyPatches\MentalStateHandler_TryStartMentalState_Patch.cs" />
+    <Compile Include="HarmonyPatches\MentalStateWorker_SlaveRebellion_StateCanOccur_Patch.cs" />
     <Compile Include="HarmonyPatches\MentalState_InsultingSpree_Patch.cs" />
     <Compile Include="HarmonyPatches\MentalState_MurderousRage_TryFindNewTarget_Patch.cs" />
     <Compile Include="HarmonyPatches\MentalState_TantrumRandom_ChooseNextTarget_Patch.cs" />
@@ -112,6 +114,7 @@
     <Compile Include="HarmonyPatches\QualityUtility_GenerateQualityCreatedByPawn_Patch.cs" />
     <Compile Include="HarmonyPatches\ReleaseAnimalToWildUtility_DoReleaseAnimal_Patch.cs" />
     <Compile Include="HarmonyPatches\RitualOutcomeComp_ParticipantCount_GetQualityFactor_Patch.cs" />
+    <Compile Include="HarmonyPatches\SlaveRebellionUtility_CanParticipateInSlaveRebellion_Patch.cs" />
     <Compile Include="HarmonyPatches\SurgeryOutcomeEffectDef_GetQuality_Patch.cs" />
     <Compile Include="HarmonyPatches\Thing_Ingested_Patch.cs" />
     <Compile Include="HarmonyPatches\Thing_TakeDamage_Patch.cs" />
@@ -127,6 +130,7 @@
     <Compile Include="HarmonyPatches\Verb_CanHitTargetFrom_Patch.cs" />
     <Compile Include="HarmonyPatches\Verb_LaunchProjectile_TryCastShot_Patch.cs" />
     <Compile Include="HarmonyPatches\Verb_OrderForceTarget_Patch.cs" />
+    <Compile Include="MayRequireVETraitsAttribute.cs" />
     <Compile Include="MentalState_GoofballGiggling.cs" />
     <Compile Include="HarmonyPatches\Pawn_InteractionsTracker_CheckSocialFightStart_Patch.cs" />
     <Compile Include="HarmonyPatches\ThoughtWorker_Ugly_CurrentSocialStateInternal_Patch.cs" />

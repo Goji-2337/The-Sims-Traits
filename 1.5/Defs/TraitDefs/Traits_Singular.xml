@@ -421,5 +421,18 @@
 		</degreeDatas>
 	</TraitDef>
 
+	<TraitDef MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+		<defName>ST_Submissive</defName>
+		<commonality>0.5</commonality>
+		<degreeDatas>
+			<li>
+				<label>submissive</label>
+				<description>{PAWN_nameDef} needs clear instructions on how, and when to do certain things and will only work at a normal speed when being forced to do something.</description>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>VTE_Rebel</li>
+		</conflictingTraits>
+	</TraitDef>
 </Defs>
 
