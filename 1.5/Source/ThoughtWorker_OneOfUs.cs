@@ -14,5 +14,4 @@ namespace SimsTraits
             return false;
         }
     }
-    
 }

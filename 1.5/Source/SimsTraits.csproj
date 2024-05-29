@@ -106,6 +106,7 @@
     <Compile Include="HarmonyPatches\Pawn_RelationsTracker_OpinionOf_Patch.cs" />
     <Compile Include="HarmonyPatches\Pawn_RoyaltyTracker_GainFavor_Patch.cs" />
     <Compile Include="HarmonyPatches\Pawn_RoyaltyTracker_AllTitlesInEffectForReading_Patch.cs" />
+    <Compile Include="HarmonyPatches\Pawn_SpawnSetup_Patch.cs" />
     <Compile Include="HarmonyPatches\QualityUtility_GenerateQualityCreatedByPawn_Patch.cs" />
     <Compile Include="HarmonyPatches\ReleaseAnimalToWildUtility_DoReleaseAnimal_Patch.cs" />
     <Compile Include="HarmonyPatches\RitualOutcomeComp_ParticipantCount_GetQualityFactor_Patch.cs" />
@@ -130,6 +131,7 @@
     <Compile Include="ThoughtWorker_LeatherApparel.cs" />
     <Compile Include="ThoughtWorker_NoPokerTable.cs" />
     <Compile Include="ThoughtWorker_OneOfUs.cs" />
+    <Compile Include="ThoughtWorker_SomethingIsOff.cs" />
     <Compile Include="ThoughtWorker_VeganVsCarnist.cs" />
     <Compile Include="ThoughtWorker_Naive.cs" />
     <Compile Include="HarmonyPatches\ThoughtWorker_Pretty_CurrentSocialStateInternal_Patch.cs" />
@@ -137,8 +139,8 @@
     <Compile Include="HarmonyPatches\MemoryThoughtHandler_TryGainMemory_Patch.cs" />
     <Compile Include="Thought_Naive.cs" />
     <Compile Include="ThoughtWorker_Narcissist.cs" />
-    <Compile Include="TraitSet_GainTrait_Patch.cs" />
-    <Compile Include="TraitSet_RemoveTrait_Patch.cs" />
+    <Compile Include="HarmonyPatches\TraitSet_GainTrait_Patch.cs" />
+    <Compile Include="HarmonyPatches\TraitSet_RemoveTrait_Patch.cs" />
     <Compile Include="TraitUtils.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

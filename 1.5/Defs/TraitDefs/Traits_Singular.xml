@@ -391,5 +391,17 @@
 			<li>Violent</li>
 		</requiredWorkTags>
 	</TraitDef>
+	
+	<TraitDef>
+		<defName>ST_Observant</defName>
+		<commonality>1</commonality>
+		<degreeDatas>
+			<li>
+				<label>observant</label>
+				<description>{PAWN_nameDef} placeholder.</description>
+			</li>
+		</degreeDatas>
+	</TraitDef>
+	
 </Defs>
 

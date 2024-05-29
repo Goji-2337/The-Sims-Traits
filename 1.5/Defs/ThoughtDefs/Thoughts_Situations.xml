@@ -125,4 +125,17 @@
       </li>
     </stages>
   </ThoughtDef>
+  
+  <ThoughtDef>
+    <defName>ST_SomethingIsOff</defName>
+    <thoughtClass>Thought_SituationalSocial</thoughtClass>
+    <workerClass>SimsTraits.ThoughtWorker_SomethingIsOff</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>something's off</label>
+        <baseOpinionOffset>-5</baseOpinionOffset>
+      </li>
+    </stages>
+  </ThoughtDef>
 </Defs>
