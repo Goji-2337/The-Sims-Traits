@@ -11,20 +11,21 @@ namespace SimsTraits
             ST_Vegan, ST_Devout, ST_Procrastinator, ST_NonCommital, ST_FamilyOriented, ST_SteadyHand, ST_Daredevil,
             ST_Chatterbox, ST_Bookworm, ST_Handy, ST_TechWhiz, ST_Gambler, ST_Nosy, ST_HugePower, ST_Observant, ST_Zen;
         [MayRequireVETraits] public static TraitDef ST_Submissive, VTE_AbsentMinded, VTE_Vengeful, ST_DrunkenMaster, 
-            VTE_BigBoned, VTE_Clumsy, VTE_Workaholic;
+            VTE_BigBoned, VTE_Clumsy, VTE_Workaholic, ST_Squeamish;
         [MayRequireRoyalty] public static TraitDef ST_HighMaintenance, ST_Virtuoso;
         [MayRequireBiotech] public static TraitDef ST_Goofball, ST_Childish;
 
         [MayRequireRoyalty] public static GatheringDef Concert;
         [MayRequireRoyalty] public static RoyalTitleDef Acolyte;
         [MayRequireBiotech] public static ThoughtDef ST_GigglingGoofball;
-        public static ThoughtDef Insulted, Slighted, ST_ParanoidThought, ST_LoyalThought, KindWordsMood, ST_NewStuff;
+        public static ThoughtDef Insulted, Slighted, ST_ParanoidThought, ST_LoyalThought, KindWordsMood, ST_NewStuff, ObservedLayingRottingCorpse;
         public static InteractionDef Slight;
         public static SoundDef LetterArrive_BadUrgentBig, LetterArrive_BadUrgent, LetterArrive_BadUrgentSmall, LetterArrive_Good;
-        public static HediffDef ST_AdrenalineRush, ST_AdrenalineRushShort, HeartAttack, ST_PsychicTranceAbsentMinded;
+        public static HediffDef ST_AdrenalineRush, ST_AdrenalineRushShort, HeartAttack, ST_PsychicTranceAbsentMinded, ST_SqueamishFakeDown;
         [MayRequireBiotech] public static MentalFitDef ST_GoofballGiggling;
         public static JoyGiverDef Pray;
         public static ThingDef PokerTable;
         public static NeedDef Joy;
+
     }
 }

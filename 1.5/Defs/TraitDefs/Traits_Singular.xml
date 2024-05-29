@@ -452,5 +452,20 @@
 		</requiredWorkTags>
 	</TraitDef>
 
+	<TraitDef MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+		<defName>ST_Squeamish</defName>
+		<commonality>0.9</commonality>
+		<degreeDatas>
+			<li>
+				<label>squeamish</label>
+				<description>Sour stomach plagues {PAWN_nameDef} any time they're around too much blood or rotting corpses. Vomiting is just part of life for {PAWN_objective}.</description>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>VTE_Desensitized</li>
+			<li>VTE_IronStomach</li>
+			<li>Bloodlust</li>
+		</conflictingTraits>
+	</TraitDef>
 </Defs>
 

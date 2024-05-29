@@ -47,7 +47,7 @@ namespace SimsTraits
 
         public static void TryGenerateRandomQuest(this Pawn nosyPawn, Faction factionSource)
         {
-            if (Rand.Chance(0.5f) && nosyPawn.GetLastNosyInteraction() is int nosyInteraction 
+            if (Rand.Chance(0.5f) && Pawn_ExposeData_Patch.lastNosyInteraction.Get(nosyPawn) is int nosyInteraction 
                 && (nosyInteraction == 0 || Find.TickManager.TicksGame >= nosyInteraction + (GenDate.TicksPerDay * 15)))
             {
                 var points = StorytellerUtility.DefaultThreatPointsNow(nosyPawn.Map);
@@ -59,7 +59,7 @@ namespace SimsTraits
                 }
                 factionSource?.TryAffectGoodwillWith(nosyPawn.Faction, -5);
             }
-            nosyPawn.SetNosyInteraction(Find.TickManager.TicksGame);
+            Pawn_ExposeData_Patch.lastNosyInteraction.Set(nosyPawn, Find.TickManager.TicksGame);
         }
     }
 }

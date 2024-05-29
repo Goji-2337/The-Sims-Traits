@@ -20,24 +20,23 @@ namespace SimsTraits
                     {
                         if (__instance.pawn.HasTrait(ST_DefOf.ST_Zen))
                         {
-                            var lastMeditation = __instance.pawn.GetLastMeditationTick();
+                            var lastMeditation = Pawn_ExposeData_Patch.lastMeditation.Get(__instance.pawn);
                             if (lastMeditation + 10 >= Find.TickManager.TicksGame)
                             {
-                                __instance.pawn.SetTotalMeditationTick(__instance.pawn.GetTotalMeditationTick() + 1);
+                                Pawn_ExposeData_Patch.totalMeditation.Set(__instance.pawn, Pawn_ExposeData_Patch.totalMeditation.Get(__instance.pawn));
                             }
                             else
                             {
-                                __instance.pawn.SetTotalMeditationTick(0);
+                                Pawn_ExposeData_Patch.totalMeditation.Set(__instance.pawn, 0);
                             }
-                            __instance.pawn.SetLastMeditationTick(Find.TickManager.TicksGame);
-                            Log.ResetMessageCount();
+                            Pawn_ExposeData_Patch.lastMeditation.Set(__instance.pawn, Find.TickManager.TicksGame);
                         }
                     });
                     toil.AddFinishAction(delegate
                     {
                         if (__instance.pawn.HasTrait(ST_DefOf.ST_Zen))
                         {
-                            if (__instance.pawn.GetTotalMeditationTick() >= GenDate.TicksPerHour * 8)
+                            if (Pawn_ExposeData_Patch.totalMeditation.Get(__instance.pawn) >= GenDate.TicksPerHour * 8)
                             {
                                 var negativeMemories = __instance.pawn.needs?.mood?.thoughts?.memories?.memories.Where(x => x.MoodOffset() < 0);
                                 if (negativeMemories.TryRandomElement(out var memory))

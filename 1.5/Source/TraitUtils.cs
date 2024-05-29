@@ -14,7 +14,8 @@ namespace SimsTraits
         public static Dictionary<string, string> replacedTraits = new Dictionary<string, string>
         {
             { "VTE_Submissive", "ST_Submissive" },
-            { "VTE_DrunkenMaster", "ST_DrunkenMaster" }
+            { "VTE_DrunkenMaster", "ST_DrunkenMaster" },
+            { "VTE_Squeamish", "ST_Squeamish" }
         };
 
         public static Harmony harmony;

@@ -49,6 +49,16 @@ namespace SimsTraits
             {
                 newThought.durationTicksOverride = GenDate.TicksPerDay * 15;
             }
+
+            if (__instance.pawn.HasTrait(ST_DefOf.ST_Squeamish) && newThought.def == ST_DefOf.ObservedLayingRottingCorpse)
+            {
+                var lastSqueamishTick = Pawn_ExposeData_Patch.lastSqueamishTicks.Get(__instance.pawn);
+                if (lastSqueamishTick == 0 || GenTicks.TicksAbs >= lastSqueamishTick + (300 * 60))
+                {
+                    __instance.pawn.health.AddHediff(ST_DefOf.ST_SqueamishFakeDown);
+                    Pawn_ExposeData_Patch.lastSqueamishTicks.Set(__instance.pawn, GenTicks.TicksAbs);
+                }
+            }
         }
 
         public static int ChatterboxEffect(this float __result)
