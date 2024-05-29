@@ -58,7 +58,7 @@
   <HediffDef>
     <defName>ST_PsychicTranceAbsentMinded</defName>
     <label>psychic trance</label>
-    <hediffClass>Hediff_PsychicTrance</hediffClass>
+    <hediffClass>HediffWithComps</hediffClass>
     <description>This person's mind is linked with an ambient psychic field from a distant archotech. They have been placed in a trance-like state. The unnatural influence sustains them - they have almost no need for food or rest.</description>
     <isBad>false</isBad>
     <stages>

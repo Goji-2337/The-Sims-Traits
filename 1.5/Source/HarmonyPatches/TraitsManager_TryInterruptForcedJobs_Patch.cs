@@ -3,6 +3,7 @@ using RimWorld;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Reflection.Emit;
+using Verse;
 using Verse.AI;
 
 namespace SimsTraits
@@ -14,6 +15,7 @@ namespace SimsTraits
 
         public static MethodBase TargetMethod() =>
             AccessTools.Method("VanillaTraitsExpanded.TraitsManager:TryInterruptForcedJobs");
+
         public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> codeInstructions)
         {
             var stopAll = AccessTools.Method(typeof(Pawn_JobTracker), "StopAll");
