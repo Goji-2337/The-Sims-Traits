@@ -18,7 +18,7 @@ namespace SimsTraits
         [MayRequireRoyalty] public static GatheringDef Concert;
         [MayRequireRoyalty] public static RoyalTitleDef Acolyte;
         [MayRequireBiotech] public static ThoughtDef ST_GigglingGoofball;
-        public static ThoughtDef Insulted, Slighted, ST_ParanoidThought, ST_LoyalThought, KindWordsMood, ST_NewStuff, ObservedLayingRottingCorpse;
+        public static ThoughtDef Insulted, Slighted, ST_ParanoidThought, ST_LoyalThought, KindWordsMood, ST_NewStuff, ObservedLayingCorpse;
         public static InteractionDef Slight;
         public static SoundDef LetterArrive_BadUrgentBig, LetterArrive_BadUrgent, LetterArrive_BadUrgentSmall, LetterArrive_Good;
         public static HediffDef ST_AdrenalineRush, ST_AdrenalineRushShort, HeartAttack, ST_PsychicTranceAbsentMinded, ST_SqueamishFakeDown;

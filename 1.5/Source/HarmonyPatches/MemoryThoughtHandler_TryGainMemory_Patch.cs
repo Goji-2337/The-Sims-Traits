@@ -50,7 +50,7 @@ namespace SimsTraits
                 newThought.durationTicksOverride = GenDate.TicksPerDay * 15;
             }
 
-            if (__instance.pawn.HasTrait(ST_DefOf.ST_Squeamish) && newThought.def == ST_DefOf.ObservedLayingRottingCorpse)
+            if (__instance.pawn.HasTrait(ST_DefOf.ST_Squeamish) && newThought.def == ST_DefOf.ObservedLayingCorpse)
             {
                 var lastSqueamishTick = Pawn_ExposeData_Patch.lastSqueamishTicks.Get(__instance.pawn);
                 if (lastSqueamishTick == 0 || GenTicks.TicksAbs >= lastSqueamishTick + (300 * 60))
