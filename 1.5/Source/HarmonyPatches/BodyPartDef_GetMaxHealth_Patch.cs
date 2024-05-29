@@ -10,7 +10,7 @@ namespace SimsTraits
         {
             if (pawn.HasTrait(ST_DefOf.VTE_BigBoned))
             {
-                __result += 2f;
+                __result += 5f;
             }
         }
     }
