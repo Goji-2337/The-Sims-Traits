@@ -434,5 +434,23 @@
 			<li>VTE_Rebel</li>
 		</conflictingTraits>
 	</TraitDef>
+	
+	<TraitDef MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+		<defName>ST_DrunkenMaster</defName>
+		<commonality>0.5</commonality>
+		<degreeDatas>
+			<li>
+				<label>drunken master</label>
+				<description>{PAWN_nameDef} is supposedly a hand-to-hand combat specialist, but only when inebriated. They claim to become more talented the more drunk they are.</description>
+				<skillGains>
+					<Melee>4</Melee>
+				</skillGains>
+			</li>
+		</degreeDatas>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+	</TraitDef>
+
 </Defs>
 

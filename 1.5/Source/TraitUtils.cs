@@ -1,6 +1,7 @@
 ﻿using HarmonyLib;
 using RimWorld;
 using System.Collections.Generic;
+using System.Reflection;
 using Verse;
 
 namespace SimsTraits
@@ -12,7 +13,8 @@ namespace SimsTraits
         public static bool VETraitsLoaded = ModsConfig.IsActive("VanillaExpanded.VanillaTraitsExpanded");
         public static Dictionary<string, string> replacedTraits = new Dictionary<string, string>
         {
-            { "VTE_Submissive", "ST_Submissive" }
+            { "VTE_Submissive", "ST_Submissive" },
+            { "VTE_DrunkenMaster", "ST_DrunkenMaster" }
         };
 
         public static Harmony harmony;
@@ -40,6 +42,12 @@ namespace SimsTraits
                 return true;
             }
             return false;
-        } 
+        }
+
+        public static T Clone<T>(this T obj)
+        {
+            var inst = obj.GetType().GetMethod("MemberwiseClone", BindingFlags.Instance | BindingFlags.NonPublic);
+            return (T)inst?.Invoke(obj, null);
+        }
     }
 }

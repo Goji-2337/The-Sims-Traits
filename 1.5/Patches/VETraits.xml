@@ -9,7 +9,18 @@
 				<li Class="PatchOperationAdd">
 					<xpath>Defs</xpath>
 					<value>
-
+					
+						<ThoughtDef>
+							<defName>ST_MyRivalsAreCaptured</defName>
+							<workerClass>SimsTraits.ThoughtWorker_MyRivalsAreCaptured</workerClass>
+							<stages>
+								<li>
+									<label>Rival Captured</label>
+									<description> My rivals are at where they belong - on their knees!</description>
+									<baseMoodEffect>1</baseMoodEffect>
+								</li>
+							</stages>
+						</ThoughtDef>
 
 					</value>
 				</li>
