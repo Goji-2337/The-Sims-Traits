@@ -371,5 +371,25 @@
 			</li>
 		</degreeDatas>
 	</TraitDef>
+	
+	<TraitDef>
+		<defName>ST_HugePower</defName>
+		<commonality>1</commonality>
+		<degreeDatas>
+			<li>
+				<label>huge power</label>
+				<description>{PAWN_nameDef} placeholder.</description>
+				<statOffsets>
+					<CarryingCapacity>75</CarryingCapacity>
+				</statOffsets>
+				<statFactors>
+					<VEF_VerbRangeFactor MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">1.5</VEF_VerbRangeFactor>
+				</statFactors>
+			</li>
+		</degreeDatas>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+	</TraitDef>
 </Defs>
 

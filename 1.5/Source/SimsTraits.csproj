@@ -109,6 +109,7 @@
     <Compile Include="HarmonyPatches\QualityUtility_GenerateQualityCreatedByPawn_Patch.cs" />
     <Compile Include="HarmonyPatches\ReleaseAnimalToWildUtility_DoReleaseAnimal_Patch.cs" />
     <Compile Include="HarmonyPatches\RitualOutcomeComp_ParticipantCount_GetQualityFactor_Patch.cs" />
+    <Compile Include="HarmonyPatches\SurgeryOutcomeEffectDef_GetQuality_Patch.cs" />
     <Compile Include="HarmonyPatches\Thing_Ingested_Patch.cs" />
     <Compile Include="HarmonyPatches\Thing_TakeDamage_Patch.cs" />
     <Compile Include="HarmonyPatches\ThinkNode_Priority_Learn_GetPriority_Patch.cs" />
@@ -118,6 +119,8 @@
     <Compile Include="HarmonyPatches\ToilFailConditions_FailOnChildLearningConditions_Patch.cs" />
     <Compile Include="HarmonyPatches\TradeDeal_TryExecute_Patch.cs" />
     <Compile Include="HarmonyPatches\InteractionWorker_Breakup_RandomSelectionWeight_Patch.cs" />
+    <Compile Include="HarmonyPatches\VerbProperties_AdjustedArmorPenetration_Patch.cs" />
+    <Compile Include="HarmonyPatches\VEF_VerbProps_Patch.cs" />
     <Compile Include="HarmonyPatches\Verb_LaunchProjectile_TryCastShot_Patch.cs" />
     <Compile Include="MentalState_GoofballGiggling.cs" />
     <Compile Include="HarmonyPatches\Pawn_InteractionsTracker_CheckSocialFightStart_Patch.cs" />
@@ -130,7 +133,6 @@
     <Compile Include="ThoughtWorker_VeganVsCarnist.cs" />
     <Compile Include="ThoughtWorker_Naive.cs" />
     <Compile Include="HarmonyPatches\ThoughtWorker_Pretty_CurrentSocialStateInternal_Patch.cs" />
-    <Compile Include="SimsTraitsMod.cs" />
     <Compile Include="ST_DefOf.cs" />
     <Compile Include="HarmonyPatches\MemoryThoughtHandler_TryGainMemory_Patch.cs" />
     <Compile Include="Thought_Naive.cs" />

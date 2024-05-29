@@ -14,7 +14,7 @@ namespace SimsTraits
         static ToilFailConditions_FailOnChildLearningConditions_Patch()
         {
             var target = TargetMethod();
-            SimsTraitsMod.harmony.Patch(
+            TraitUtils.harmony.Patch(
                 AccessTools.Method(target.DeclaringType.MakeGenericType([typeof(IJobEndable)]), target.Name),
                 postfix: new HarmonyMethod(typeof(ToilFailConditions_FailOnChildLearningConditions_Patch), nameof(Postfix)));
         }

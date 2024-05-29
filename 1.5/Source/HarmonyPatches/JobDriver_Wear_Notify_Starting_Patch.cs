@@ -16,7 +16,7 @@ namespace SimsTraits
         public static int DelayDuration(JobDriver job, Thing thing)
         {
             var comp = thing.TryGetComp<CompBiocodable>();
-            if (comp != null && comp.CodedPawn != job.pawn)
+            if (comp != null && comp.CodedPawn is not null && comp.CodedPawn != job.pawn)
             {
                 return 17 * 60;
             }
