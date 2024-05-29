@@ -10,7 +10,7 @@ namespace SimsTraits
             ST_Paranoid, ST_Loyal, ST_PartyAnimal, ST_Insane, ST_Proper, ST_Grumpy, ST_Shy, ST_Materialistic,
             ST_Vegan, ST_Devout, ST_Procrastinator, ST_NonCommital, ST_FamilyOriented, ST_SteadyHand, ST_Daredevil,
             ST_Chatterbox, ST_Bookworm, ST_Handy, ST_TechWhiz, ST_Gambler, ST_Nosy, ST_HugePower, ST_Observant, ST_Zen;
-        [MayRequireVETraits] public static TraitDef ST_Submissive;
+        [MayRequireVETraits] public static TraitDef ST_Submissive, VTE_AbsentMinded;
         [MayRequireRoyalty] public static TraitDef ST_HighMaintenance, ST_Virtuoso;
         [MayRequireBiotech] public static TraitDef ST_Goofball, ST_Childish;
 
@@ -20,7 +20,7 @@ namespace SimsTraits
         public static ThoughtDef Insulted, Slighted, ST_ParanoidThought, ST_LoyalThought, KindWordsMood, ST_NewStuff;
         public static InteractionDef Slight;
         public static SoundDef LetterArrive_BadUrgentBig, LetterArrive_BadUrgent, LetterArrive_BadUrgentSmall, LetterArrive_Good;
-        public static HediffDef ST_AdrenalineRush, ST_AdrenalineRushShort, HeartAttack;
+        public static HediffDef ST_AdrenalineRush, ST_AdrenalineRushShort, HeartAttack, ST_PsychicTranceAbsentMinded;
         [MayRequireBiotech] public static MentalFitDef ST_GoofballGiggling;
         public static JoyGiverDef Pray;
         public static ThingDef PokerTable;

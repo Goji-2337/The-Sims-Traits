@@ -101,10 +101,12 @@
     <Compile Include="HarmonyPatches\PawnGenerator_GeneratePawn_Patch.cs" />
     <Compile Include="HarmonyPatches\PawnGenerator_GenerateTraitsFor_Patch.cs" />
     <Compile Include="HarmonyPatches\Pawn_AgeTracker_TryChildGrowthMoment_Patch.cs" />
+    <Compile Include="HarmonyPatches\Pawn_DraftController_Drafted_Patch.cs" />
     <Compile Include="HarmonyPatches\Pawn_ExposeData_Patch.cs" />
     <Compile Include="HarmonyPatches\Pawn_HealthTracker_AddHediff_Patch.cs" />
     <Compile Include="HarmonyPatches\Pawn_InteractionsTracker_InteractionsTrackerTick_Patch.cs" />
     <Compile Include="HarmonyPatches\Pawn_InteractionsTracker_TryInteractWith_Patch.cs" />
+    <Compile Include="HarmonyPatches\Pawn_JobTracker_TryTakeOrderedJob_Patch.cs" />
     <Compile Include="HarmonyPatches\Pawn_MeleeVerbs_TryGetMeleeVerb_Patch.cs" />
     <Compile Include="HarmonyPatches\Pawn_NeedsTracker_ShouldHaveNeed_Patch.cs" />
     <Compile Include="HarmonyPatches\Pawn_RelationsTracker_OpinionOf_Patch.cs" />
@@ -126,6 +128,7 @@
     <Compile Include="HarmonyPatches\ToilFailConditions_FailOnChildLearningConditions_Patch.cs" />
     <Compile Include="HarmonyPatches\TradeDeal_TryExecute_Patch.cs" />
     <Compile Include="HarmonyPatches\InteractionWorker_Breakup_RandomSelectionWeight_Patch.cs" />
+    <Compile Include="HarmonyPatches\TraitsManager_TryInterruptForcedJobs_Patch.cs" />
     <Compile Include="HarmonyPatches\VerbProperties_AdjustedArmorPenetration_Patch.cs" />
     <Compile Include="HarmonyPatches\VEF_VerbProps_Patch.cs" />
     <Compile Include="HarmonyPatches\Verb_CanHitTargetFrom_Patch.cs" />
