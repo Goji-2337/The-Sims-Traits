@@ -65,11 +65,13 @@
     <Compile Include="HarmonyPatches\AgeInjuryUtility_GenerateRandomOldAgeInjuries_Patch.cs" />
     <Compile Include="HarmonyPatches\AgeInjuryUtility_RandomHediffsToGainOnBirthday_Patch.cs" />
     <Compile Include="HarmonyPatches\BackCompatibility_BackCompatibleDefName_Patch.cs" />
+    <Compile Include="HarmonyPatches\BodyPartDef_GetMaxHealth_Patch.cs" />
     <Compile Include="HarmonyPatches\BookUtility_GetReadingBonus_Patch.cs" />
     <Compile Include="HarmonyPatches\CompBiocodable_IsBiocodedFor_Patch.cs" />
     <Compile Include="HarmonyPatches\GatheringsUtility_FindRandomGatheringOrganizer_CanOrganize_Patch.cs" />
     <Compile Include="HarmonyPatches\HediffSet_AddDirect_Patch.cs" />
     <Compile Include="HarmonyPatches\Hediff_Alcohol_HangoverSusceptible_Patch.cs" />
+    <Compile Include="HarmonyPatches\Pawn_BodySize_Patch.cs" />
     <Compile Include="HarmonyPatches\Verb_MeleeAttack_GetDodgeChance_Patch.cs" />
     <Compile Include="HarmonyPatches\HostilityResponseModeUtility_DrawResponseButton_GenerateMenu_Patch.cs" />
     <Compile Include="HarmonyPatches\InteractionUtility_CanInitiateInteraction_Patch.cs" />
