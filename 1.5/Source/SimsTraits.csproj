@@ -77,6 +77,7 @@
     <Compile Include="HarmonyPatches\JobDriver_Equip_MakeNewToils_Patch.cs" />
     <Compile Include="HarmonyPatches\JobDriver_FixBrokenDownBuilding_Patch.cs" />
     <Compile Include="HarmonyPatches\JobDriver_GiveToPawn_MakeNewToils_Patch.cs" />
+    <Compile Include="HarmonyPatches\JobDriver_Meditate_MakeNewToils_Patch.cs" />
     <Compile Include="HarmonyPatches\JobDriver_PlayPoker_ModifyPlayToil_Patch.cs" />
     <Compile Include="HarmonyPatches\JobDriver_RelaxAlone_Patch.cs" />
     <Compile Include="HarmonyPatches\JobDriver_Wear_Notify_Starting_Patch.cs" />
@@ -102,6 +103,7 @@
     <Compile Include="HarmonyPatches\Pawn_HealthTracker_AddHediff_Patch.cs" />
     <Compile Include="HarmonyPatches\Pawn_InteractionsTracker_InteractionsTrackerTick_Patch.cs" />
     <Compile Include="HarmonyPatches\Pawn_InteractionsTracker_TryInteractWith_Patch.cs" />
+    <Compile Include="HarmonyPatches\Pawn_MeleeVerbs_TryGetMeleeVerb_Patch.cs" />
     <Compile Include="HarmonyPatches\Pawn_NeedsTracker_ShouldHaveNeed_Patch.cs" />
     <Compile Include="HarmonyPatches\Pawn_RelationsTracker_OpinionOf_Patch.cs" />
     <Compile Include="HarmonyPatches\Pawn_RoyaltyTracker_GainFavor_Patch.cs" />
@@ -122,7 +124,9 @@
     <Compile Include="HarmonyPatches\InteractionWorker_Breakup_RandomSelectionWeight_Patch.cs" />
     <Compile Include="HarmonyPatches\VerbProperties_AdjustedArmorPenetration_Patch.cs" />
     <Compile Include="HarmonyPatches\VEF_VerbProps_Patch.cs" />
+    <Compile Include="HarmonyPatches\Verb_CanHitTargetFrom_Patch.cs" />
     <Compile Include="HarmonyPatches\Verb_LaunchProjectile_TryCastShot_Patch.cs" />
+    <Compile Include="HarmonyPatches\Verb_OrderForceTarget_Patch.cs" />
     <Compile Include="MentalState_GoofballGiggling.cs" />
     <Compile Include="HarmonyPatches\Pawn_InteractionsTracker_CheckSocialFightStart_Patch.cs" />
     <Compile Include="HarmonyPatches\ThoughtWorker_Ugly_CurrentSocialStateInternal_Patch.cs" />

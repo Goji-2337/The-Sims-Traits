@@ -12,8 +12,15 @@ namespace SimsTraits
             var nosyInteraction = __instance.GetLastNosyInteraction();
             Scribe_Values.Look(ref nosyInteraction, "nosyInteraction");
             __instance.SetNosyInteraction(nosyInteraction);
-        }
 
+            var lastMeditationTick = __instance.GetLastMeditationTick();
+            Scribe_Values.Look(ref lastMeditationTick, "lastMeditationTick");
+            __instance.SetLastMeditationTick(lastMeditationTick);
+
+            var totalMeditationTick = __instance.GetTotalMeditationTick();
+            Scribe_Values.Look(ref totalMeditationTick, "totalMeditationTick");
+            __instance.SetTotalMeditationTick(totalMeditationTick);
+        }
 
         private static Dictionary<Pawn, int> pawnsLastNosyInteractions = new Dictionary<Pawn, int>();
         public static int GetLastNosyInteraction(this Pawn pawn)
@@ -30,5 +37,34 @@ namespace SimsTraits
             pawnsLastNosyInteractions[pawn] = nosyInteraction;
         }
 
+        private static Dictionary<Pawn, int> pawnsLastMeditationTicks = new Dictionary<Pawn, int>();
+        public static int GetLastMeditationTick(this Pawn pawn)
+        {
+            if (!pawnsLastMeditationTicks.TryGetValue(pawn, out var data))
+            {
+                pawnsLastMeditationTicks[pawn] = data = 0;
+            }
+            return data;
+        }
+
+        public static void SetLastMeditationTick(this Pawn pawn, int MeditationTick)
+        {
+            pawnsLastMeditationTicks[pawn] = MeditationTick;
+        }
+
+        private static Dictionary<Pawn, int> pawnsTotalMeditationTicks = new Dictionary<Pawn, int>();
+        public static int GetTotalMeditationTick(this Pawn pawn)
+        {
+            if (!pawnsTotalMeditationTicks.TryGetValue(pawn, out var data))
+            {
+                pawnsTotalMeditationTicks[pawn] = data = 0;
+            }
+            return data;
+        }
+
+        public static void SetTotalMeditationTick(this Pawn pawn, int MeditationTick)
+        {
+            pawnsTotalMeditationTicks[pawn] = MeditationTick;
+        }
     }
 }

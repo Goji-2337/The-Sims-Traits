@@ -402,6 +402,24 @@
 			</li>
 		</degreeDatas>
 	</TraitDef>
-	
+
+	<TraitDef>
+		<defName>ST_Zen</defName>
+		<commonality>1</commonality>
+		<degreeDatas>
+			<li>
+				<label>zen</label>
+				<description>{PAWN_nameDef} placeholder.</description>
+				<allowedMeditationFocusTypes>
+					<li>Morbid</li>
+					<li>Minimal</li>
+					<li>Artistic</li>
+					<li>Nature</li>
+					<li>Flame</li>
+				</allowedMeditationFocusTypes>
+			</li>
+		</degreeDatas>
+	</TraitDef>
+
 </Defs>
 
