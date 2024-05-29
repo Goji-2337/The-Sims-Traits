@@ -9,13 +9,10 @@ namespace SimsTraits
     {
         public static void Postfix(Pawn_DraftController __instance)
         {
-            if (__instance.pawn.HasTrait(ST_DefOf.VTE_AbsentMinded))
+            var hediff = __instance.pawn.health.hediffSet.GetFirstHediffOfDef(ST_DefOf.ST_PsychicTranceAbsentMinded);
+            if (hediff != null)
             {
-                var hediff = __instance.pawn.health.hediffSet.GetFirstHediffOfDef(ST_DefOf.ST_PsychicTranceAbsentMinded);
-                if (hediff != null)
-                {
-                    __instance.pawn.health.RemoveHediff(hediff);
-                }
+                __instance.pawn.health.RemoveHediff(hediff);
             }
         }
     }
