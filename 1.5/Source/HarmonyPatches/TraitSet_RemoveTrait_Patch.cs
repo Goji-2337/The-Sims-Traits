@@ -9,7 +9,7 @@ namespace SimsTraits
     {
         public static void Postfix(Pawn ___pawn, Trait trait)
         {
-            if (trait.def == ST_DefOf.ST_Childish)
+            if (trait.def == ST_DefOf.ST_Childish || trait.def == ST_DefOf.ST_Insomniac)
             {
                 PawnComponentsUtility.AddAndRemoveDynamicComponents(___pawn);
             }

@@ -31,7 +31,7 @@ namespace SimsTraits
                 for (int i = 0; i < diffSet.hediffs.Count; i++)
                 {
                     if (diffSet.hediffs[i].Part == part && diffSet.hediffs[i] is Hediff_Injury hediff_Injury 
-                        && hediff_Injury.Severity < 2)
+                        && hediff_Injury.Severity < 3)
                     {
                         health += hediff_Injury.Severity;
                     }

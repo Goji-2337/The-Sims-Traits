@@ -475,10 +475,9 @@
 			<li>
 				<label>insomniac</label>
 				<description>{PAWN_nameDef} is never really asleep or awake. {PAWN_pronoun} is almost zombie like, lurching along and working very slowly, and will only sleep once every three days or so.</description>
-				<statFactors>
-					<WorkSpeedGlobal>0.7</WorkSpeedGlobal>
-					<CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0.5</CertaintyLossFactor>
-				</statFactors>
+				<statOffsets>
+					<WorkSpeedGlobal>-0.7</WorkSpeedGlobal>
+				</statOffsets>
 				<disablesNeeds>
 					<li>Rest</li>
 				</disablesNeeds>
