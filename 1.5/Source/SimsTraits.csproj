@@ -68,6 +68,7 @@
     <Compile Include="HarmonyPatches\BodyPartDef_GetMaxHealth_Patch.cs" />
     <Compile Include="HarmonyPatches\BookUtility_GetReadingBonus_Patch.cs" />
     <Compile Include="HarmonyPatches\CompBiocodable_IsBiocodedFor_Patch.cs" />
+    <Compile Include="HarmonyPatches\ExpectationsUtility_CurrentExpectationFor_Patch.cs" />
     <Compile Include="HarmonyPatches\GatheringsUtility_FindRandomGatheringOrganizer_CanOrganize_Patch.cs" />
     <Compile Include="HarmonyPatches\HediffSet_AddDirect_Patch.cs" />
     <Compile Include="HarmonyPatches\Hediff_Alcohol_HangoverSusceptible_Patch.cs" />
@@ -76,6 +77,7 @@
     <Compile Include="HarmonyPatches\PawnObserver_ObserveSurroundingThings_Patch.cs" />
     <Compile Include="HarmonyPatches\RitualOutcomeEffectWorker_Trial_GetOutcome_Patch.cs" />
     <Compile Include="HarmonyPatches\TendUtility_CalculateBaseTendQuality_Patch.cs" />
+    <Compile Include="HarmonyPatches\ThoughtWorker_Expectations_CurrentStateInternal_Patch.cs" />
     <Compile Include="HarmonyPatches\TryFindGoodKidnapVictim_TryFindGoodKidnapVictim_Validator_Patch.cs" />
     <Compile Include="HarmonyPatches\Verb_MeleeAttack_GetDodgeChance_Patch.cs" />
     <Compile Include="HarmonyPatches\HostilityResponseModeUtility_DrawResponseButton_GenerateMenu_Patch.cs" />

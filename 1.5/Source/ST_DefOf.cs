@@ -11,7 +11,7 @@ namespace SimsTraits
             ST_Vegan, ST_Devout, ST_Procrastinator, ST_NonCommital, ST_FamilyOriented, ST_SteadyHand, ST_Daredevil,
             ST_Chatterbox, ST_Bookworm, ST_Handy, ST_TechWhiz, ST_Gambler, ST_Nosy, ST_HugePower, ST_Observant, ST_Zen;
         [MayRequireVETraits] public static TraitDef ST_Submissive, VTE_AbsentMinded, VTE_Vengeful, ST_DrunkenMaster, 
-            VTE_BigBoned, VTE_Clumsy, VTE_Workaholic, ST_Squeamish, ST_Insomniac;
+            VTE_BigBoned, VTE_Clumsy, VTE_Workaholic, ST_Squeamish, ST_Insomniac, VTE_WorldWeary;
         [MayRequireRoyalty] public static TraitDef ST_HighMaintenance, ST_Virtuoso;
         [MayRequireBiotech] public static TraitDef ST_Goofball, ST_Childish;
 
@@ -27,6 +27,7 @@ namespace SimsTraits
         public static JoyGiverDef Pray;
         public static ThingDef PokerTable;
         public static NeedDef Joy;
+        public static ExpectationDef SkyHigh;
 
     }
 }
