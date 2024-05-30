@@ -72,6 +72,7 @@
     <Compile Include="HarmonyPatches\HediffSet_AddDirect_Patch.cs" />
     <Compile Include="HarmonyPatches\Hediff_Alcohol_HangoverSusceptible_Patch.cs" />
     <Compile Include="HarmonyPatches\Need_IsFrozen_Patch.cs" />
+    <Compile Include="HarmonyPatches\PawnCapacityUtility_CalculatePartEfficiency_Patch.cs" />
     <Compile Include="HarmonyPatches\PawnObserver_ObserveSurroundingThings_Patch.cs" />
     <Compile Include="HarmonyPatches\RitualOutcomeEffectWorker_Trial_GetOutcome_Patch.cs" />
     <Compile Include="HarmonyPatches\TendUtility_CalculateBaseTendQuality_Patch.cs" />
