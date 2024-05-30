@@ -26,6 +26,10 @@ namespace SimsTraits
             {
                 return true;
             }
+            if (pawn.HasTrait(ST_DefOf.ST_Insomniac) && hediff == ST_DefOf.SleepingSickness)
+            {
+                return true;
+            }
             return false;
         }
     }

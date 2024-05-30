@@ -467,5 +467,26 @@
 			<li>Bloodlust</li>
 		</conflictingTraits>
 	</TraitDef>
+	
+	<TraitDef MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+		<defName>ST_Insomniac</defName>
+		<commonality>0.7</commonality>
+		<degreeDatas>
+			<li>
+				<label>insomniac</label>
+				<description>{PAWN_nameDef} is never really asleep or awake. {PAWN_pronoun} is almost zombie like, lurching along and working very slowly, and will only sleep once every three days or so.</description>
+				<statFactors>
+					<WorkSpeedGlobal>0.7</WorkSpeedGlobal>
+					<CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0.5</CertaintyLossFactor>
+				</statFactors>
+				<disablesNeeds>
+					<li>Rest</li>
+				</disablesNeeds>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>VTE_HeavySleeper</li>
+		</conflictingTraits>
+	</TraitDef>
 </Defs>
 
