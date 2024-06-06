@@ -47,11 +47,11 @@
 	</TraitDef>
 
 	<TraitDef>
-		<defName>ST_HealthFreak</defName>
+		<defName>ST_HealthNut</defName>
 		<commonality>1</commonality>
 		<degreeDatas>
 			<li>
-				<label>health freak</label>
+				<label>health Nut</label>
 				<description>{PAWN_nameDef}’s body is a temple, {PAWN_pronoun} only eats food to survive. {PAWN_pronoun} is here for a long time, not a good time.</description>
 			</li>
 		</degreeDatas>
@@ -261,11 +261,11 @@
 	</TraitDef>
 	
 	<TraitDef>
-		<defName>ST_SteadyHand</defName>
+		<defName>ST_SteadyHands</defName>
 		<commonality>1</commonality>
 		<degreeDatas>
 			<li>
-				<label>steady hand</label>
+				<label>steady hands</label>
 				<description>{PAWN_nameDef} has a pair of steady hands that never shakes or even trembles under pressure.</description>
 			</li>
 		</degreeDatas>

@@ -48,12 +48,12 @@
 						</MentalStateDef>
 
 						<ThoughtDef ParentName="BaseHeardBaby">
-							<defName>ST_GigglingGoofball</defName>
+							<defName>ST_FunnyPerson</defName>
 							<icon>Things/Mote/Childcare/BabyGiggling/BabyGigglingIcon</icon>
 							<stages>
 								<li>
-									<label>goofball giggling</label>
-									<description>{OTHERPAWN_pronoun}'s so funny!</description>
+									<label>Funny person</label>
+									<description>{OTHERPAWN_pronoun}'s so dorky!</description>
 									<baseMoodEffect>4</baseMoodEffect>
 								</li>
 							</stages>
