@@ -7,10 +7,15 @@
 		<degreeDatas>
 			<li>
 				<label>manipulative</label>
-				<description>{PAWN_nameDef} placeholder.</description>
+				<description>{PAWN_nameDef} is good at getting {PAWN_possessive} way. Be it love bombing or gaslighting, {PAWN_possessive} victims rarely notice what’s truly going on.</description>
 				<allowedMeditationFocusTypes><li>Morbid</li></allowedMeditationFocusTypes>
 			</li>
 		</degreeDatas>
+		<conflictingTraits>
+			<li>ST_Naive</li>
+			<li>Kind</li>
+			<li>Abrasive</li>
+		</conflictingTraits>
 	</TraitDef>
 
 	<TraitDef>
@@ -19,12 +24,15 @@
 		<degreeDatas>
 			<li>
 				<label>naive</label>
-				<description>{PAWN_nameDef} placeholder.</description>
+				<description>{PAWN_nameDef} was taught everyone is good and kind. Maybe one day {PAWN_pronoun} will learn the lesson the hard way.</description>
 				<statFactors>
 					<CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">2</CertaintyLossFactor>
 				</statFactors>
 			</li>
 		</degreeDatas>
+		<conflictingTraits>
+			<li>VTE_WorldWeary</li>
+		</conflictingTraits>
 	</TraitDef>
 
 	<TraitDef>
@@ -33,7 +41,7 @@
 		<degreeDatas>
 			<li>
 				<label>narcissist</label>
-				<description>{PAWN_nameDef} placeholder.</description>
+				<description>{PAWN_nameDef} believes in pretty privilege. {PAWN_pronoun} is desperate to achieve flawless beauty by any means.</description>
 			</li>
 		</degreeDatas>
 	</TraitDef>
@@ -44,9 +52,12 @@
 		<degreeDatas>
 			<li>
 				<label>health freak</label>
-				<description>{PAWN_nameDef} placeholder.</description>
+				<description>{PAWN_nameDef}’s body is a temple, {PAWN_pronoun} only eats food to survive. {PAWN_pronoun} is here for a long time, not a good time.</description>
 			</li>
 		</degreeDatas>
+		<conflictingTraits>
+			<li>VTE_Slob</li>
+		</conflictingTraits>
 	</TraitDef>
 
 	<TraitDef>
@@ -55,9 +66,12 @@
 		<degreeDatas>
 			<li>
 				<label>emotional</label>
-				<description>{PAWN_nameDef} placeholder.</description>
+				<description>{PAWN_nameDef} feels {PAWN_possessive} emotions more profoundly and experiences greater mood swings. {PAWN_pronoun} often cries to release any frustration.</description>
 			</li>
 		</degreeDatas>
+		<conflictingTraits>
+			<li>VTE_Desensitized</li>
+		</conflictingTraits>
 	</TraitDef>
 
 	<TraitDef>
@@ -66,9 +80,12 @@
 		<degreeDatas>
 			<li>
 				<label>paranoid</label>
-				<description>{PAWN_nameDef} placeholder.</description>
+				<description>{PAWN_nameDef} believes good luck is an illusion and bad things are bound to happen. {PAWN_pronoun} is always ready for the worst case scenario.</description>
 			</li>
 		</degreeDatas>
+		<conflictingTraits>
+			<li>Nerves</li>
+		</conflictingTraits>
 	</TraitDef>
 
 	<TraitDef MayRequire="Ludeon.RimWorld.Biotech">
@@ -77,9 +94,12 @@
 		<degreeDatas>
 			<li>
 				<label>goofball</label>
-				<description>{PAWN_nameDef} placeholder.</description>
+				<description>{PAWN_nameDef} acts funny in the day-to-day life. {PAWN_pronoun} silly nature often amuses others.</description>
 			</li>
 		</degreeDatas>
+		<conflictingTraits>
+			<li>VTE_Snob</li>
+		</conflictingTraits>
 	</TraitDef>
 
 	<TraitDef>
@@ -88,7 +108,7 @@
 		<degreeDatas>
 			<li>
 				<label>loyal</label>
-				<description>{PAWN_nameDef} placeholder.</description>
+				<description>{PAWN_nameDef} is never gonna give you up.</description>
 				<statFactors>
 					<CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0.5</CertaintyLossFactor>
 				</statFactors>
@@ -102,7 +122,7 @@
 		<degreeDatas>
 			<li>
 				<label>party animal</label>
-				<description>{PAWN_nameDef} placeholder.</description>
+				<description>For {PAWN_nameDef}, every season is party season!</description>
 			</li>
 		</degreeDatas>
 	</TraitDef>
@@ -113,7 +133,7 @@
 		<degreeDatas>
 			<li>
 				<label>insane</label>
-				<description>{PAWN_nameDef} placeholder.</description>
+				<description>{PAWN_nameDef} always seem out of place. No one knows what’s going on in {PAWN_possessive} head, not even {PAWN_objective}self.</description>
 			</li>
 		</degreeDatas>
 	</TraitDef>
@@ -124,7 +144,7 @@
 		<degreeDatas>
 			<li>
 				<label>proper</label>
-				<description>{PAWN_nameDef} placeholder.</description>
+				<description>Follow the dress code, say the right word. {PAWN_nameDef} has immaculate manners that navigate them through every social occasion.</description>
 			</li>
 		</degreeDatas>
 		<requiredWorkTags>
@@ -138,7 +158,7 @@
 		<degreeDatas>
 			<li>
 				<label>grumpy</label>
-				<description>{PAWN_nameDef} placeholder.</description>
+				<description>{PAWN_nameDef} always seems annoyed, especially on a Monday. Others around {PAWN_objective} are constantly afraid to trigger {PAWN_possessive} grumbles.</description>
 			</li>
 		</degreeDatas>
 	</TraitDef>
@@ -149,7 +169,7 @@
 		<degreeDatas>
 			<li>
 				<label>shy</label>
-				<description>{PAWN_nameDef} placeholder.</description>
+				<description>{PAWN_nameDef} struggles to socialise with other people, {PAWN_pronoun} especially cherish it while being on the receiving end of kindness.\n\nOver the time, {PAWN_nameDef} have learned to spend more time on organising and introspecting {PAWN_objective}self.</description>
 			</li>
 		</degreeDatas>
 	</TraitDef>
@@ -160,7 +180,7 @@
 		<degreeDatas>
 			<li>
 				<label>materialistic</label>
-				<description>{PAWN_nameDef} placeholder.</description>
+				<description>{PAWN_nameDef} likes buying and bragging about {PAWN_possessive} new possessions.</description>
 			</li>
 		</degreeDatas>
 	</TraitDef>
@@ -171,7 +191,7 @@
 		<degreeDatas>
 			<li>
 				<label>vegan</label>
-				<description>{PAWN_nameDef} placeholder.</description>
+				<description>{PAWN_nameDef} avoids eating meat. {PAWN_pronoun} believes animals should not be treated as commodities and strives to rescue as many as {PAWN_pronoun} can.</description>
 			</li>
 		</degreeDatas>
 	</TraitDef>
@@ -182,7 +202,7 @@
 		<degreeDatas>
 			<li>
 				<label>devout</label>
-				<description>{PAWN_nameDef} placeholder.</description>
+				<description>{PAWN_nameDef} devotes {PAWN_possessive} body and soul to what {PAWN_pronoun} believes. Somehow, {PAWN_possessive} prayers get answered.</description>
 				<statFactors>
 					<CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0.01</CertaintyLossFactor>
 				</statFactors>
@@ -196,7 +216,7 @@
 		<degreeDatas>
 			<li>
 				<label>procrastinator</label>
-				<description>{PAWN_nameDef} placeholder.</description>
+				<description>{PAWN_nameDef} likes to put things off until the last minute. {PAWN_pronoun} still manages to get those tasks done but the results are usually lacklustre.</description>
 				<statOffsets>
 					<WorkSpeedGlobal>0.5</WorkSpeedGlobal>
 				</statOffsets>
@@ -210,7 +230,7 @@
 		<degreeDatas>
 			<li>
 				<label>non-committal</label>
-				<description>{PAWN_nameDef} placeholder.</description>
+				<description>{PAWN_nameDef} becomes tense after a while in the same job or relationship. {PAWN_possessive} fear of commitment facilitates change.</description>
 				<statFactors>
 					<CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">2</CertaintyLossFactor>
 				</statFactors>
@@ -224,7 +244,7 @@
 		<degreeDatas>
 			<li>
 				<label>high maintenance</label>
-				<description>{PAWN_nameDef} placeholder.</description>
+				<description>{PAWN_nameDef} can feel a pea under twenty mattresses while sleeping. {PAWN_pronoun} is born blue blood with expensive taste and trivial problems.</description>
 			</li>
 		</degreeDatas>
 	</TraitDef>
@@ -235,7 +255,7 @@
 		<degreeDatas>
 			<li>
 				<label>family oriented</label>
-				<description>{PAWN_nameDef} placeholder.</description>
+				<description>{PAWN_nameDef} want big families and enjoy being surrounded by children. {PAWN_pronoun} will make an excellent parent!</description>
 			</li>
 		</degreeDatas>
 	</TraitDef>
@@ -246,7 +266,7 @@
 		<degreeDatas>
 			<li>
 				<label>steady hand</label>
-				<description>{PAWN_nameDef} placeholder.</description>
+				<description>{PAWN_nameDef} has a pair of steady hands that never shakes or even trembles under pressure.</description>
 			</li>
 		</degreeDatas>
 	</TraitDef>
@@ -258,7 +278,7 @@
 		<degreeDatas>
 			<li>
 				<label>daredevil</label>
-				<description>{PAWN_nameDef} placeholder.</description>
+				<description>{PAWN_nameDef} enjoys chaos and takes the extreme side in life. {PAWN_pronoun} can’t quit the adrenaline rush from being reckless.</description>
 			</li>
 		</degreeDatas>
 		<requiredWorkTags>
@@ -272,7 +292,7 @@
 		<degreeDatas>
 			<li>
 				<label>chatterbox</label>
-				<description>{PAWN_nameDef} placeholder.</description>
+				<description>{PAWN_nameDef} likes to talk and {PAWN_pronoun} sure talks a lot. People around {PAWN_objective} have started to develop immunity to whatever {PAWN_pronoun} says.</description>
 			</li>
 		</degreeDatas>
 	</TraitDef>
@@ -283,7 +303,7 @@
 		<degreeDatas>
 			<li>
 				<label>bookworm</label>
-				<description>{PAWN_nameDef} placeholder.</description>
+				<description>{PAWN_nameDef} has a deep love for reading. {PAWN_pronoun} reads fast and enjoys expanding {PAWN_possessive} knowledge this way.</description>
 			</li>
 		</degreeDatas>
 	</TraitDef>
@@ -294,7 +314,7 @@
 		<degreeDatas>
 			<li>
 				<label>handy</label>
-				<description>{PAWN_nameDef} placeholder.</description>
+				<description>{PAWN_nameDef} likes to get on with {PAWN_possessive} hands and tinkers around. {PAWN_pronoun} has the natural aptitude of handling those tiny precision components.</description>
 				<skillGains>
 					<Construction>2</Construction>
 					<Crafting>2</Crafting>
@@ -312,7 +332,7 @@
 		<degreeDatas>
 			<li>
 				<label>virtuoso</label>
-				<description>{PAWN_nameDef} placeholder.</description>
+				<description>{PAWN_nameDef} has a natural gift with musical and instruments. It is as if the music {PAWN_pronoun} plays lingered in the air.</description>
 			</li>
 		</degreeDatas>
 	</TraitDef>
@@ -323,7 +343,7 @@
 		<degreeDatas>
 			<li>
 				<label>tech whiz</label>
-				<description>{PAWN_nameDef} placeholder.</description>
+				<description>{PAWN_nameDef} is brilliant with computers and technology. {PAWN_pronoun} can hack into other people’s data and security systems with ease.</description>
 				<skillGains>
 					<Intellectual>4</Intellectual>
 				</skillGains>
@@ -340,7 +360,7 @@
 		<degreeDatas>
 			<li>
 				<label>gambler</label>
-				<description>{PAWN_nameDef} placeholder.</description>
+				<description>{PAWN_nameDef} believes in {PAWN_possessive} own luck. Despite the crippling addiction, {PAWN_possessive} luck certainly tips in a different direction on the battlefield.</description>
 				<statOffsets>
 					<ShootingAccuracyPawn>7</ShootingAccuracyPawn>
 					<MeleeHitChance>7</MeleeHitChance>
@@ -356,7 +376,7 @@
 		<degreeDatas>
 			<li>
 				<label>childish</label>
-				<description>{PAWN_nameDef} placeholder.</description>
+				<description>{PAWN_nameDef} never lost that childlike wonder. {PAWN_pronoun} sees things through the eyes of a child and need to be constantly entertained.</description>
 			</li>
 		</degreeDatas>
 	</TraitDef>
@@ -367,7 +387,7 @@
 		<degreeDatas>
 			<li>
 				<label>nosy</label>
-				<description>{PAWN_nameDef} placeholder.</description>
+				<description>{PAWN_nameDef} ignores others' boundaries and likes pressing for more information, this often rubs people the wrong way.</description>
 			</li>
 		</degreeDatas>
 	</TraitDef>
@@ -378,7 +398,7 @@
 		<degreeDatas>
 			<li>
 				<label>huge power</label>
-				<description>{PAWN_nameDef} placeholder.</description>
+				<description>{PAWN_nameDef} is noted for {PAWN_possessive} incredible strength. {PAWN_pronoun}'s naturally strong without the need to frequent the gym.</description>
 				<statOffsets>
 					<CarryingCapacity>75</CarryingCapacity>
 				</statOffsets>
@@ -398,7 +418,7 @@
 		<degreeDatas>
 			<li>
 				<label>observant</label>
-				<description>{PAWN_nameDef} placeholder.</description>
+				<description>{PAWN_nameDef} has a pair of keen eyes that scans through every detail and miss no strange things.</description>
 			</li>
 		</degreeDatas>
 	</TraitDef>
@@ -409,7 +429,7 @@
 		<degreeDatas>
 			<li>
 				<label>zen</label>
-				<description>{PAWN_nameDef} placeholder.</description>
+				<description>{PAWN_nameDef} takes time to discover beauty in everything. {PAWN_pronoun} sees the world in a grain of sand.\n\nTo {PAWN_objective}, actively sabotaging life is a despicable act.</description>
 				<allowedMeditationFocusTypes>
 					<li>Morbid</li>
 					<li>Minimal</li>
@@ -427,7 +447,7 @@
 		<degreeDatas>
 			<li>
 				<label>submissive</label>
-				<description>{PAWN_nameDef} needs clear instructions on how, and when to do certain things and will only work at a normal speed when being forced to do something.</description>
+				<description>{PAWN_nameDef} wants to be told what to do. Following rules and obeying authority are their second nature.</description>
 			</li>
 		</degreeDatas>
 		<conflictingTraits>
@@ -442,9 +462,6 @@
 			<li>
 				<label>drunken master</label>
 				<description>{PAWN_nameDef} is supposedly a hand-to-hand combat specialist, but only when inebriated. They claim to become more talented the more drunk they are.</description>
-				<skillGains>
-					<Melee>4</Melee>
-				</skillGains>
 			</li>
 		</degreeDatas>
 		<requiredWorkTags>
@@ -458,7 +475,7 @@
 		<degreeDatas>
 			<li>
 				<label>squeamish</label>
-				<description>Sour stomach plagues {PAWN_nameDef} any time they're around too much blood or rotting corpses. Vomiting is just part of life for {PAWN_objective}.</description>
+				<description>{PAWN_nameDef} feels faint upon witnessing too much blood or rotting corpses. The sight of blood triggers their worst fear somehow.</description>
 			</li>
 		</degreeDatas>
 		<conflictingTraits>
@@ -474,7 +491,7 @@
 		<degreeDatas>
 			<li>
 				<label>insomniac</label>
-				<description>{PAWN_nameDef} is never really asleep or awake. {PAWN_pronoun} is almost zombie like, lurching along and working very slowly, and will only sleep once every three days or so.</description>
+				<description>{PAWN_nameDef} is never really asleep or awake. {PAWN_pronoun} is almost zombie like, lurching along and working very slowly.</description>
 				<statOffsets>
 					<WorkSpeedGlobal>-0.7</WorkSpeedGlobal>
 				</statOffsets>
