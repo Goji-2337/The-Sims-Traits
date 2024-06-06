@@ -15,7 +15,7 @@ namespace SimsTraits
             if (compMannable?.ManningPawn is null && __instance.verbProps.isMortar is false)
             {
                 var pawn = __instance.CasterPawn;
-                if (pawn != null && pawn.HasTrait(ST_DefOf.ST_SteadyHand))
+                if (pawn != null && pawn.HasTrait(ST_DefOf.ST_SteadyHands))
                 {
                     __instance.verbProps.forcedMissRadius = 0;
                     __instance.verbProps.canGoWild = false;

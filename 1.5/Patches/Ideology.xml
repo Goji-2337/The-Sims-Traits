@@ -9,7 +9,7 @@
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/MemeDef[defName="FleshPurity"]/agreeableTraits</xpath>
 					<value>
-						<li>ST_HealthFreak</li>
+						<li>ST_HealthNut</li>
 					</value>
 				</li>
 
@@ -18,14 +18,14 @@
 					<match Class="PatchOperationAdd">
 						<xpath>Defs/MemeDef[defName="Blindsight"]/disagreeableTraits</xpath>
 						<value>
-							<li>ST_HealthFreak</li>
+							<li>ST_HealthNut</li>
 						</value>
 					</match>
 					<nomatch Class="PatchOperationAdd">
 						<xpath>Defs/MemeDef[defName="Blindsight"]</xpath>
 						<value>
 							<disagreeableTraits>
-								<li>ST_HealthFreak</li>
+								<li>ST_HealthNut</li>
 							</disagreeableTraits>
 						</value>
 					</nomatch>

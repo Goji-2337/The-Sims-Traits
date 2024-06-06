@@ -31,7 +31,7 @@
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/ThoughtDef[defName="AteNutrientPasteMeal"]/nullifyingTraits</xpath>
 				<value>
-					<li>ST_HealthFreak</li>
+					<li>ST_HealthNut</li>
 				</value>
 			</li>
 
@@ -40,14 +40,14 @@
 				<match Class="PatchOperationAdd">
 					<xpath>Defs/ThoughtDef[defName="AteLavishMeal"]/nullifyingTraits</xpath>
 					<value>
-						<li>ST_HealthFreak</li>
+						<li>ST_HealthNut</li>
 					</value>
 				</match>
 				<nomatch Class="PatchOperationAdd">
 					<xpath>Defs/ThoughtDef[defName="AteLavishMeal"]</xpath>
 					<value>
 						<nullifyingTraits>
-							<li>ST_HealthFreak</li>
+							<li>ST_HealthNut</li>
 						</nullifyingTraits>
 					</value>
 				</nomatch>
@@ -58,14 +58,14 @@
 				<match Class="PatchOperationAdd">
 					<xpath>Defs/ThoughtDef[defName="AteFineMeal"]/nullifyingTraits</xpath>
 					<value>
-						<li>ST_HealthFreak</li>
+						<li>ST_HealthNut</li>
 					</value>
 				</match>
 				<nomatch Class="PatchOperationAdd">
 					<xpath>Defs/ThoughtDef[defName="AteFineMeal"]</xpath>
 					<value>
 						<nullifyingTraits>
-							<li>ST_HealthFreak</li>
+							<li>ST_HealthNut</li>
 						</nullifyingTraits>
 					</value>
 				</nomatch>

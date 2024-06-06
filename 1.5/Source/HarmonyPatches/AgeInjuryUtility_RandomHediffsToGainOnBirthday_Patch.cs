@@ -11,7 +11,7 @@ namespace SimsTraits
     {
         public static IEnumerable<HediffGiver_Birthday> Postfix(IEnumerable<HediffGiver_Birthday> __result, Pawn pawn)
         {
-            if (pawn.HasTrait(ST_DefOf.ST_HealthFreak))
+            if (pawn.HasTrait(ST_DefOf.ST_HealthNut))
             {
                 yield break;
             }

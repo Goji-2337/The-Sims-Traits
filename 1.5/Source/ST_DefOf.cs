@@ -6,9 +6,9 @@ namespace SimsTraits
     [DefOf]
     public static class ST_DefOf
     {
-        public static TraitDef ST_Manipulative, ST_Naive, ST_Narcissist, ST_HealthFreak, ST_Emotional,
+        public static TraitDef ST_Manipulative, ST_Naive, ST_Narcissist, ST_HealthNut, ST_Emotional,
             ST_Paranoid, ST_Loyal, ST_PartyAnimal, ST_Insane, ST_Proper, ST_Grumpy, ST_Shy, ST_Materialistic,
-            ST_Vegan, ST_Devout, ST_Procrastinator, ST_NonCommital, ST_FamilyOriented, ST_SteadyHand, ST_Daredevil,
+            ST_Vegan, ST_Devout, ST_Procrastinator, ST_NonCommital, ST_FamilyOriented, ST_SteadyHands, ST_Daredevil,
             ST_Chatterbox, ST_Bookworm, ST_Handy, ST_TechWhiz, ST_Gambler, ST_Nosy, ST_HugePower, ST_Observant, ST_Zen;
         [MayRequireVETraits] public static TraitDef ST_Submissive, VTE_AbsentMinded, VTE_Vengeful, ST_DrunkenMaster, 
             VTE_BigBoned, VTE_Clumsy, VTE_Workaholic, ST_Squeamish, ST_Insomniac, VTE_WorldWeary;
@@ -17,7 +17,7 @@ namespace SimsTraits
 
         [MayRequireRoyalty] public static GatheringDef Concert;
         [MayRequireRoyalty] public static RoyalTitleDef Acolyte;
-        [MayRequireBiotech] public static ThoughtDef ST_GigglingGoofball;
+        [MayRequireBiotech] public static ThoughtDef ST_FunnyPerson;
         public static ThoughtDef Insulted, Slighted, ST_ParanoidThought, ST_LoyalThought, KindWordsMood, ST_NewStuff, ObservedLayingCorpse;
         public static InteractionDef Slight;
         public static SoundDef LetterArrive_BadUrgentBig, LetterArrive_BadUrgent, LetterArrive_BadUrgentSmall, LetterArrive_Good;

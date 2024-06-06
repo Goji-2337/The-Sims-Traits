@@ -57,7 +57,7 @@ namespace SimsTraits
         {
             if (source is Pawn otherPawn && hearer.needs.mood != null)
             {
-                hearer.needs.mood.thoughts.memories.TryGainMemory(ST_DefOf.ST_GigglingGoofball, otherPawn);
+                hearer.needs.mood.thoughts.memories.TryGainMemory(ST_DefOf.ST_FunnyPerson, otherPawn);
             }
         }
 
