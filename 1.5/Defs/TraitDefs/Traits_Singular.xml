@@ -505,7 +505,7 @@
 			<li>Bloodlust</li>
 			<li>Nerves</li>
 			<li>ST_Manipulative</li>
-			<li MayRequire="Ludeon.RimWorld.Anomoly">VoidFascination</li>
+			<li MayRequire="Ludeon.RimWorld.Anomaly">VoidFascination</li>
 		</conflictingTraits>
 	</TraitDef>
 
