@@ -9,7 +9,7 @@ namespace SimsTraits
     {
         public static void Postfix(Pawn ___pawn, Trait trait)
         {
-            if (trait.def == ST_DefOf.ST_Childish || trait.def == ST_DefOf.ST_Insomniac)
+            if (trait.def == ST_DefOf.ST_Childish)
             {
                 PawnComponentsUtility.AddAndRemoveDynamicComponents(___pawn);
             }
@@ -27,7 +27,7 @@ namespace SimsTraits
                 for (int j = 0; j < map.Size.z; j++)
                 {
                     var cell = new IntVec3(i, 0, j);
-                    if (cell.Filled(map) is false 
+                    if (cell.Filled(map) is false
                         || cell.GetRoom(map) is Room room && room.PsychologicallyOutdoors is false
                         || cell.GetRoof(map) == RoofDefOf.RoofConstructed)
                     {

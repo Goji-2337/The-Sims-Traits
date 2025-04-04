@@ -1,43 +1,31 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{97FA1308-3ED7-41D8-827D-0CC3A3291EE8}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <TargetFramework>net48</TargetFramework> <!-- Ensure this matches the original framework version -->
     <RootNamespace>SimsTraits</RootNamespace>
     <AssemblyName>SimsTraits</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <Deterministic>true</Deterministic>
     <LangVersion>latest</LangVersion>
-    <TargetFrameworkProfile />
+    <Deterministic>true</Deterministic>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath> <!-- Prevent appending target framework to the output path -->
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
-    <OutputPath>..\Assemblies\</OutputPath>
-    <DebugType>none</DebugType>
+
+  <!-- Debug configuration -->
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <Optimize>true</Optimize>
-    <DebugSymbols>false</DebugSymbols>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>false</DebugSymbols>
-    <DebugType>none</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>..\Assemblies\</OutputPath>
+    <OutputPath>..\Assemblies\</OutputPath> <!-- Output directly to Assemblies -->
     <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType> <!-- Set to 'none' to exclude debug info -->
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>false</DebugType>
+
+  <!-- Release configuration -->
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
     <Optimize>true</Optimize>
-    <OutputPath>..\Assemblies\</OutputPath>
+    <OutputPath>..\Assemblies\</OutputPath> <!-- Output directly to Assemblies -->
     <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType> <!-- Set to 'none' to exclude debug info -->
   </PropertyGroup>
+
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -48,125 +36,25 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
   </ItemGroup>
+
   <ItemGroup>
-    <PackageReference Include="Krafs.Publicizer" Version="2.*">
+    <PackageReference Include="Krafs.Publicizer" Version="2.*" PrivateAssets="all">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-      <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.5.*">
-    </PackageReference>
-    <PackageReference Include="Lib.Harmony" Version="2.3.*">
+    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.5.*" />
+    <PackageReference Include="Lib.Harmony" Version="2.3.3">
       <ExcludeAssets>runtime</ExcludeAssets>
       <IncludeAssets>compile; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+  </ItemGroup>
+
+  <PropertyGroup>
+    <!-- Disable automatic generation of assembly attributes -->
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+
+  <ItemGroup>
     <Publicize Include="Assembly-CSharp" />
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="HarmonyPatches\AgeInjuryUtility_GenerateRandomOldAgeInjuries_Patch.cs" />
-    <Compile Include="HarmonyPatches\AgeInjuryUtility_RandomHediffsToGainOnBirthday_Patch.cs" />
-    <Compile Include="HarmonyPatches\BackCompatibility_BackCompatibleDefName_Patch.cs" />
-    <Compile Include="HarmonyPatches\BodyPartDef_GetMaxHealth_Patch.cs" />
-    <Compile Include="HarmonyPatches\BookUtility_GetReadingBonus_Patch.cs" />
-    <Compile Include="HarmonyPatches\CompBiocodable_IsBiocodedFor_Patch.cs" />
-    <Compile Include="HarmonyPatches\ExpectationsUtility_CurrentExpectationFor_Patch.cs" />
-    <Compile Include="HarmonyPatches\GatheringsUtility_FindRandomGatheringOrganizer_CanOrganize_Patch.cs" />
-    <Compile Include="HarmonyPatches\HediffSet_AddDirect_Patch.cs" />
-    <Compile Include="HarmonyPatches\Hediff_Alcohol_HangoverSusceptible_Patch.cs" />
-    <Compile Include="HarmonyPatches\Need_IsFrozen_Patch.cs" />
-    <Compile Include="HarmonyPatches\PawnCapacityUtility_CalculatePartEfficiency_Patch.cs" />
-    <Compile Include="HarmonyPatches\PawnObserver_ObserveSurroundingThings_Patch.cs" />
-    <Compile Include="HarmonyPatches\RitualOutcomeEffectWorker_Trial_GetOutcome_Patch.cs" />
-    <Compile Include="HarmonyPatches\TendUtility_CalculateBaseTendQuality_Patch.cs" />
-    <Compile Include="HarmonyPatches\ThoughtWorker_ExpectationsSlave_CurrentStateInternal_Patch.cs" />
-    <Compile Include="HarmonyPatches\ThoughtWorker_Expectations_CurrentStateInternal_Patch.cs" />
-    <Compile Include="HarmonyPatches\TryFindGoodKidnapVictim_TryFindGoodKidnapVictim_Validator_Patch.cs" />
-    <Compile Include="HarmonyPatches\Verb_MeleeAttack_GetDodgeChance_Patch.cs" />
-    <Compile Include="HarmonyPatches\HostilityResponseModeUtility_DrawResponseButton_GenerateMenu_Patch.cs" />
-    <Compile Include="HarmonyPatches\InteractionUtility_CanInitiateInteraction_Patch.cs" />
-    <Compile Include="HarmonyPatches\InteractionWorker_KindWords_RandomSelectionWeight_Patch.cs" />
-    <Compile Include="HarmonyPatches\InteractionWorker_RomanceAttempt_RandomSelectionWeight_Patch.cs" />
-    <Compile Include="HarmonyPatches\InteractionWorker_RomanceAttempt_RomanceFactors_Patch.cs" />
-    <Compile Include="HarmonyPatches\InteractionWorker_RomanceAttempt_SuccessChance_Patch.cs" />
-    <Compile Include="HarmonyPatches\JobDriver_Equip_MakeNewToils_Patch.cs" />
-    <Compile Include="HarmonyPatches\JobDriver_FixBrokenDownBuilding_Patch.cs" />
-    <Compile Include="HarmonyPatches\JobDriver_GiveToPawn_MakeNewToils_Patch.cs" />
-    <Compile Include="HarmonyPatches\JobDriver_Meditate_MakeNewToils_Patch.cs" />
-    <Compile Include="HarmonyPatches\JobDriver_PlayPoker_ModifyPlayToil_Patch.cs" />
-    <Compile Include="HarmonyPatches\JobDriver_RelaxAlone_Patch.cs" />
-    <Compile Include="HarmonyPatches\JobDriver_Wear_Notify_Starting_Patch.cs" />
-    <Compile Include="HarmonyPatches\JobGiver_Berserk_FindAttackTarget_Patch.cs" />
-    <Compile Include="HarmonyPatches\JobGiver_Work_GetPriority_Patch.cs" />
-    <Compile Include="HarmonyPatches\JoyGiver_GetChance_Patch.cs" />
-    <Compile Include="HarmonyPatches\LearningGiver_CanDo_Patch.cs" />
-    <Compile Include="HarmonyPatches\LetterStack_ReceiveLetter_Patch.cs" />
-    <Compile Include="HarmonyPatches\Map_MapPostTick_Patch.cs" />
-    <Compile Include="HarmonyPatches\MentalBreakWorker_IdeoChange_CanInitiateInteraction_Patch.cs" />
-    <Compile Include="HarmonyPatches\MentalFitDef_CalculateMTBDays_Patch.cs" />
-    <Compile Include="HarmonyPatches\MentalStateHandler_TryStartMentalState_Patch.cs" />
-    <Compile Include="HarmonyPatches\MentalStateWorker_SlaveRebellion_StateCanOccur_Patch.cs" />
-    <Compile Include="HarmonyPatches\MentalState_InsultingSpree_Patch.cs" />
-    <Compile Include="HarmonyPatches\MentalState_MurderousRage_TryFindNewTarget_Patch.cs" />
-    <Compile Include="HarmonyPatches\MentalState_TantrumRandom_ChooseNextTarget_Patch.cs" />
-    <Compile Include="HarmonyPatches\Need_Joy_GainJoy_Patch.cs" />
-    <Compile Include="HarmonyPatches\PawnComponentsUtility_AddAndRemoveDynamicComponents_Patch.cs" />
-    <Compile Include="HarmonyPatches\PawnDiedOrDownedThoughtsUtility_AppendThoughts_ForHumanlike_Patch.cs" />
-    <Compile Include="HarmonyPatches\PawnGenerator_GeneratePawn_Patch.cs" />
-    <Compile Include="HarmonyPatches\PawnGenerator_GenerateTraitsFor_Patch.cs" />
-    <Compile Include="HarmonyPatches\Pawn_AgeTracker_TryChildGrowthMoment_Patch.cs" />
-    <Compile Include="HarmonyPatches\Pawn_DraftController_Drafted_Patch.cs" />
-    <Compile Include="HarmonyPatches\Pawn_ExposeData_Patch.cs" />
-    <Compile Include="HarmonyPatches\Pawn_HealthTracker_AddHediff_Patch.cs" />
-    <Compile Include="HarmonyPatches\Pawn_InteractionsTracker_InteractionsTrackerTick_Patch.cs" />
-    <Compile Include="HarmonyPatches\Pawn_InteractionsTracker_TryInteractWith_Patch.cs" />
-    <Compile Include="HarmonyPatches\Pawn_JobTracker_TryTakeOrderedJob_Patch.cs" />
-    <Compile Include="HarmonyPatches\Pawn_MeleeVerbs_TryGetMeleeVerb_Patch.cs" />
-    <Compile Include="HarmonyPatches\Pawn_NeedsTracker_ShouldHaveNeed_Patch.cs" />
-    <Compile Include="HarmonyPatches\Pawn_RelationsTracker_OpinionOf_Patch.cs" />
-    <Compile Include="HarmonyPatches\Pawn_RoyaltyTracker_GainFavor_Patch.cs" />
-    <Compile Include="HarmonyPatches\Pawn_RoyaltyTracker_AllTitlesInEffectForReading_Patch.cs" />
-    <Compile Include="HarmonyPatches\Pawn_SpawnSetup_Patch.cs" />
-    <Compile Include="HarmonyPatches\QualityUtility_GenerateQualityCreatedByPawn_Patch.cs" />
-    <Compile Include="HarmonyPatches\ReleaseAnimalToWildUtility_DoReleaseAnimal_Patch.cs" />
-    <Compile Include="HarmonyPatches\RitualOutcomeComp_ParticipantCount_GetQualityFactor_Patch.cs" />
-    <Compile Include="HarmonyPatches\SlaveRebellionUtility_CanParticipateInSlaveRebellion_Patch.cs" />
-    <Compile Include="HarmonyPatches\StatPart_Slave_ActiveFor_Patch.cs" />
-    <Compile Include="HarmonyPatches\SurgeryOutcomeEffectDef_GetQuality_Patch.cs" />
-    <Compile Include="HarmonyPatches\Thing_Ingested_Patch.cs" />
-    <Compile Include="HarmonyPatches\Thing_TakeDamage_Patch.cs" />
-    <Compile Include="HarmonyPatches\ThinkNode_Priority_Learn_GetPriority_Patch.cs" />
-    <Compile Include="HarmonyPatches\ThoughtWorker_ApparelDamaged_CurrentStateInternal_Patch.cs" />
-    <Compile Include="HarmonyPatches\ThoughtWorker_LoveReading_CurrentStateInternal_Patch.cs" />
-    <Compile Include="HarmonyPatches\ThoughtWorker_MusicalInstrumentListeningBase_CurrentStateInternal_Patch.cs" />
-    <Compile Include="HarmonyPatches\ThoughtWorker_MyRivalsAreCaptured.cs" />
-    <Compile Include="HarmonyPatches\ToilFailConditions_FailOnChildLearningConditions_Patch.cs" />
-    <Compile Include="HarmonyPatches\TradeDeal_TryExecute_Patch.cs" />
-    <Compile Include="HarmonyPatches\InteractionWorker_Breakup_RandomSelectionWeight_Patch.cs" />
-    <Compile Include="HarmonyPatches\TraitsManager_TryInterruptForcedJobs_Patch.cs" />
-    <Compile Include="HarmonyPatches\VerbProperties_AdjustedArmorPenetration_Patch.cs" />
-    <Compile Include="HarmonyPatches\VEF_VerbProps_Patch.cs" />
-    <Compile Include="HarmonyPatches\Verb_CanHitTargetFrom_Patch.cs" />
-    <Compile Include="HarmonyPatches\Verb_LaunchProjectile_TryCastShot_Patch.cs" />
-    <Compile Include="HarmonyPatches\Verb_OrderForceTarget_Patch.cs" />
-    <Compile Include="MayRequireVETraitsAttribute.cs" />
-    <Compile Include="MentalState_GoofballGiggling.cs" />
-    <Compile Include="HarmonyPatches\Pawn_InteractionsTracker_CheckSocialFightStart_Patch.cs" />
-    <Compile Include="HarmonyPatches\ThoughtWorker_Ugly_CurrentSocialStateInternal_Patch.cs" />
-    <Compile Include="HarmonyPatches\Thought_MoodOffset_Patch.cs" />
-    <Compile Include="InteractionWorker_Cry.cs" />
-    <Compile Include="ThoughtWorker_LeatherApparel.cs" />
-    <Compile Include="ThoughtWorker_NoPokerTable.cs" />
-    <Compile Include="ThoughtWorker_OneOfUs.cs" />
-    <Compile Include="ThoughtWorker_SomethingIsOff.cs" />
-    <Compile Include="ThoughtWorker_VeganVsCarnist.cs" />
-    <Compile Include="ThoughtWorker_Naive.cs" />
-    <Compile Include="HarmonyPatches\ThoughtWorker_Pretty_CurrentSocialStateInternal_Patch.cs" />
-    <Compile Include="ST_DefOf.cs" />
-    <Compile Include="HarmonyPatches\MemoryThoughtHandler_TryGainMemory_Patch.cs" />
-    <Compile Include="Thought_Naive.cs" />
-    <Compile Include="ThoughtWorker_Narcissist.cs" />
-    <Compile Include="HarmonyPatches\TraitSet_GainTrait_Patch.cs" />
-    <Compile Include="HarmonyPatches\TraitSet_RemoveTrait_Patch.cs" />
-    <Compile Include="TraitUtils.cs" />
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+
 </Project>

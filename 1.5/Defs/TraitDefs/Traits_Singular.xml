@@ -8,7 +8,9 @@
 			<li>
 				<label>manipulative</label>
 				<description>{PAWN_nameDef} is good at getting {PAWN_possessive} way. Be it love bombing or gaslighting, {PAWN_possessive} victims rarely notice what’s truly going on.</description>
-				<allowedMeditationFocusTypes><li>Morbid</li></allowedMeditationFocusTypes>
+				<allowedMeditationFocusTypes>
+					<li>Morbid</li>
+				</allowedMeditationFocusTypes>
 			</li>
 		</degreeDatas>
 		<conflictingTraits>
@@ -120,11 +122,11 @@
 			</li>
 		</degreeDatas>
 		<conflictingTraits>
-		<li>Jealous</li>
-		<li>ST_NonCommital</li>
-	</conflictingTraits>
+			<li>Jealous</li>
+			<li>ST_NonCommital</li>
+		</conflictingTraits>
 	</TraitDef>
-	
+
 	<TraitDef>
 		<defName>ST_PartyAnimal</defName>
 		<commonality>1.1</commonality>
@@ -138,7 +140,7 @@
 			<li MayRequire="Ludeon.RimWorld.Biotech">Recluse</li>
 		</conflictingTraits>
 	</TraitDef>
-	
+
 	<TraitDef>
 		<defName>ST_Insane</defName>
 		<commonality>0.2</commonality>
@@ -152,7 +154,7 @@
 			<li>ST_Proper</li>
 		</conflictingTraits>
 	</TraitDef>
-	
+
 	<TraitDef>
 		<defName>ST_Proper</defName>
 		<commonality>0.4</commonality>
@@ -170,7 +172,7 @@
 			<li>Abrasive</li>
 		</conflictingTraits>
 	</TraitDef>
-	
+
 	<TraitDef>
 		<defName>ST_Grumpy</defName>
 		<commonality>0.4</commonality>
@@ -185,7 +187,7 @@
 			<li>NaturalMood</li>
 		</conflictingTraits>
 	</TraitDef>
-	
+
 	<TraitDef>
 		<defName>ST_Shy</defName>
 		<commonality>0.7</commonality>
@@ -199,7 +201,7 @@
 			<li>ST_PartyAnimal</li>
 		</conflictingTraits>
 	</TraitDef>
-	
+
 	<TraitDef>
 		<defName>ST_Materialistic</defName>
 		<commonality>0.9</commonality>
@@ -228,7 +230,7 @@
 			<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">VTE_AnimalHater</li>
 		</conflictingTraits>
 	</TraitDef>
-	
+
 	<TraitDef>
 		<defName>ST_Devout</defName>
 		<commonality>0.6</commonality>
@@ -246,7 +248,7 @@
 			<li>ST_Paranoid</li>
 		</conflictingTraits>
 	</TraitDef>
-	
+
 	<TraitDef>
 		<defName>ST_Procrastinator</defName>
 		<commonality>0.6</commonality>
@@ -260,7 +262,7 @@
 			</li>
 		</degreeDatas>
 	</TraitDef>
-	
+
 	<TraitDef>
 		<defName>ST_NonCommital</defName>
 		<commonality>0.7</commonality>
@@ -274,7 +276,7 @@
 			</li>
 		</degreeDatas>
 	</TraitDef>
-	
+
 	<TraitDef MayRequire="Ludeon.RimWorld.Royalty">
 		<defName>ST_HighMaintenance</defName>
 		<commonality>0.3</commonality>
@@ -285,7 +287,7 @@
 			</li>
 		</degreeDatas>
 	</TraitDef>
-	
+
 	<TraitDef>
 		<defName>ST_FamilyOriented</defName>
 		<commonality>1</commonality>
@@ -296,7 +298,7 @@
 			</li>
 		</degreeDatas>
 	</TraitDef>
-	
+
 	<TraitDef>
 		<defName>ST_SteadyHands</defName>
 		<commonality>0.1</commonality>
@@ -311,7 +313,7 @@
 			<li>Whip</li>
 		</conflictingTraits>
 	</TraitDef>
-	
+
 	<TraitDef>
 		<defName>ST_Daredevil</defName>
 		<commonality>0.3</commonality>
@@ -330,7 +332,7 @@
 			<li>Whip</li>
 		</conflictingTraits>
 	</TraitDef>
-	
+
 	<TraitDef>
 		<defName>ST_Chatterbox</defName>
 		<commonality>0.5</commonality>
@@ -345,7 +347,7 @@
 			<li>ST_Shy</li>
 		</conflictingTraits>
 	</TraitDef>
-	
+
 	<TraitDef>
 		<defName>ST_Bookworm</defName>
 		<commonality>0.7</commonality>
@@ -356,7 +358,7 @@
 			</li>
 		</degreeDatas>
 	</TraitDef>
-	
+
 	<TraitDef>
 		<defName>ST_Handy</defName>
 		<commonality>0.7</commonality>
@@ -374,7 +376,7 @@
 			<li>Constructing</li>
 		</requiredWorkTags>
 	</TraitDef>
-	
+
 	<TraitDef MayRequire="Ludeon.RimWorld.Royalty">
 		<defName>ST_Virtuoso</defName>
 		<commonality>0.7</commonality>
@@ -388,7 +390,7 @@
 			</li>
 		</degreeDatas>
 	</TraitDef>
-	
+
 	<TraitDef>
 		<defName>ST_TechWhiz</defName>
 		<commonality>0.7</commonality>
@@ -405,7 +407,7 @@
 			<li>Intellectual</li>
 		</requiredWorkTags>
 	</TraitDef>
-	
+
 	<TraitDef>
 		<defName>ST_Gambler</defName>
 		<commonality>0.2</commonality>
@@ -435,7 +437,7 @@
 			<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">VTE_WorldWeary</li>
 		</conflictingTraits>
 	</TraitDef>
-	
+
 	<TraitDef>
 		<defName>ST_Nosy</defName>
 		<commonality>0.4</commonality>
@@ -446,7 +448,7 @@
 			</li>
 		</degreeDatas>
 	</TraitDef>
-	
+
 	<TraitDef>
 		<defName>ST_HugePower</defName>
 		<commonality>0.9</commonality>
@@ -469,7 +471,7 @@
 			<li MayRequire="Ludeon.RimWorld.Biotech">Delicate</li>
 		</conflictingTraits>
 	</TraitDef>
-	
+
 	<TraitDef>
 		<defName>ST_Observant</defName>
 		<commonality>0.3</commonality>
@@ -522,7 +524,7 @@
 			<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">VTE_Rebel</li>
 		</conflictingTraits>
 	</TraitDef>
-	
+
 	<TraitDef MayRequire="VanillaExpanded.VanillaTraitsExpanded">
 		<defName>ST_DrunkenMaster</defName>
 		<commonality>0.5</commonality>
@@ -552,7 +554,7 @@
 			<li>Bloodlust</li>
 		</conflictingTraits>
 	</TraitDef>
-	
+
 	<TraitDef MayRequire="VanillaExpanded.VanillaTraitsExpanded">
 		<defName>ST_Insomniac</defName>
 		<commonality>0.7</commonality>
@@ -561,11 +563,9 @@
 				<label>insomniac</label>
 				<description>{PAWN_nameDef} is never really asleep or awake. {PAWN_pronoun} is almost zombie like, lurching along and working very slowly.</description>
 				<statOffsets>
-					<WorkSpeedGlobal>-0.7</WorkSpeedGlobal>
+					<WorkSpeedGlobal>-0.4</WorkSpeedGlobal>
+					<RestFallRateFactor>-0.6</RestFallRateFactor>
 				</statOffsets>
-				<disablesNeeds>
-					<li>Rest</li>
-				</disablesNeeds>
 			</li>
 		</degreeDatas>
 		<conflictingTraits>

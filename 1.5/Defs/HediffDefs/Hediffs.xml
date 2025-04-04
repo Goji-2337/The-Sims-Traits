@@ -54,7 +54,7 @@
       </li>
     </stages>
   </HediffDef>
-  
+
   <HediffDef>
     <defName>ST_PsychicTranceAbsentMinded</defName>
     <label>psychic trance</label>
@@ -74,12 +74,17 @@
     </comps>
   </HediffDef>
 
-  <HediffDef>
-    <defName>ST_SqueamishFakeDown</defName>
-    <label>squeamish fake down</label>
-    <hediffClass>HediffWithComps</hediffClass>
-    <description>placeholder.</description>
-    <isBad>false</isBad>
+  <HediffDef ParentName="DiseaseBase">
+    <defName>ST_SqueamishCatatonicHediff</defName>
+    <label>squeamish catatonia</label>
+    <labelNoun>a squeamish catatonic breakdown</labelNoun>
+    <description>A state of mental shock triggered by witnessing excessive gore, leading to a temporary inability to function. The victim collapses, effectively unconscious.</description>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>10000</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
     <stages>
       <li>
         <capMods>
@@ -87,15 +92,9 @@
             <capacity>Consciousness</capacity>
             <setMax>0.1</setMax>
           </li>
-		 </capMods>
+        </capMods>
       </li>
     </stages>
-    <comps>
-      <li Class="HediffCompProperties_DisappearsOnDeath" />
-      <li Class="HediffCompProperties_Disappears">
-        <disappearsAfterTicks>1800</disappearsAfterTicks>
-        <showRemainingTime>true</showRemainingTime>
-      </li>
-    </comps>
   </HediffDef>
+
 </Defs>

@@ -17,11 +17,6 @@ namespace SimsTraits
                 }
             }
 
-            var hediff2 = __instance.pawn.health.hediffSet.GetFirstHediffOfDef(ST_DefOf.ST_SqueamishFakeDown);
-            if (hediff2 != null)
-            {
-                __instance.pawn.health.RemoveHediff(hediff2);
-            }
         }
     }
 }

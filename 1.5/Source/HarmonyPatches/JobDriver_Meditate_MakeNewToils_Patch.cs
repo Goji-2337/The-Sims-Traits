@@ -36,7 +36,7 @@ namespace SimsTraits
                     {
                         if (__instance.pawn.HasTrait(ST_DefOf.ST_Zen))
                         {
-                            if (Pawn_ExposeData_Patch.totalMeditation.Get(__instance.pawn) >= GenDate.TicksPerHour * 8)
+                            if (Pawn_ExposeData_Patch.totalMeditation.Get(__instance.pawn) >= GenDate.TicksPerHour * 4)
                             {
                                 var negativeMemories = __instance.pawn.needs?.mood?.thoughts?.memories?.memories.Where(x => x.MoodOffset() < 0);
                                 if (negativeMemories.TryRandomElement(out var memory))

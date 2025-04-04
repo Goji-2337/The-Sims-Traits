@@ -35,12 +35,15 @@ namespace SimsTraits
         }
         public static void RegisterDeathEvent(ThoughtDef genderSpecificThought, Pawn witness, Pawn victim)
         {
-            if (witness.HasTrait(ST_DefOf.ST_FamilyOriented) 
+            if (witness.HasTrait(ST_DefOf.ST_FamilyOriented)
                 && witness.GetRelations(victim).Any(x => x.familyByBloodRelation || x == PawnRelationDefOf.Spouse))
             {
-                if (witness.mindState.mentalBreaker.TryGetRandomMentalBreak(MentalBreakIntensity.Extreme, out var breakDef))
+                var possibleBreaks = DefDatabase<MentalBreakDef>.AllDefsListForReading
+                                        .Where(mb => mb.Worker.BreakCanOccur(witness));
+
+                if (possibleBreaks.TryRandomElement(out var selectedBreakDef))
                 {
-                    witness.mindState.mentalBreaker.TryDoMentalBreak("FinalStraw".Translate(genderSpecificThought.stages[0].label.Formatted(victim.LabelShort)), breakDef);
+                    witness.mindState.mentalBreaker.TryDoMentalBreak("FinalStraw".Translate(genderSpecificThought.stages[0].label.Formatted(victim.LabelShort)), selectedBreakDef);
                 }
             }
         }

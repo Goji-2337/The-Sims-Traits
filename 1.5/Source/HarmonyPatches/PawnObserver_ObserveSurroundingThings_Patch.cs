@@ -10,7 +10,7 @@ namespace SimsTraits
     {
         public static void Postfix(Pawn ___pawn)
         {
-            if (!___pawn.HasTrait(ST_DefOf.ST_Squeamish) 
+            if (!___pawn.HasTrait(ST_DefOf.ST_Squeamish)
                 || !___pawn.health.capacities.CapableOf(PawnCapacityDefOf.Sight) || ___pawn.needs.mood == null)
             {
                 return;
@@ -34,12 +34,7 @@ namespace SimsTraits
                 }
                 if (num >= 3)
                 {
-                    var lastSqueamishTick = Pawn_ExposeData_Patch.lastSqueamishTicks.Get(___pawn);
-                    if (lastSqueamishTick == 0 || GenTicks.TicksAbs >= lastSqueamishTick + (300 * 60))
-                    {
-                        ___pawn.health.AddHediff(ST_DefOf.ST_SqueamishFakeDown);
-                        Pawn_ExposeData_Patch.lastSqueamishTicks.Set(___pawn, GenTicks.TicksAbs);
-                    }
+                    TraitUtils.TriggerSqueamishBreakdown(___pawn);
                 }
             }
         }
