@@ -13,7 +13,7 @@ namespace SimsTraits
         {
             foreach (var originalThing in __result)
             {
-                Thing thingToYield = originalThing;
+                bool processed = false; // Flag to track if we handled this stack
 
                 if (worker != null && worker.HasTrait(ST_DefOf.ST_Vegan))
                 {
@@ -28,29 +28,51 @@ namespace SimsTraits
                     if (upgradeTargetDef != null)
                     {
                         var ingredientsComp = originalThing.TryGetComp<CompIngredients>();
-                        if (ingredientsComp != null && ingredientsComp.ingredients != null 
-                        && ingredientsComp.ingredients.All(ing => !ing.IsMeat 
-                            && FoodUtility.UnacceptableVegetarian(ing) is false))
+                        // Check if ingredients exist and are all non-meat
+                        if (ingredientsComp != null && ingredientsComp.ingredients != null && ingredientsComp.ingredients.All(ing => !ing.IsMeat))
                         {
-                            if (Rand.Chance(0.25f))
+                            processed = true; // Mark this stack as handled
+                            int originalCount = originalThing.stackCount;
+                            int upgradedCount = 0;
+
+                            // Check each item in the stack for upgrade chance
+                            for (int i = 0; i < originalCount; i++)
+                            {
+                                if (Rand.Chance(0.25f))
+                                {
+                                    upgradedCount++;
+                                }
+                            }
+
+                            int remainingOriginalCount = originalCount - upgradedCount;
+
+                            // Yield upgraded items if any
+                            if (upgradedCount > 0)
                             {
                                 Thing upgradedThing = ThingMaker.MakeThing(upgradeTargetDef);
-                                upgradedThing.stackCount = originalThing.stackCount;
-
+                                upgradedThing.stackCount = upgradedCount;
                                 var newIngredientsComp = upgradedThing.TryGetComp<CompIngredients>();
-                                if (newIngredientsComp != null)
+                                if (newIngredientsComp != null && ingredientsComp.ingredients != null)
                                 {
-                                    if (ingredientsComp.ingredients != null)
-                                    {
-                                        newIngredientsComp.ingredients = new List<ThingDef>(ingredientsComp.ingredients);
-                                    }
+                                    newIngredientsComp.ingredients = new List<ThingDef>(ingredientsComp.ingredients);
                                 }
-                                thingToYield = upgradedThing;
+                                yield return upgradedThing;
+                            }
+
+                            // Yield remaining original items if any
+                            if (remainingOriginalCount > 0)
+                            {
+                                originalThing.stackCount = remainingOriginalCount;
+                                yield return originalThing;
                             }
                         }
                     }
                 }
-                yield return thingToYield;
+
+                if (!processed)
+                {
+                    yield return originalThing;
+                }
             }
         }
     }
