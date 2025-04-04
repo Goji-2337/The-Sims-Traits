@@ -34,8 +34,8 @@
 		</degreeDatas>
 		<conflictingTraits>
 			<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">VTE_WorldWeary</li>
-			<li>Misandrist</li>
-			<li>Misogynist</li>
+			<li>DislikesWomen</li>
+			<li>DislikesMen</li>
 			<li>TorturedArtist</li>
 		</conflictingTraits>
 	</TraitDef>
@@ -309,8 +309,8 @@
 			</li>
 		</degreeDatas>
 		<conflictingTraits>
-			<li>ST_Squeamish</li>
-			<li>Whip</li>
+			<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">ST_Squeamish</li>
+			<li>Wimp</li>
 		</conflictingTraits>
 	</TraitDef>
 
@@ -328,7 +328,7 @@
 			<li>Violent</li>
 		</requiredWorkTags>
 		<conflictingTraits>
-			<li>ST_Squeamish</li>
+			<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">ST_Squeamish</li>
 			<li>Whip</li>
 		</conflictingTraits>
 	</TraitDef>
@@ -385,7 +385,7 @@
 				<label>virtuoso</label>
 				<description>{PAWN_nameDef} has a natural gift with musical and instruments. It is as if the music {PAWN_pronoun} plays lingered in the air.</description>
 				<skillGains>
-					<Art>2</Art>
+					<Artistic>2</Artistic>
 				</skillGains>
 			</li>
 		</degreeDatas>
