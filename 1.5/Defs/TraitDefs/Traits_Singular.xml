@@ -497,8 +497,6 @@
 				<allowedMeditationFocusTypes>
 					<li>Morbid</li>
 					<li>Minimal</li>
-					<li>Artistic</li>
-					<li>Natural</li>
 					<li>Flame</li>
 				</allowedMeditationFocusTypes>
 			</li>
