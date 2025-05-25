@@ -1,4 +1,4 @@
-﻿using HarmonyLib;
+using HarmonyLib;
 using RimWorld;
 using System.Collections.Generic;
 using System.Reflection;
@@ -51,21 +51,6 @@ namespace SimsTraits
         {
             var inst = obj.GetType().GetMethod("MemberwiseClone", BindingFlags.Instance | BindingFlags.NonPublic);
             return (T)inst?.Invoke(obj, null);
-        }
-
-        public static void TriggerSqueamishBreakdown(Pawn pawn)
-        {
-            if (pawn.InMentalState || !pawn.Spawned || pawn.Downed)
-            {
-                return;
-            }
-
-            var lastSqueamishTick = Pawn_ExposeData_Patch.lastSqueamishTicks.Get(pawn);
-            if (lastSqueamishTick == 0 || GenTicks.TicksAbs >= lastSqueamishTick + (300 * 60))
-            {
-                pawn.health.AddHediff(ST_DefOf.ST_SqueamishCatatonicHediff);
-                Pawn_ExposeData_Patch.lastSqueamishTicks.Set(pawn, GenTicks.TicksAbs);
-            }
         }
     }
 }

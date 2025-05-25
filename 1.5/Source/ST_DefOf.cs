@@ -1,4 +1,4 @@
-﻿using RimWorld;
+using RimWorld;
 using Verse;
 
 namespace SimsTraits
@@ -22,7 +22,7 @@ namespace SimsTraits
         public static ThoughtDef Insulted, Slighted, ST_ParanoidThought, ST_LoyalThought, KindWordsMood, ST_NewStuff, ObservedLayingCorpse;
         public static InteractionDef Slight;
         public static SoundDef LetterArrive_BadUrgentBig, LetterArrive_BadUrgent, LetterArrive_BadUrgentSmall, LetterArrive_Good;
-        public static HediffDef ST_AdrenalineRush, ST_AdrenalineRushShort, HeartAttack, ST_PsychicTranceAbsentMinded, SleepingSickness, ST_SqueamishCatatonicHediff;
+        public static HediffDef ST_AdrenalineRush, ST_AdrenalineRushShort, HeartAttack, ST_PsychicTranceAbsentMinded, SleepingSickness;
         [MayRequireBiotech] public static MentalFitDef ST_GoofballGiggling;
         public static MentalStateDef FireStartingSpree;
         [MayRequire("VanillaExpanded.VTraitsE")] public static MentalStateDef VTE_MentalState_Binging_Food;

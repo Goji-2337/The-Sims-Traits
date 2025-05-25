@@ -1,4 +1,4 @@
-﻿using HarmonyLib;
+using HarmonyLib;
 using RimWorld;
 using System;
 using Verse;
@@ -48,11 +48,6 @@ namespace SimsTraits
             if (newThought.def == ST_DefOf.KindWordsMood && __instance.pawn.HasTrait(ST_DefOf.ST_Shy))
             {
                 newThought.durationTicksOverride = GenDate.TicksPerDay * 15;
-            }
-
-            if (__instance.pawn.HasTrait(ST_DefOf.ST_Squeamish) && newThought.def == ST_DefOf.ObservedLayingCorpse)
-            {
-                TraitUtils.TriggerSqueamishBreakdown(__instance.pawn);
             }
         }
 

@@ -74,27 +74,4 @@
     </comps>
   </HediffDef>
 
-  <HediffDef ParentName="DiseaseBase">
-    <defName>ST_SqueamishCatatonicHediff</defName>
-    <label>squeamish catatonia</label>
-    <labelNoun>a squeamish catatonic breakdown</labelNoun>
-    <description>A state of mental shock triggered by witnessing excessive gore, leading to a temporary inability to function. The victim collapses, effectively unconscious.</description>
-    <comps>
-      <li Class="HediffCompProperties_Disappears">
-        <disappearsAfterTicks>10000</disappearsAfterTicks>
-        <showRemainingTime>true</showRemainingTime>
-      </li>
-    </comps>
-    <stages>
-      <li>
-        <capMods>
-          <li>
-            <capacity>Consciousness</capacity>
-            <setMax>0.1</setMax>
-          </li>
-        </capMods>
-      </li>
-    </stages>
-  </HediffDef>
-
 </Defs>
