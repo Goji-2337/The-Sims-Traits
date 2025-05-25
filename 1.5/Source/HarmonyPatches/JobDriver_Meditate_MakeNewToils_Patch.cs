@@ -1,9 +1,11 @@
-﻿using HarmonyLib;
+using HarmonyLib;
 using RimWorld;
 using System.Collections.Generic;
 using System.Linq;
 using Verse;
 using Verse.AI;
+using RimWorld.Planet;
+using UnityEngine;
 
 namespace SimsTraits
 {
@@ -42,6 +44,30 @@ namespace SimsTraits
                                 if (negativeMemories.TryRandomElement(out var memory))
                                 {
                                     __instance.pawn.needs.mood.thoughts.memories.RemoveMemory(memory);
+                                }
+                            }
+                        }
+                        if (__instance.pawn.story.traits.HasTrait(ST_DefOf.ST_Devout))
+                        {
+                            if (__instance.pawn.psychicEntropy != null)
+                            {
+                                __instance.pawn.psychicEntropy.currentPsyfocus = Mathf.Clamp(__instance.pawn.psychicEntropy.currentPsyfocus + 0.1f, 0f, 1f);
+                            }
+
+                            if (Rand.Chance(1f / 15f))
+                            {
+                                var positiveEvents = DefDatabase<IncidentDef>.AllDefsListForReading
+                                    .Where(inc => inc.letterDef == LetterDefOf.PositiveEvent)
+                                    .ToList();
+
+                                if (positiveEvents.Any())
+                                {
+                                    var incidentDef = positiveEvents.RandomElement();
+                                    var parms = StorytellerUtility.DefaultParmsNow(incidentDef.category, Find.AnyPlayerHomeMap);
+                                    if (incidentDef.Worker.TryExecute(parms))
+                                    {
+                                        __instance.pawn.ageTracker.AgeBiologicalTicks += GenDate.TicksPerQuadrum;
+                                    }
                                 }
                             }
                         }

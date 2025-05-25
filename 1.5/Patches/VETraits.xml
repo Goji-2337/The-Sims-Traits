@@ -9,7 +9,7 @@
 				<li Class="PatchOperationAdd">
 					<xpath>Defs</xpath>
 					<value>
-					
+
 						<ThoughtDef>
 							<defName>ST_MyRivalsAreCaptured</defName>
 							<workerClass>SimsTraits.ThoughtWorker_MyRivalsAreCaptured</workerClass>
@@ -24,11 +24,20 @@
 
 					</value>
 				</li>
-				
+
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/TraitDef[defName="VTE_WorldWeary"]/degreeDatas/li</xpath>
 					<value>
-						<allowedMeditationFocusTypes><li>Void</li></allowedMeditationFocusTypes>
+						<allowedMeditationFocusTypes>
+							<li>Void</li>
+						</allowedMeditationFocusTypes>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/TraitDef[defName="VTE_Squeamish"]/degreeDatas/li/description</xpath>
+					<value>
+						<description>{PAWN_nameDef} can’t stand the sight of blood or corpses, often vomiting when exposed. {PAWN_possessive} panic reflexes, however, make {PAWN_objective} surprisingly good at avoiding bleeding wounds.</description>
 					</value>
 				</li>
 			</operations>

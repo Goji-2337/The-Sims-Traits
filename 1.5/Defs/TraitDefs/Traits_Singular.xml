@@ -309,7 +309,7 @@
 			</li>
 		</degreeDatas>
 		<conflictingTraits>
-			<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">ST_Squeamish</li>
+			<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">VTE_Squeamish</li>
 			<li>Wimp</li>
 		</conflictingTraits>
 	</TraitDef>
@@ -328,7 +328,7 @@
 			<li>Violent</li>
 		</requiredWorkTags>
 		<conflictingTraits>
-			<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">ST_Squeamish</li>
+			<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">VTE_Squeamish</li>
 			<li>Whip</li>
 		</conflictingTraits>
 	</TraitDef>
@@ -535,22 +535,6 @@
 		<requiredWorkTags>
 			<li>Violent</li>
 		</requiredWorkTags>
-	</TraitDef>
-
-	<TraitDef MayRequire="VanillaExpanded.VanillaTraitsExpanded">
-		<defName>ST_Squeamish</defName>
-		<commonality>0.9</commonality>
-		<degreeDatas>
-			<li>
-				<label>squeamish</label>
-				<description>{PAWN_nameDef} feels faint upon witnessing too much blood or rotting corpses. The sight of blood triggers their worst fear somehow.</description>
-			</li>
-		</degreeDatas>
-		<conflictingTraits>
-			<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">VTE_Desensitized</li>
-			<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">VTE_IronStomach</li>
-			<li>Bloodlust</li>
-		</conflictingTraits>
 	</TraitDef>
 
 	<TraitDef MayRequire="VanillaExpanded.VanillaTraitsExpanded">

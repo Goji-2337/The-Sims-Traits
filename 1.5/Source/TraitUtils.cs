@@ -17,7 +17,6 @@ namespace SimsTraits
             { "VTE_Submissive", "ST_Submissive" },
             { "VTE_DrunkenMaster", "ST_DrunkenMaster" },
             { "VTE_Insomniac", "ST_Insomniac" },
-            { "VTE_Squeamish", "ST_Squeamish" }
         };
 
         public static Harmony harmony;

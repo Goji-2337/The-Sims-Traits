@@ -1,4 +1,4 @@
-﻿using HarmonyLib;
+using HarmonyLib;
 using System.Collections.Generic;
 using Verse;
 
@@ -7,13 +7,11 @@ namespace SimsTraits
     [HarmonyPatch(typeof(Pawn), "ExposeData")]
     public static class Pawn_ExposeData_Patch
     {
-        public static PawnSaveDataHandler<int> lastSqueamishTicks = new PawnSaveDataHandler<int>("lastSqueamishTicks");
         public static PawnSaveDataHandler<int> lastNosyInteraction = new PawnSaveDataHandler<int>("lastNosyInteractionTicks");
         public static PawnSaveDataHandler<int> lastMeditation = new PawnSaveDataHandler<int>("lastMeditationTicks");
         public static PawnSaveDataHandler<int> totalMeditation = new PawnSaveDataHandler<int>("totalMeditationTicks");
         public static void Postfix(Pawn __instance)
         {
-            lastSqueamishTicks.ExposeData(__instance);
             lastNosyInteraction.ExposeData(__instance);
             lastMeditation.ExposeData(__instance);
             totalMeditation.ExposeData(__instance);
