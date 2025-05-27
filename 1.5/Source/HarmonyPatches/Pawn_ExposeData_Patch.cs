@@ -10,11 +10,13 @@ namespace SimsTraits
         public static PawnSaveDataHandler<int> lastNosyInteraction = new PawnSaveDataHandler<int>("lastNosyInteractionTicks");
         public static PawnSaveDataHandler<int> lastMeditation = new PawnSaveDataHandler<int>("lastMeditationTicks");
         public static PawnSaveDataHandler<int> totalMeditation = new PawnSaveDataHandler<int>("totalMeditationTicks");
+        public static PawnSaveDataHandler<int> lastAnimalReleaseInspiration = new PawnSaveDataHandler<int>("lastAnimalReleaseInspirationTicks");
         public static void Postfix(Pawn __instance)
         {
             lastNosyInteraction.ExposeData(__instance);
             lastMeditation.ExposeData(__instance);
             totalMeditation.ExposeData(__instance);
+            lastAnimalReleaseInspiration.ExposeData(__instance);
         }
     }
 
