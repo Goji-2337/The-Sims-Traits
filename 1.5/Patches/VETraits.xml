@@ -40,6 +40,12 @@
 						<description>{PAWN_nameDef} can’t stand the sight of blood or corpses, often vomiting when exposed. {PAWN_possessive} panic reflexes, however, make {PAWN_objective} surprisingly good at avoiding bleeding wounds.</description>
 					</value>
 				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/TraitDef[defName="VTE_AnimalLover"]/degreeDatas/li/description</xpath>
+					<value>
+						<description>{PAWN_nameDef} placeholder text</description>
+					</value>
+				</li>
 			</operations>
 		</match>
 	</Operation>

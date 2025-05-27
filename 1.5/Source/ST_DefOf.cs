@@ -32,6 +32,6 @@ namespace SimsTraits
         public static NeedDef Joy;
         public static ExpectationDef SkyHigh;
         public static InspirationDef Inspired_Creativity;
-
+        public static HediffDef WorkDrive;
     }
 }
