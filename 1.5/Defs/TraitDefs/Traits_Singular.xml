@@ -117,8 +117,11 @@
 				<label>loyal</label>
 				<description>{PAWN_nameDef} is never gonna give you up.</description>
 				<statFactors>
-					<CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0.5</CertaintyLossFactor>
+					<CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0.01</CertaintyLossFactor>
 				</statFactors>
+				<disallowedMentalStates>
+					<li>GiveUpExit</li>
+				</disallowedMentalStates>
 			</li>
 		</degreeDatas>
 		<conflictingTraits>
@@ -148,6 +151,9 @@
 			<li>
 				<label>insane</label>
 				<description>{PAWN_nameDef} always seem out of place. No one knows what’s going on in {PAWN_possessive} head, not even {PAWN_objective}self.</description>
+				<allowedMeditationFocusTypes>
+					<li>Void</li>
+				</allowedMeditationFocusTypes>
 			</li>
 		</degreeDatas>
 		<conflictingTraits>
@@ -162,6 +168,9 @@
 			<li>
 				<label>proper</label>
 				<description>Follow the dress code, say the right word. {PAWN_nameDef} has immaculate manners that navigate them through every social occasion.</description>
+				<statOffsets>
+					<SocialImpact>0.15</SocialImpact>
+				</statOffsets>
 			</li>
 		</degreeDatas>
 		<requiredWorkTags>
@@ -401,6 +410,9 @@
 				<skillGains>
 					<Intellectual>4</Intellectual>
 				</skillGains>
+				<statOffsets>
+					<MechBandwidth>2</MechBandwidth>
+				</statOffsets>
 			</li>
 		</degreeDatas>
 		<requiredWorkTags>
