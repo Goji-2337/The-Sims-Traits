@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<TraitDef>
+		<defName>ST_Manipulative</defName>
+		<commonality>0.5</commonality>
+		<degreeDatas>
+			<li>
+				<label>manipulative</label>
+				<description>{PAWN_nameDef} is good at getting {PAWN_possessive} way. Be it love bombing or gaslighting, {PAWN_possessive} victims rarely notice what’s truly going on.</description>
+				<allowedMeditationFocusTypes>
+					<li>Morbid</li>
+				</allowedMeditationFocusTypes>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>ST_Naive</li>
+			<li>Kind</li>
+			<li>Abrasive</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>ST_Naive</defName>
+		<commonality>0.6</commonality>
+		<degreeDatas>
+			<li>
+				<label>naive</label>
+				<description>{PAWN_nameDef} was taught everyone is good and kind. Maybe one day {PAWN_pronoun} will learn the lesson the hard way.</description>
+				<statFactors>
+					<CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">2</CertaintyLossFactor>
+				</statFactors>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">VTE_WorldWeary</li>
+			<li>DislikesWomen</li>
+			<li>DislikesMen</li>
+			<li>TorturedArtist</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>ST_Narcissist</defName>
+		<commonality>0.7</commonality>
+		<degreeDatas>
+			<li>
+				<label>narcissist</label>
+				<description>{PAWN_nameDef} believes in pretty privilege. {PAWN_pronoun} is desperate to achieve flawless beauty by any means.</description>
+			</li>
+		</degreeDatas>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>ST_HealthNut</defName>
+		<commonality>0.3</commonality>
+		<degreeDatas>
+			<li>
+				<label>health Nut</label>
+				<description>{PAWN_nameDef}’s body is a temple, {PAWN_pronoun} only eats food to survive. {PAWN_pronoun} is here for a long time, not a good time.</description>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">VTE_Slob</li>
+			<li>DrugDesire</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>ST_Emotional</defName>
+		<commonality>0.7</commonality>
+		<degreeDatas>
+			<li>
+				<label>emotional</label>
+				<description>{PAWN_nameDef} feels {PAWN_possessive} emotions more profoundly and experiences greater mood swings. {PAWN_pronoun} often cries to release any frustration.</description>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">VTE_Desensitized</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>ST_Paranoid</defName>
+		<commonality>0.5</commonality>
+		<degreeDatas>
+			<li>
+				<label>paranoid</label>
+				<description>{PAWN_nameDef} believes good luck is an illusion and bad things are bound to happen. {PAWN_pronoun} is always ready for the worst case scenario.</description>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>Nerves</li>
+			<li>NaturalMood</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef MayRequire="Ludeon.RimWorld.Biotech">
+		<defName>ST_Goofball</defName>
+		<commonality>1</commonality>
+		<degreeDatas>
+			<li>
+				<label>goofball</label>
+				<description>{PAWN_nameDef} acts funny in the day-to-day life. {PAWN_pronoun} silly nature often amuses others.</description>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">VTE_Snob</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>ST_Loyal</defName>
+		<commonality>1</commonality>
+		<degreeDatas>
+			<li>
+				<label>loyal</label>
+				<description>{PAWN_nameDef} is never gonna give you up.</description>
+				<statFactors>
+					<CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0.01</CertaintyLossFactor>
+				</statFactors>
+				<disallowedMentalStates>
+					<li>GiveUpExit</li>
+				</disallowedMentalStates>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>Jealous</li>
+			<li>ST_NonCommital</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>ST_PartyAnimal</defName>
+		<commonality>1.1</commonality>
+		<degreeDatas>
+			<li>
+				<label>party animal</label>
+				<description>For {PAWN_nameDef}, every season is party season!</description>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li MayRequire="Ludeon.RimWorld.Biotech">Recluse</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>ST_Insane</defName>
+		<commonality>0.2</commonality>
+		<degreeDatas>
+			<li>
+				<label>insane</label>
+				<description>{PAWN_nameDef} always seem out of place. No one knows what’s going on in {PAWN_possessive} head, not even {PAWN_objective}self.</description>
+				<allowedMeditationFocusTypes>
+					<li>Void</li>
+				</allowedMeditationFocusTypes>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>ST_Proper</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>ST_Proper</defName>
+		<commonality>0.4</commonality>
+		<degreeDatas>
+			<li>
+				<label>proper</label>
+				<description>Follow the dress code, say the right word. {PAWN_nameDef} has immaculate manners that navigate them through every social occasion.</description>
+				<statOffsets>
+					<SocialImpact>0.15</SocialImpact>
+				</statOffsets>
+			</li>
+		</degreeDatas>
+		<requiredWorkTags>
+			<li>Social</li>
+		</requiredWorkTags>
+		<conflictingTraits>
+			<li>Nudist</li>
+			<li>Abrasive</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>ST_Grumpy</defName>
+		<commonality>0.4</commonality>
+		<degreeDatas>
+			<li>
+				<label>grumpy</label>
+				<description>{PAWN_nameDef} always seems annoyed, especially on a Monday. Others around {PAWN_objective} are constantly afraid to trigger {PAWN_possessive} grumbles.</description>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>ST_Goofball</li>
+			<li>NaturalMood</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>ST_Shy</defName>
+		<commonality>0.7</commonality>
+		<degreeDatas>
+			<li>
+				<label>shy</label>
+				<description>{PAWN_nameDef} struggles to socialise with other people, {PAWN_pronoun} especially cherish it while being on the receiving end of kindness.\n\nOver the time, {PAWN_nameDef} have learned to spend more time on organising and introspecting {PAWN_objective}self.</description>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>ST_PartyAnimal</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>ST_Materialistic</defName>
+		<commonality>0.9</commonality>
+		<degreeDatas>
+			<li>
+				<label>materialistic</label>
+				<description>{PAWN_nameDef} likes buying and bragging about {PAWN_possessive} new possessions.</description>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>ST_Zen</li>
+			<li>ST_Devout</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>ST_Vegan</defName>
+		<commonality>0.1</commonality>
+		<degreeDatas>
+			<li>
+				<label>vegan</label>
+				<description>{PAWN_nameDef} avoids eating meat. {PAWN_pronoun} believes animals should not be treated as commodities and strives to rescue as many as {PAWN_pronoun} can.</description>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">VTE_AnimalHater</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>ST_Devout</defName>
+		<commonality>0.6</commonality>
+		<degreeDatas>
+			<li>
+				<label>devout</label>
+				<description>{PAWN_nameDef} devotes {PAWN_possessive} body and soul to what {PAWN_pronoun} believes. Somehow, {PAWN_possessive} prayers get answered.</description>
+				<statFactors>
+					<CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0.01</CertaintyLossFactor>
+				</statFactors>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>ST_NonCommital</li>
+			<li>ST_Paranoid</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>ST_Procrastinator</defName>
+		<commonality>0.6</commonality>
+		<degreeDatas>
+			<li>
+				<label>procrastinator</label>
+				<description>{PAWN_nameDef} likes to put things off until the last minute. {PAWN_pronoun} still manages to get those tasks done but the results are usually lacklustre.</description>
+				<statOffsets>
+					<WorkSpeedGlobal>0.5</WorkSpeedGlobal>
+				</statOffsets>
+			</li>
+		</degreeDatas>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>ST_NonCommital</defName>
+		<commonality>0.7</commonality>
+		<degreeDatas>
+			<li>
+				<label>non-committal</label>
+				<description>{PAWN_nameDef} becomes tense after a while in the same job or relationship. {PAWN_possessive} fear of commitment facilitates change.</description>
+				<statFactors>
+					<CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">2</CertaintyLossFactor>
+				</statFactors>
+			</li>
+		</degreeDatas>
+	</TraitDef>
+
+	<TraitDef MayRequire="Ludeon.RimWorld.Royalty">
+		<defName>ST_HighMaintenance</defName>
+		<commonality>0.3</commonality>
+		<degreeDatas>
+			<li>
+				<label>high maintenance</label>
+				<description>{PAWN_nameDef} can feel a pea under twenty mattresses while sleeping. {PAWN_pronoun} is born blue blood with expensive taste and trivial problems.</description>
+			</li>
+		</degreeDatas>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>ST_FamilyOriented</defName>
+		<commonality>1</commonality>
+		<degreeDatas>
+			<li>
+				<label>family oriented</label>
+				<description>{PAWN_nameDef} want big families and enjoy being surrounded by children. {PAWN_pronoun} will make an excellent parent!</description>
+			</li>
+		</degreeDatas>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>ST_SteadyHands</defName>
+		<commonality>0.1</commonality>
+		<degreeDatas>
+			<li>
+				<label>steady hands</label>
+				<description>{PAWN_nameDef} has a pair of steady hands that never shakes or even trembles under pressure.</description>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">VTE_Squeamish</li>
+			<li>Wimp</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>ST_Daredevil</defName>
+		<commonality>0.3</commonality>
+		<disabledWorkTags>Firefighting</disabledWorkTags>
+		<degreeDatas>
+			<li>
+				<label>daredevil</label>
+				<description>{PAWN_nameDef} enjoys chaos and takes the extreme side in life. {PAWN_pronoun} can’t quit the adrenaline rush from being reckless.</description>
+			</li>
+		</degreeDatas>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+		<conflictingTraits>
+			<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">VTE_Squeamish</li>
+			<li>Whip</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>ST_Chatterbox</defName>
+		<commonality>0.5</commonality>
+		<degreeDatas>
+			<li>
+				<label>chatterbox</label>
+				<description>{PAWN_nameDef} likes to talk and {PAWN_pronoun} sure talks a lot. People around {PAWN_objective} have started to develop immunity to whatever {PAWN_pronoun} says.</description>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li MayRequire="Ludeon.RimWorld.Biotech">Recluse</li>
+			<li>ST_Shy</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>ST_Bookworm</defName>
+		<commonality>0.7</commonality>
+		<degreeDatas>
+			<li>
+				<label>bookworm</label>
+				<description>{PAWN_nameDef} has a deep love for reading. {PAWN_pronoun} reads fast and enjoys expanding {PAWN_possessive} knowledge this way.</description>
+			</li>
+		</degreeDatas>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>ST_Handy</defName>
+		<commonality>0.7</commonality>
+		<degreeDatas>
+			<li>
+				<label>handy</label>
+				<description>{PAWN_nameDef} likes to get on with {PAWN_possessive} hands and tinkers around. {PAWN_pronoun} has the natural aptitude of handling those tiny precision components.</description>
+				<skillGains>
+					<Construction>2</Construction>
+					<Crafting>2</Crafting>
+				</skillGains>
+			</li>
+		</degreeDatas>
+		<requiredWorkTags>
+			<li>Constructing</li>
+		</requiredWorkTags>
+	</TraitDef>
+
+	<TraitDef MayRequire="Ludeon.RimWorld.Royalty">
+		<defName>ST_Virtuoso</defName>
+		<commonality>0.7</commonality>
+		<degreeDatas>
+			<li>
+				<label>virtuoso</label>
+				<description>{PAWN_nameDef} has a natural gift with musical and instruments. It is as if the music {PAWN_pronoun} plays lingered in the air.</description>
+				<skillGains>
+					<Artistic>2</Artistic>
+				</skillGains>
+			</li>
+		</degreeDatas>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>ST_TechWhiz</defName>
+		<commonality>0.7</commonality>
+		<degreeDatas>
+			<li>
+				<label>tech whiz</label>
+				<description>{PAWN_nameDef} is brilliant with computers and technology. {PAWN_pronoun} can hack into other people’s data and security systems with ease.</description>
+				<skillGains>
+					<Intellectual>4</Intellectual>
+				</skillGains>
+				<statOffsets>
+					<MechBandwidth>2</MechBandwidth>
+				</statOffsets>
+			</li>
+		</degreeDatas>
+		<requiredWorkTags>
+			<li>Intellectual</li>
+		</requiredWorkTags>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>ST_Gambler</defName>
+		<commonality>0.2</commonality>
+		<degreeDatas>
+			<li>
+				<label>gambler</label>
+				<description>{PAWN_nameDef} believes in {PAWN_possessive} own luck. Despite the crippling addiction, {PAWN_possessive} luck certainly tips in a different direction on the battlefield.</description>
+				<statOffsets>
+					<ShootingAccuracyPawn>7</ShootingAccuracyPawn>
+					<MeleeHitChance>7</MeleeHitChance>
+					<MeleeDodgeChance>7</MeleeDodgeChance>
+				</statOffsets>
+			</li>
+		</degreeDatas>
+	</TraitDef>
+
+	<TraitDef MayRequire="Ludeon.RimWorld.Biotech">
+		<defName>ST_Childish</defName>
+		<commonality>0.8</commonality>
+		<degreeDatas>
+			<li>
+				<label>childish</label>
+				<description>{PAWN_nameDef} never lost that childlike wonder. {PAWN_pronoun} sees things through the eyes of a child and need to be constantly entertained.</description>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">VTE_WorldWeary</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>ST_Nosy</defName>
+		<commonality>0.4</commonality>
+		<degreeDatas>
+			<li>
+				<label>nosy</label>
+				<description>{PAWN_nameDef} ignores others' boundaries and likes pressing for more information, this often rubs people the wrong way.</description>
+			</li>
+		</degreeDatas>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>ST_HugePower</defName>
+		<commonality>0.9</commonality>
+		<degreeDatas>
+			<li>
+				<label>huge power</label>
+				<description>{PAWN_nameDef} is noted for {PAWN_possessive} incredible strength. {PAWN_pronoun}'s naturally strong without the need to frequent the gym.</description>
+				<statOffsets>
+					<CarryingCapacity>75</CarryingCapacity>
+				</statOffsets>
+				<statFactors>
+					<VEF_VerbRangeFactor MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">1.5</VEF_VerbRangeFactor>
+				</statFactors>
+			</li>
+		</degreeDatas>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+		<conflictingTraits>
+			<li MayRequire="Ludeon.RimWorld.Biotech">Delicate</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>ST_Observant</defName>
+		<commonality>0.3</commonality>
+		<degreeDatas>
+			<li>
+				<label>observant</label>
+				<description>{PAWN_nameDef} has a pair of keen eyes that scans through every detail and miss no strange things.</description>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>ST_Naive</li>
+			<li>Abrasive</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>ST_Zen</defName>
+		<commonality>0.1</commonality>
+		<degreeDatas>
+			<li>
+				<label>zen</label>
+				<description>{PAWN_nameDef} takes time to discover beauty in everything. {PAWN_pronoun} sees the world in a grain of sand.\n\nTo {PAWN_objective}, actively sabotaging life is a despicable act.</description>
+				<allowedMeditationFocusTypes>
+					<li>Morbid</li>
+					<li>Minimal</li>
+					<li>Flame</li>
+				</allowedMeditationFocusTypes>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>Bloodlust</li>
+			<li>Nerves</li>
+			<li>ST_Manipulative</li>
+			<li MayRequire="Ludeon.RimWorld.Anomaly">VoidFascination</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+		<defName>ST_Submissive</defName>
+		<commonality>0.5</commonality>
+		<degreeDatas>
+			<li>
+				<label>submissive</label>
+				<description>{PAWN_nameDef} wants to be told what to do. Following rules and obeying authority are their second nature.</description>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">VTE_Rebel</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<TraitDef MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+		<defName>ST_DrunkenMaster</defName>
+		<commonality>0.5</commonality>
+		<degreeDatas>
+			<li>
+				<label>drunken master</label>
+				<description>{PAWN_nameDef} is supposedly a hand-to-hand combat specialist, but only when inebriated. They claim to become more talented the more drunk they are.</description>
+			</li>
+		</degreeDatas>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+	</TraitDef>
+
+	<TraitDef MayRequire="VanillaExpanded.VanillaTraitsExpanded">
+		<defName>ST_Insomniac</defName>
+		<commonality>0.7</commonality>
+		<degreeDatas>
+			<li>
+				<label>insomniac</label>
+				<description>{PAWN_nameDef} is never really asleep or awake. {PAWN_pronoun} is almost zombie like, lurching along and working very slowly.</description>
+				<statOffsets>
+					<WorkSpeedGlobal>-0.4</WorkSpeedGlobal>
+					<RestFallRateFactor>-0.6</RestFallRateFactor>
+				</statOffsets>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">VTE_HeavySleeper</li>
+		</conflictingTraits>
+	</TraitDef>
+</Defs>
+

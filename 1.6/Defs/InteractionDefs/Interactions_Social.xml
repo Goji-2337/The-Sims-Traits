@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <InteractionDef>
+    <defName>ST_Cry</defName>
+    <label>cry</label>
+    <workerClass>SimsTraits.InteractionWorker_Cry</workerClass>
+    <symbol>UI/Icons/Cry</symbol>
+    <recipientThought>ST_EmotionallyDrained</recipientThought>
+    <logRulesInitiator>
+      <rulesStrings>
+        <li>r_logentry->[INITIATOR_nameDef] [talkedabout] [subject] with [RECIPIENT_nameDef].</li>
+        <li>talkedabout(p=4)->cried about</li>
+        <li>talkedabout->lamented about</li>
+        <li>talkedabout->wept about</li>
+		
+        <li>subject(INITIATOR_cubeInterest==false)->[TalkTopicLight]</li>
+        <li>subject(INITIATOR_cubeInterest==true)->[TalkTopicCube]</li>
+
+      </rulesStrings>
+    </logRulesInitiator>
+  </InteractionDef>
+
+  <ThoughtDef>
+    <defName>ST_EmotionallyDrained</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <durationDays>20</durationDays>
+    <stackLimit>300</stackLimit>
+    <stackLimitForSameOtherPawn>10</stackLimitForSameOtherPawn>
+    <stackedEffectMultiplier>0.9</stackedEffectMultiplier>
+    <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <socialTargetDevelopmentalStageFilter>Baby, Child, Adult</socialTargetDevelopmentalStageFilter>
+    <stages>
+      <li>
+        <label>emotionally drained</label>
+        <baseOpinionOffset>-15</baseOpinionOffset>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+
+</Defs>
