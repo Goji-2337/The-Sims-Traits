@@ -1,4 +1,4 @@
-﻿using HarmonyLib;
+using HarmonyLib;
 using RimWorld;
 using System;
 using System.Collections.Generic;
@@ -14,8 +14,8 @@ namespace SimsTraits
         [HarmonyTargetMethods]
         public static IEnumerable<MethodBase> TargetMethods()
         {
-            yield return AccessTools.Method(AccessTools.TypeByName("VFECore.VerbUtility"), "TryModifyThingsVerbs");
-            yield return AccessTools.Method(AccessTools.TypeByName("VFECore.DrawStatsReport_Patch"), "Prefix");
+            yield return AccessTools.Method(AccessTools.TypeByName("VEF.Weapons.VerbUtility"), "TryModifyThingsVerbs");
+            yield return AccessTools.Method(AccessTools.TypeByName("VEF.Weapons.VanillaExpandedFramework_StatsReportUtility_DrawStatsReport_Patch"), "Prefix");
         }
 
         public static Thing curThing;
@@ -37,7 +37,7 @@ namespace SimsTraits
         [HarmonyTargetMethods]
         public static IEnumerable<MethodBase> TargetMethods()
         {
-            yield return AccessTools.Method(AccessTools.TypeByName("VFECore.VerbUtility"), "GetVerbRangeMultiplier");
+            yield return AccessTools.Method(AccessTools.TypeByName("VEF.Weapons.VerbUtility"), "GetVerbRangeMultiplier");
         }
 
         public static void Postfix(Pawn pawn, ref float __result)
