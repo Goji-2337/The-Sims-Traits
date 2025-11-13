@@ -13,8 +13,11 @@ namespace SimsTraits
             {
                 if (pawnTarget.RaceProps.IsFlesh && (__instance.IsMeleeAttack || __instance is Verb_LaunchProjectile))
                 {
-                    Messages.Message("IsIncapableOfViolence".Translate(__instance.CasterPawn.LabelShort, __instance.CasterPawn), MessageTypeDefOf.RejectInput);
-                    return false;
+                    if (pawnTarget.Faction != null && pawnTarget.HostileTo(__instance.CasterPawn.Faction) == false)
+                    {
+                        Messages.Message("IsIncapableOfViolence".Translate(__instance.CasterPawn.LabelShort, __instance.CasterPawn), MessageTypeDefOf.RejectInput);
+                        return false;
+                    }
                 }
             }
             return true;

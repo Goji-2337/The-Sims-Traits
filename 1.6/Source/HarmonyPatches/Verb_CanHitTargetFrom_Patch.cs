@@ -1,4 +1,5 @@
-﻿using HarmonyLib;
+using HarmonyLib;
+using RimWorld;
 using Verse;
 
 namespace SimsTraits
@@ -12,7 +13,10 @@ namespace SimsTraits
             {
                 if (pawnTarget.RaceProps.IsFlesh && (__instance.IsMeleeAttack || __instance is Verb_LaunchProjectile))
                 {
-                    __result = false;
+                    if (pawnTarget.Faction != null && pawnTarget.HostileTo(__instance.CasterPawn.Faction) == false)
+                    {
+                        __result = false;
+                    }
                 }
             }
         }

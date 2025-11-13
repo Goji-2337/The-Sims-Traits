@@ -9,10 +9,13 @@ namespace SimsTraits
     {
         public static void Postfix(Pawn_MeleeVerbs __instance, Thing target, ref Verb __result)
         {
-            if (__instance.pawn.HasTrait(ST_DefOf.ST_Zen) && target is Pawn pawn 
+            if (__instance.pawn.HasTrait(ST_DefOf.ST_Zen) && target is Pawn pawn
                 && pawn.RaceProps.IsFlesh)
             {
-                __result = null;
+                if (pawn.Faction != null && pawn.HostileTo(__instance.pawn.Faction) == false)
+                {
+                    __result = null;
+                }
             }
         }
     }
