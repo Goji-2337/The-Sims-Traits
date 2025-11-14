@@ -14,5 +14,23 @@ namespace SimsTraits
                 PawnComponentsUtility.AddAndRemoveDynamicComponents(___pawn);
             }
         }
+
+        public static void ClearFog(Pawn pawn)
+        {
+            var map = pawn.Map;
+            for (int i = 0; i < map.Size.x; i++)
+            {
+                for (int j = 0; j < map.Size.z; j++)
+                {
+                    var cell = new IntVec3(i, 0, j);
+                    if (cell.Filled(map) is false
+                        || cell.GetRoom(map) is Room room && room.PsychologicallyOutdoors is false
+                        || cell.GetRoof(map) == RoofDefOf.RoofConstructed)
+                    {
+                        map.fogGrid.Unfog(cell);
+                    }
+                }
+            }
+        }
     }
 }
