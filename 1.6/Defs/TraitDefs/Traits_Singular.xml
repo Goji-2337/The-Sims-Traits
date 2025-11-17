@@ -338,7 +338,7 @@
 		</requiredWorkTags>
 		<conflictingTraits>
 			<li MayRequire="VanillaExpanded.VanillaTraitsExpanded">VTE_Squeamish</li>
-			<li>Whip</li>
+			<li>Wimp</li>
 		</conflictingTraits>
 	</TraitDef>
 
