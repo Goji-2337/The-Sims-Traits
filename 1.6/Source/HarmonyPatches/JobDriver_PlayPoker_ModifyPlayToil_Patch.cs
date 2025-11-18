@@ -15,10 +15,10 @@ namespace SimsTraits
             {
                 if (toil.actor.HasTrait(ST_DefOf.ST_Gambler))
                 {
-                    var inventoryItem = toil.actor.inventory.innerContainer.InRandomOrder().FirstOrDefault();
-                    if (inventoryItem != null)
+                    var affordableItems = toil.actor.inventory.innerContainer.Where(item => (item.MarketValue * item.stackCount) < 500).InRandomOrder().FirstOrDefault();
+                    if (affordableItems != null)
                     {
-                        inventoryItem.Destroy();
+                        affordableItems.Destroy();
                     }
                 }
             });
