@@ -28,10 +28,23 @@ namespace SimsTraits
             {
                 foreach (var kvp in replacedTraits)
                 {
-                    var defToRemove = DefDatabase<TraitDef>.GetNamedSilentFail(kvp.Key);
-                    if (defToRemove != null)
+                    bool disableSTTrait = SimsTraitsSettings.disableVEPatchingPerTrait.TryGetValue(kvp.Key, out bool value) && value;
+                    
+                    if (disableSTTrait)
                     {
-                        DefDatabase<TraitDef>.Remove(defToRemove);
+                        var defToRemove = DefDatabase<TraitDef>.GetNamedSilentFail(kvp.Value);
+                        if (defToRemove != null)
+                        {
+                            DefDatabase<TraitDef>.Remove(defToRemove);
+                        }
+                    }
+                    else
+                    {
+                        var defToRemove = DefDatabase<TraitDef>.GetNamedSilentFail(kvp.Key);
+                        if (defToRemove != null)
+                        {
+                            DefDatabase<TraitDef>.Remove(defToRemove);
+                        }
                     }
                 }
             }
