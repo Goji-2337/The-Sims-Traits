@@ -1,4 +1,4 @@
-﻿using HarmonyLib;
+using HarmonyLib;
 using RimWorld;
 using System.Collections.Generic;
 using System.Reflection;
@@ -44,22 +44,10 @@ namespace SimsTraits
                 foreach (var kvp in replacedTraits)
                 {
                     bool enableSTTrait = !SimsTraitsSettings.VEPatchPerTrait[kvp.Key];
-                    
-                    if (enableSTTrait)
+                    var defToRemove = DefDatabase<TraitDef>.GetNamedSilentFail(enableSTTrait ? kvp.Key : kvp.Value);
+                    if (defToRemove != null)
                     {
-                        var defToRemove = DefDatabase<TraitDef>.GetNamedSilentFail(kvp.Key);
-                        if (defToRemove != null)
-                        {
-                            DefDatabase<TraitDef>.Remove(defToRemove);
-                        }
-                    }
-                    else
-                    {
-                        var defToRemove = DefDatabase<TraitDef>.GetNamedSilentFail(kvp.Value);
-                        if (defToRemove != null)
-                        {
-                            DefDatabase<TraitDef>.Remove(defToRemove);
-                        }
+                        defToRemove.commonality = defToRemove.commonalityFemale = 0f;
                     }
                 }
             }
