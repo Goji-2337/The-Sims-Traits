@@ -38,7 +38,7 @@ namespace SimsTraits
             foreach (var kvp in TraitUtils.replacedTraits)
             {
                 bool currentValue = SimsTraitsSettings.VEPatchPerTrait[kvp.Key];
-                listingStandard.CheckboxLabeled($"{kvp.Key} -> {kvp.Value}", ref currentValue, $"If checked, {kvp.Value} will be used instead of {kvp.Key}. Requires restart.");
+                listingStandard.CheckboxLabeled($"{kvp.Value} -> {kvp.Key}", ref currentValue, $"If checked, {kvp.Value} will be used instead of {kvp.Key}. Requires restart.");
                 SimsTraitsSettings.VEPatchPerTrait[kvp.Key] = currentValue;
             }
             

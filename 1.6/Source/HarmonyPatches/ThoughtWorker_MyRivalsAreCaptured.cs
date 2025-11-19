@@ -1,8 +1,15 @@
+using System;
 using RimWorld;
 using Verse;
 
 namespace SimsTraits
 {
+    [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct)]
+    public class HotSwappableAttribute : Attribute
+    {
+    }
+
+    [HotSwappable]
     public class ThoughtWorker_MyRivalsAreCaptured : ThoughtWorker
     {
         public int RivalsAreCaptured(Pawn p)
@@ -10,10 +17,10 @@ namespace SimsTraits
             int count = 0;
             foreach (var pawn in PawnsFinder.AllMapsCaravansAndTravellingTransporters_AliveSpawned)
             {
-                if (pawn.RaceProps.IsFlesh && !pawn.Dead && !pawn.Destroyed)
+                if (pawn != p && pawn.RaceProps.IsFlesh && !pawn.Dead && !pawn.Destroyed)
                 {
                     int num = p.relations.OpinionOf(pawn);
-                    if (num < -20 && (p.IsSlave || p.IsPrisoner))
+                    if (num <= -20 && (pawn.IsSlave || pawn.IsPrisoner))
                     {
                         count++;
                     }
