@@ -1,4 +1,4 @@
-﻿using RimWorld;
+using RimWorld;
 using Verse;
 
 namespace SimsTraits
@@ -8,7 +8,7 @@ namespace SimsTraits
         public int RivalsAreCaptured(Pawn p)
         {
             int count = 0;
-            foreach (var pawn in PawnsFinder.AllMapsCaravansAndTravellingTransporters_Alive_OfPlayerFaction)
+            foreach (var pawn in PawnsFinder.AllMapsCaravansAndTravellingTransporters_AliveSpawned)
             {
                 if (pawn.RaceProps.IsFlesh && !pawn.Dead && !pawn.Destroyed)
                 {

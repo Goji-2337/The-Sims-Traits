@@ -24,11 +24,18 @@ namespace SimsTraits
         {
             harmony = new Harmony("SimsTraitsMod");
             harmony.PatchAll();
+            foreach (var kvp in replacedTraits)
+            {
+                if (!SimsTraitsSettings.VEPatchPerTrait.ContainsKey(kvp.Key))
+                {
+                    SimsTraitsSettings.VEPatchPerTrait[kvp.Key] = true;
+                }
+            }
             foreach (var traitName in additionalPatches)
             {
-                if (!SimsTraitsSettings.disableVEPatchingPerTrait.ContainsKey(traitName))
+                if (!SimsTraitsSettings.VEPatchPerTrait.ContainsKey(traitName))
                 {
-                    SimsTraitsSettings.disableVEPatchingPerTrait[traitName] = false;
+                    SimsTraitsSettings.VEPatchPerTrait[traitName] = true;
                 }
             }
             
@@ -36,11 +43,11 @@ namespace SimsTraits
             {
                 foreach (var kvp in replacedTraits)
                 {
-                    bool disableSTTrait = SimsTraitsSettings.disableVEPatchingPerTrait.TryGetValue(kvp.Key, out bool value) && value;
+                    bool enableSTTrait = !SimsTraitsSettings.VEPatchPerTrait[kvp.Key];
                     
-                    if (disableSTTrait)
+                    if (enableSTTrait)
                     {
-                        var defToRemove = DefDatabase<TraitDef>.GetNamedSilentFail(kvp.Value);
+                        var defToRemove = DefDatabase<TraitDef>.GetNamedSilentFail(kvp.Key);
                         if (defToRemove != null)
                         {
                             DefDatabase<TraitDef>.Remove(defToRemove);
@@ -48,7 +55,7 @@ namespace SimsTraits
                     }
                     else
                     {
-                        var defToRemove = DefDatabase<TraitDef>.GetNamedSilentFail(kvp.Key);
+                        var defToRemove = DefDatabase<TraitDef>.GetNamedSilentFail(kvp.Value);
                         if (defToRemove != null)
                         {
                             DefDatabase<TraitDef>.Remove(defToRemove);
@@ -80,9 +87,9 @@ namespace SimsTraits
 
         public static bool IsOurPatchEnabled(this TraitDef def)
         {
-            if (SimsTraitsSettings.disableVEPatchingPerTrait.TryGetValue(def.defName, out bool value))
+            if (SimsTraitsSettings.VEPatchPerTrait.TryGetValue(def.defName, out bool value))
             {
-                return !value;
+                return value;
             }
             return true;
         }
