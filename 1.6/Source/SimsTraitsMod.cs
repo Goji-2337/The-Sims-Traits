@@ -40,7 +40,7 @@ namespace SimsTraits
                 var traitDef = DefDatabase<TraitDef>.GetNamedSilentFail(patchName);
                 string traitLabel = traitDef?.degreeDatas?.Count > 0 ? traitDef.degreeDatas[0].label : patchName;
                 
-                listingStandard.CheckboxLabeled($"Patch {traitLabel}", ref currentValue, $"If enabled, the patch for {traitLabel} will be disabled. Requires restart.");
+                listingStandard.CheckboxLabeled($"Disable patch for {traitLabel}", ref currentValue, $"If enabled, the patch for {traitLabel} will be disabled. Requires restart.");
                 SimsTraitsSettings.disableVEPatchingPerTrait[patchName] = currentValue;
             }
             
