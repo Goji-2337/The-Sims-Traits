@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using Verse;
 using RimWorld;
 using System.Collections.Generic;
@@ -50,7 +50,7 @@ namespace SimsTraits
 
         public override string SettingsCategory()
         {
-            if (TraitUtils.VETraitsLoaded)
+            if (TraitUtils.VETraitsLoaded is false)
             {
                 return "";
             }
