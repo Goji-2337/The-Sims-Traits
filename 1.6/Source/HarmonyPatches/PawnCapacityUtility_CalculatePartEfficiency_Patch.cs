@@ -26,11 +26,11 @@ namespace SimsTraits
 
         public static float GetPartHealth(float health, HediffSet diffSet, BodyPartRecord part)
         {
-            if (diffSet.pawn.HasTrait(ST_DefOf.VTE_Clumsy))
+            if (diffSet.pawn.HasTrait(ST_DefOf.VTE_Clumsy) && ST_DefOf.VTE_Clumsy.IsOurPatchEnabled())
             {
                 for (int i = 0; i < diffSet.hediffs.Count; i++)
                 {
-                    if (diffSet.hediffs[i].Part == part && diffSet.hediffs[i] is Hediff_Injury hediff_Injury 
+                    if (diffSet.hediffs[i].Part == part && diffSet.hediffs[i] is Hediff_Injury hediff_Injury
                         && hediff_Injury.Severity < 3)
                     {
                         health += hediff_Injury.Severity;

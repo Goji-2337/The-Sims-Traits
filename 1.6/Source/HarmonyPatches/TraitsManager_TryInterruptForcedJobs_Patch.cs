@@ -1,4 +1,4 @@
-﻿using HarmonyLib;
+using HarmonyLib;
 using RimWorld;
 using System.Collections.Generic;
 using System.Reflection;
@@ -34,7 +34,7 @@ namespace SimsTraits
         public static void AbsentMinded(KeyValuePair<Verse.Pawn, Verse.AI.Job> kvp)
         {
             var sensitivity = kvp.Key.GetStatValue(StatDefOf.PsychicSensitivity);
-            if (sensitivity >= 0.1f)
+            if (sensitivity >= 0.1f && ST_DefOf.VTE_AbsentMinded.IsOurPatchEnabled())
             {
                 kvp.Key.health.AddHediff(ST_DefOf.ST_PsychicTranceAbsentMinded);
             }

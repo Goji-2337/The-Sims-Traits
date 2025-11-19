@@ -29,7 +29,7 @@ namespace SimsTraits
         }
         public override ThoughtState CurrentStateInternal(Pawn p)
         {
-            if (p.HasTrait(ST_DefOf.VTE_Vengeful) && RivalsAreCaptured(p) > 0)
+            if (p.HasTrait(ST_DefOf.VTE_Vengeful) && ST_DefOf.VTE_Vengeful.IsOurPatchEnabled() && RivalsAreCaptured(p) > 0)
             {
                 return ThoughtState.ActiveDefault;
             }

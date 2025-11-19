@@ -24,9 +24,9 @@ namespace SimsTraits
             }
         }
 
-        public static float GetSelfTendQuality(float tendQuality, Pawn pawn) 
+        public static float GetSelfTendQuality(float tendQuality, Pawn pawn)
         {
-            if (pawn.HasTrait(ST_DefOf.VTE_Clumsy))
+            if (pawn.HasTrait(ST_DefOf.VTE_Clumsy) && ST_DefOf.VTE_Clumsy.IsOurPatchEnabled())
             {
                 return 1.3f;
             }

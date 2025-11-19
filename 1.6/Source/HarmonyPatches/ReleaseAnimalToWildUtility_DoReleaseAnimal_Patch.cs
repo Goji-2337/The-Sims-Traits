@@ -9,7 +9,7 @@ namespace SimsTraits
     {
         public static void Postfix(Pawn animal, Pawn releasedBy)
         {
-            if (releasedBy != null && releasedBy.story != null && releasedBy.story.traits != null && releasedBy.story.traits.HasTrait(ST_DefOf.VTE_AnimalLover))
+            if (releasedBy != null && releasedBy.story != null && releasedBy.story.traits != null && releasedBy.story.traits.HasTrait(ST_DefOf.VTE_AnimalLover) && ST_DefOf.VTE_AnimalLover.IsOurPatchEnabled())
             {
                 var lastInspirationTick = Pawn_ExposeData_Patch.lastAnimalReleaseInspiration.Get(releasedBy);
                 var ticksSinceLastInspiration = Find.TickManager.TicksGame - lastInspirationTick;

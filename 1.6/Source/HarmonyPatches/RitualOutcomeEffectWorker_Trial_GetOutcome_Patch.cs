@@ -12,7 +12,7 @@ namespace SimsTraits
         {
             Pawn pawn = ritual.PawnWithRole("leader");
             Pawn pawn2 = ritual.PawnWithRole("convict");
-            if (pawn.HasTrait(ST_DefOf.VTE_Vengeful) && pawn.relations.OpinionOf(pawn2) < -20)
+            if (pawn.HasTrait(ST_DefOf.VTE_Vengeful) && ST_DefOf.VTE_Vengeful.IsOurPatchEnabled() && pawn.relations.OpinionOf(pawn2) < -20)
             {
                 __result = __instance.def.outcomeChances[1];
             }

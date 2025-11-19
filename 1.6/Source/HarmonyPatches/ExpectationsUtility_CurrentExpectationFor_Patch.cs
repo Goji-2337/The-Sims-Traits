@@ -10,7 +10,7 @@ namespace SimsTraits
     {
         public static void Postfix(ref ExpectationDef __result, Pawn p)
         {
-            if (__result != null && p.HasTrait(ST_DefOf.VTE_WorldWeary))
+            if (__result != null && p.HasTrait(ST_DefOf.VTE_WorldWeary) && ST_DefOf.VTE_WorldWeary.IsOurPatchEnabled())
             {
                 __result = ST_DefOf.SkyHigh;
             }

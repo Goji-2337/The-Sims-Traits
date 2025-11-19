@@ -8,7 +8,7 @@ namespace SimsTraits
     {
         public static void Postfix(ref float __result, Pawn pawn)
         {
-            if (pawn.HasTrait(ST_DefOf.VTE_BigBoned))
+            if (pawn.HasTrait(ST_DefOf.VTE_BigBoned) && ST_DefOf.VTE_BigBoned.IsOurPatchEnabled())
             {
                 __result += 5f;
             }

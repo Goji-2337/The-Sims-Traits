@@ -1,4 +1,4 @@
-using HarmonyLib;
+﻿using HarmonyLib;
 using RimWorld;
 using System.Collections.Generic;
 using System.Reflection;
@@ -24,6 +24,14 @@ namespace SimsTraits
         {
             harmony = new Harmony("SimsTraitsMod");
             harmony.PatchAll();
+            foreach (var traitName in additionalPatches)
+            {
+                if (!SimsTraitsSettings.disableVEPatchingPerTrait.ContainsKey(traitName))
+                {
+                    SimsTraitsSettings.disableVEPatchingPerTrait[traitName] = false;
+                }
+            }
+            
             if (VETraitsLoaded)
             {
                 foreach (var kvp in replacedTraits)
@@ -50,6 +58,17 @@ namespace SimsTraits
             }
         }
 
+        public static readonly List<string> additionalPatches = new List<string>
+        {
+            "VTE_AbsentMinded",
+            "VTE_AnimalLover",
+            "VTE_BigBoned",
+            "VTE_Clumsy",
+            "VTE_Vengeful",
+            "VTE_Workaholic",
+            "VTE_WorldWeary"
+        };
+
         public static bool HasTrait(this Pawn pawn, TraitDef traitDef)
         {
             if (traitDef != null && (pawn?.story?.traits?.HasTrait(traitDef) ?? false))
@@ -57,6 +76,15 @@ namespace SimsTraits
                 return true;
             }
             return false;
+        }
+
+        public static bool IsOurPatchEnabled(this TraitDef def)
+        {
+            if (SimsTraitsSettings.disableVEPatchingPerTrait.TryGetValue(def.defName, out bool value))
+            {
+                return !value;
+            }
+            return true;
         }
 
         public static T Clone<T>(this T obj)

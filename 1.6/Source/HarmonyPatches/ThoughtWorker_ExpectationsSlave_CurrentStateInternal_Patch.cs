@@ -9,7 +9,7 @@ namespace SimsTraits
     {
         public static void Postfix(ref ThoughtState __result, Pawn p)
         {
-            if (__result.Active && p.HasTrait(ST_DefOf.VTE_WorldWeary))
+            if (__result.Active && p.HasTrait(ST_DefOf.VTE_WorldWeary) && ST_DefOf.VTE_WorldWeary.IsOurPatchEnabled())
             {
                 __result = false;
             }
