@@ -1,4 +1,4 @@
-﻿using HarmonyLib;
+using HarmonyLib;
 using RimWorld;
 using Verse;
 
@@ -6,23 +6,33 @@ namespace SimsTraits
 {
     [HarmonyPatch(typeof(Pawn_NeedsTracker), "ShouldHaveNeed")]
     public static class Pawn_NeedsTracker_ShouldHaveNeed_Patch
-    {
-        public static void Prefix(Pawn ___pawn, NeedDef nd, out DevelopmentalStage __state)
+    {        
+        [HarmonyPriority(int.MaxValue)]
+        public static void Prefix(Pawn ___pawn, NeedDef nd, ref DevelopmentalStage? __state)
         {
-            __state = nd.developmentalStageFilter;
-            if (___pawn.HasTrait(ST_DefOf.ST_Childish) && nd == NeedDefOf.Learning)
+            if (ModsConfig.BiotechActive)
             {
-                nd.developmentalStageFilter = DevelopmentalStage.Child | DevelopmentalStage.Adult;
+                if (___pawn.HasTrait(ST_DefOf.ST_Childish) && nd == NeedDefOf.Learning)
+                {
+                    __state = nd.developmentalStageFilter;
+                    nd.developmentalStageFilter = DevelopmentalStage.Child | DevelopmentalStage.Adult;
+                }
             }
         }
 
         [HarmonyPriority(int.MinValue)]
-        public static void Postfix(Pawn ___pawn, NeedDef nd, ref bool __result, DevelopmentalStage __state)
+        public static void Postfix(Pawn ___pawn, NeedDef nd, ref bool __result, DevelopmentalStage? __state)
         {
-            nd.developmentalStageFilter = __state;
-            if (___pawn.HasTrait(ST_DefOf.ST_Childish) && nd == ST_DefOf.Joy)
+            if (ModsConfig.BiotechActive)
             {
-                __result = false;
+                if (__state != null)
+                {
+                    nd.developmentalStageFilter = __state.Value;
+                }
+                if (___pawn.HasTrait(ST_DefOf.ST_Childish) && nd == ST_DefOf.Joy)
+                {
+                    __result = false;
+                }
             }
         }
     }
