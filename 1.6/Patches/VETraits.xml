@@ -43,7 +43,7 @@
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/TraitDef[defName="VTE_AnimalLover"]/degreeDatas/li/description</xpath>
 					<value>
-						<description>{PAWN_nameDef} placeholder text</description>
+						<description>{PAWN_nameDef} can't stand cruelty toward animals and strive to rescue as many as they can. {PAWN_pronoun} feels happier when nuzzled, but is more deeply upset when losing one. {PAWN_pronoun} also refuses to butcher animals.</description>
 					</value>
 				</li>
 			</operations>

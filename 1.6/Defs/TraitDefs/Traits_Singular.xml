@@ -167,7 +167,7 @@
 		<degreeDatas>
 			<li>
 				<label>proper</label>
-				<description>Follow the dress code, say the right word. {PAWN_nameDef} has immaculate manners that navigate them through every social occasion.</description>
+				<description>Follow the dress code, say the right word. {PAWN_nameDef} has immaculate manners that navigate {PAWN_objective} through every social occasion.</description>
 				<statOffsets>
 					<SocialImpact>0.15</SocialImpact>
 				</statOffsets>
@@ -232,7 +232,7 @@
 		<degreeDatas>
 			<li>
 				<label>vegan</label>
-				<description>{PAWN_nameDef} avoids eating meat. {PAWN_pronoun} believes animals should not be treated as commodities and strives to rescue as many as {PAWN_pronoun} can.</description>
+				<description>{PAWN_nameDef} avoids eating meat. {PAWN_pronoun} believes animals should not be treated as commodities and knows how to use plants to make delicious meals.</description>
 			</li>
 		</degreeDatas>
 		<conflictingTraits>
@@ -541,7 +541,7 @@
 		<degreeDatas>
 			<li>
 				<label>drunken master</label>
-				<description>{PAWN_nameDef} is supposedly a hand-to-hand combat specialist, but only when inebriated. They claim to become more talented the more drunk they are.</description>
+				<description>{PAWN_nameDef} is supposedly a hand-to-hand combat specialist, but only when inebriated. {PAWN_pronoun} claim to become more talented the more drunk {PAWN_pronoun} are.</description>
 			</li>
 		</degreeDatas>
 		<requiredWorkTags>
