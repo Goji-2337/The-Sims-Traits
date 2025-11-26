@@ -28,7 +28,7 @@ namespace SimsTraits
         [MayRequire("VanillaExpanded.VTraitsE")] public static MentalStateDef VTE_MentalState_Binging_Food;
         [MayRequire("VanillaExpanded.VTraitsE")] public static MentalStateDef VTE_MentalState_AnxiousBreakdown;
         public static JoyGiverDef Pray;
-        public static ThingDef PokerTable, MealLavish;
+        public static ThingDef PokerTable, MealLavish, Telescope;
         public static NeedDef Joy;
         public static ExpectationDef SkyHigh;
         public static InspirationDef Inspired_Creativity;
