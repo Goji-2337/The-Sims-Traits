@@ -490,7 +490,7 @@
 		<degreeDatas>
 			<li>
 				<label>observant</label>
-				<description>{PAWN_nameDef} has a pair of keen eyes that scans through every detail and miss no strange things.</description>
+				<description>{PAWN_nameDef} has a pair of keen eyes that scans through every detail and miss no strange things. {PAWN_pronoun} can even spot distant ships while stargazing through a telescope.</description>
 			</li>
 		</degreeDatas>
 		<conflictingTraits>
