@@ -19,7 +19,7 @@ namespace SimsTraits
                     }
                     
                     compQuality.SetQuality(newQuality, ArtGenerationContext.Colony);
-                    MoteMaker.ThrowText(t.DrawPos, t.Map, "ST_QualityUpgraded".Translate(newQuality.GetLabel()), 3.65f);
+                    MoteMaker.ThrowText(t.DrawPos, t.Map, "ST.QualityUpgraded".Translate(newQuality.GetLabel()), 3.65f);
                 }
             }
         }
