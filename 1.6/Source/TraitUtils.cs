@@ -1,6 +1,7 @@
 using HarmonyLib;
 using RimWorld;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using Verse;
 using Verse.AI;
@@ -38,7 +39,23 @@ namespace SimsTraits
                     SimsTraitsSettings.VEPatchPerTrait[traitName] = true;
                 }
             }
-            
+            if (ModsConfig.IdeologyActive)
+            {
+                foreach (var ritualOutcome in DefDatabase<RitualOutcomeEffectDef>.AllDefsListForReading)
+                {
+                    if (ritualOutcome.comps == null)
+                    {
+                        ritualOutcome.comps = new List<RitualOutcomeComp>();
+                    }
+                    var properBonus = new RitualOutcomeComp_ProperPawn
+                    {
+                        label = "ST.ProperPawnBonus".Translate(),
+                        qualityOffset = 0.05f
+                    };
+                    ritualOutcome.comps.Add(properBonus);
+                }
+            }
+
             if (VETraitsLoaded)
             {
                 foreach (var kvp in replacedTraits)

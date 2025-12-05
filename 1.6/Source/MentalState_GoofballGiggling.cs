@@ -21,11 +21,10 @@ namespace SimsTraits
         {
             return RandomSocialMode.Normal;
         }
-
         public override void MentalStateTick(int delta)
         {
             base.MentalStateTick(delta);
-            if ((float)Find.TickManager.TicksGame <= lastScreamTick + 150f || pawn.IsWorldPawn())
+            if ((float)Find.TickManager.TicksGame <= lastScreamTick + 150f || pawn.IsWorldPawn() || pawn.Drafted)
             {
                 return;
             }
@@ -66,6 +65,18 @@ namespace SimsTraits
             base.ExposeData();
             Scribe_Values.Look(ref lastScreamTick, "lastScreamTick", 0f);
             Scribe_Collections.Look(ref alreadyHeard, "alreadyHeard", LookMode.Reference);
+        }
+
+        public override void PostStart(string reason)
+        {
+            base.PostStart(reason);
+            alreadyHeard.Clear();
+        }
+
+        public override void PostEnd()
+        {
+            base.PostEnd();
+            alreadyHeard.Clear();
         }
     }
 }

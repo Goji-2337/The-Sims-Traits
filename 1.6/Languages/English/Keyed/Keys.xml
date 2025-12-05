@@ -3,4 +3,6 @@
 	<ST.BeingScolded>scolded by {PAWN_nameDef}.</ST.BeingScolded>
 	<ST.NonCommital>non-committal</ST.NonCommital>
 	<ST.ObservantTradeShip>{PAWN_nameDef} noticed an unscheduled orbital trader approaching while using telescope!</ST.ObservantTradeShip>
+	<ST.QualityUpgraded>Quality upgraded to {0}</ST.QualityUpgraded>
+	<ST.ProperPawnBonus>Proper colonist present</ST.ProperPawnBonus>
 </LanguageData>

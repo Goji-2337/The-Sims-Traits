@@ -1,4 +1,4 @@
-﻿using HarmonyLib;
+using HarmonyLib;
 using RimWorld;
 
 namespace SimsTraits
@@ -14,6 +14,10 @@ namespace SimsTraits
                 if (hediff != null)
                 {
                     __instance.pawn.health.RemoveHediff(hediff);
+                }
+                if (__instance.pawn.MentalState is MentalState_GoofballGiggling)
+                {
+                    __instance.pawn.MentalState.RecoverFromState();
                 }
             }
 
