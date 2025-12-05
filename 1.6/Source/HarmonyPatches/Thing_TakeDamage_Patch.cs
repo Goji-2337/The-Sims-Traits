@@ -22,10 +22,10 @@ namespace SimsTraits
             }
             return true;
         }
-        
+
         public static void Postfix(Thing __instance, ref DamageInfo dinfo)
         {
-            if (dinfo.Instigator is Pawn pawn && __instance.HostileTo(pawn) && pawn.HasTrait(ST_DefOf.ST_Daredevil) && (pawn.mindState.MeleeThreatStillThreat || pawn.mindState.lastRangedHarmTick > 0 && Find.TickManager.TicksGame < pawn.mindState.lastRangedHarmTick + 400))
+            if (dinfo.Instigator is Pawn pawn && pawn.HasTrait(ST_DefOf.ST_Daredevil))
             {
                 pawn.health.AddHediff(ST_DefOf.ST_AdrenalineRushShort);
             }
