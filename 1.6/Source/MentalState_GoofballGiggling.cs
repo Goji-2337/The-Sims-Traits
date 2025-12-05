@@ -42,7 +42,7 @@ namespace SimsTraits
             }
             lastScreamTick = Find.TickManager.TicksGame;
         }
-
+        
         private void DoPawnHear(Thing source, Pawn hearer)
         {
             if (hearer != source && !alreadyHeard.Contains(hearer))
