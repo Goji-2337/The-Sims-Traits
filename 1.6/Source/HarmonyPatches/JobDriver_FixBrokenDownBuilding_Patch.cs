@@ -27,10 +27,33 @@ namespace SimsTraits
                 {
                     __instance.Components.Destroy();
                     __instance.Building.GetComp<CompBreakdownable>().Notify_Repaired();
+                    if (Rand.Value < 0.15f)
+                    {
+                        TryUpgradeQuality(__instance.Building);
+                    }
                 }
                 return false;
             }
             return true;
+        }
+        
+        private static void TryUpgradeQuality(Building building)
+        {
+            if (building.TryGetComp<CompQuality>() is CompQuality compQuality)
+            {
+                QualityCategory currentQuality = compQuality.Quality;
+                if (currentQuality < QualityCategory.Good)
+                {
+                    QualityCategory newQuality = currentQuality + 1;
+                    if (newQuality > QualityCategory.Good)
+                    {
+                        newQuality = QualityCategory.Good;
+                    }
+                    
+                    compQuality.SetQuality(newQuality, ArtGenerationContext.Colony);
+                    MoteMaker.ThrowText(building.DrawPos, building.Map, "ST_QualityUpgraded".Translate(newQuality.GetLabel()), 3.65f);
+                }
+            }
         }
     }
 }

@@ -192,7 +192,7 @@
 			</li>
 		</degreeDatas>
 		<conflictingTraits>
-			<li>ST_Goofball</li>
+			<li MayRequire="RimWorld.Ludeon.Biotech">ST_Goofball</li>
 			<li>NaturalMood</li>
 		</conflictingTraits>
 	</TraitDef>
@@ -411,7 +411,7 @@
 					<Intellectual>4</Intellectual>
 				</skillGains>
 				<statOffsets>
-					<MechBandwidth>2</MechBandwidth>
+					<MechBandwidth MayRequire="Ludeon.RimWorld.Biotech">2</MechBandwidth>
 				</statOffsets>
 			</li>
 		</degreeDatas>

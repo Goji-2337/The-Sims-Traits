@@ -8,7 +8,7 @@ namespace SimsTraits
     {
         public static void Prefix(Pawn_RoyaltyTracker __instance, ref int amount)
         {
-            if (__instance.pawn.HasTrait(ST_DefOf.ST_HighMaintenance))
+            if (__instance.pawn.HasTrait(ST_DefOf.ST_HighMaintenance) && Faction.OfEmpire != null)
             {
                 amount++;
             }

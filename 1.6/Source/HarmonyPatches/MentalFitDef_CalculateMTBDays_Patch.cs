@@ -1,4 +1,4 @@
-﻿using HarmonyLib;
+using HarmonyLib;
 using Verse;
 
 namespace SimsTraits
@@ -8,7 +8,7 @@ namespace SimsTraits
     {
         public static void Postfix(ref float __result, MentalFitDef __instance, Pawn pawn)
         {
-            if (__instance == ST_DefOf.ST_GoofballGiggling && pawn.HasTrait(ST_DefOf.ST_Goofball) is false)
+            if (__instance == ST_DefOf.ST_GoofballGiggling && (pawn.HasTrait(ST_DefOf.ST_Goofball) is false || pawn.Drafted))
             {
                 __result = float.PositiveInfinity;
             }

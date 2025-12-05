@@ -39,7 +39,7 @@ namespace SimsTraits
                 && witness.GetRelations(victim).Any(x => x.familyByBloodRelation || x == PawnRelationDefOf.Spouse))
             {
                 var possibleBreaks = DefDatabase<MentalBreakDef>.AllDefsListForReading
-                                        .Where(mb => mb.Worker.BreakCanOccur(witness));
+                                        .Where(mb => mb.Worker.BreakCanOccur(witness) && mb.intensity != MentalBreakIntensity.Extreme);
 
                 if (possibleBreaks.TryRandomElement(out var selectedBreakDef))
                 {
