@@ -9,6 +9,7 @@ namespace SimsTraits
 
         public override bool Applies(LordJob_Ritual ritual)
         {
+            if (ritual?.assignments?.Participants is null) return false;
             foreach (var assignedPawn in ritual.assignments.Participants)
             {
                 if (assignedPawn.HasTrait(ST_DefOf.ST_Proper))
@@ -22,6 +23,7 @@ namespace SimsTraits
         public override float Count(LordJob_Ritual ritual, RitualOutcomeComp_Data data)
         {
             int count = 0;
+            if (ritual?.assignments?.Participants is null) return count;
             foreach (var assignedPawn in ritual.assignments.Participants)
             {
                 if (assignedPawn.HasTrait(ST_DefOf.ST_Proper))
@@ -40,7 +42,7 @@ namespace SimsTraits
 
         public override string GetDesc(LordJob_Ritual ritual = null, RitualOutcomeComp_Data data = null)
         {
-            if (ritual == null)
+            if (ritual?.assignments?.Participants == null)
             {
                 return labelAbstract;
             }
