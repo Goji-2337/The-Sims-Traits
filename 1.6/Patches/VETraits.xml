@@ -25,11 +25,11 @@
 					</value>
 				</li>
 
-				<li Class="PatchOperationAdd">
+				<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Anomaly">
 					<xpath>Defs/TraitDef[defName="VTE_WorldWeary"]/degreeDatas/li</xpath>
 					<value>
 						<allowedMeditationFocusTypes>
-							<li>Void</li>
+							<li MayRequire="Ludeon.RimWorld.Anomaly">Void</li>
 						</allowedMeditationFocusTypes>
 					</value>
 				</li>
