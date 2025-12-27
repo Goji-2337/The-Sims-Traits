@@ -331,6 +331,9 @@
 			<li>
 				<label>daredevil</label>
 				<description>{PAWN_nameDef} enjoys chaos and takes the extreme side in life. {PAWN_pronoun} can’t quit the adrenaline rush from being reckless.</description>
+				<allowedMeditationFocusTypes>
+					<li>Flame</li>
+				</allowedMeditationFocusTypes>
 			</li>
 		</degreeDatas>
 		<requiredWorkTags>

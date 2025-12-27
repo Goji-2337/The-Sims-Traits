@@ -11,7 +11,7 @@ namespace SimsTraits
         {
             if (pawn.HasTrait(ST_DefOf.ST_Shy))
             {
-                return false;
+                return Rand.Chance(0.02f);
             }
             return true;
         }
