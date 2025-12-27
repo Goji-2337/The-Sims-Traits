@@ -101,7 +101,7 @@
 		<degreeDatas>
 			<li>
 				<label>goofball</label>
-				<description>{PAWN_nameDef} acts funny in the day-to-day life. {PAWN_pronoun} silly nature often amuses others.</description>
+				<description>{PAWN_nameDef} acts funny in the day-to-day life. {PAWN_possessive} silly nature often amuses others.</description>
 			</li>
 		</degreeDatas>
 		<conflictingTraits>
