@@ -470,7 +470,7 @@
 		<degreeDatas>
 			<li>
 				<label>huge power</label>
-				<description>{PAWN_nameDef} is noted for {PAWN_possessive} incredible strength. {PAWN_pronoun}'s naturally strong without the need to frequent the gym.</description>
+				<description>{PAWN_nameDef} is noted for {PAWN_possessive} incredible strength. {PAWN_pronoun}'s naturally strong without the need to frequent the gym.\n\nHowever, delicate tasks like medical operations pose a huge challenge, as the sheer force of {PAWN_possessive} grip hinders any precision.</description>
 				<statOffsets>
 					<CarryingCapacity>75</CarryingCapacity>
 				</statOffsets>
