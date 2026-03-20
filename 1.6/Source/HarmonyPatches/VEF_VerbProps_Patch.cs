@@ -1,52 +1,27 @@
 using HarmonyLib;
 using RimWorld;
-using System;
-using System.Collections.Generic;
-using System.Reflection;
 using Verse;
 
 namespace SimsTraits
 {
-    [HarmonyPatch]
-    public static class VEF_VerbProps_Patch
+    [HarmonyPatch(typeof(VerbProperties), nameof(VerbProperties.AdjustedRange))]
+    public static class ST_AdjustedRange_Patch
     {
-        [HarmonyPrepare] public static bool Prepare() => TraitUtils.VEFLoaded;
-        [HarmonyTargetMethods]
-        public static IEnumerable<MethodBase> TargetMethods()
+        public static void Postfix(VerbProperties __instance, Verb ownerVerb, Thing attacker, ref float __result)
         {
-            yield return AccessTools.Method(AccessTools.TypeByName("VEF.Weapons.VerbUtility"), "TryModifyThingsVerbs");
-            yield return AccessTools.Method(AccessTools.TypeByName("VEF.Weapons.VanillaExpandedFramework_StatsReportUtility_DrawStatsReport_Patch"), "Prefix");
-        }
-
-        public static Thing curThing;
-
-        public static void Prefix(Thing thing)
-        {
-            curThing = thing;
-        }
-        public static void Postfix()
-        {
-            curThing = null;
-        }
-    }
-
-    [HarmonyPatch]
-    public static class VEF_VerbProps_GetVerbRangeMultiplier_Patch
-    {
-        [HarmonyPrepare] public static bool Prepare() => TraitUtils.VEFLoaded;
-        [HarmonyTargetMethods]
-        public static IEnumerable<MethodBase> TargetMethods()
-        {
-            yield return AccessTools.Method(AccessTools.TypeByName("VEF.Weapons.VerbUtility"), "GetVerbRangeMultiplier");
-        }
-
-        public static void Postfix(Pawn pawn, ref float __result)
-        {
-            if (VEF_VerbProps_Patch.curThing is var weapon && 
-                (weapon.def.IsRangedWeapon is false || weapon.def.techLevel > TechLevel.Neolithic) 
-                && pawn.HasTrait(ST_DefOf.ST_HugePower))
+            if (attacker is not Pawn pawn)
+            return;
+            if (!pawn.HasTrait(ST_DefOf.ST_HugePower))
+            return;
+            var equipment = ownerVerb?.EquipmentSource;
+            if (equipment == null)
+            return;
+            var def = equipment.def;
+            if (def == null)
+            return;
+            if (!def.IsRangedWeapon || def.techLevel > TechLevel.Neolithic)
             {
-                __result /= 1.5f;
+            __result /= 1.5f;
             }
         }
     }
