@@ -16,7 +16,7 @@
           "build/Krafs.Publicizer.targets": {}
         }
       },
-      "Krafs.Rimworld.Ref/1.6.4633": {
+      "Krafs.Rimworld.Ref/1.6.4759-beta": {
         "type": "package",
         "compile": {
           "ref/net472/Assembly-CSharp-firstpass.dll": {},
@@ -127,7 +127,7 @@
           "ref/net472/netstandard.dll": {}
         }
       },
-      "Lib.Harmony/2.4.1": {
+      "Lib.Harmony/2.4.2": {
         "type": "package",
         "compile": {
           "lib/net48/0Harmony.dll": {
@@ -161,17 +161,17 @@
         "krafs.publicizer.nuspec"
       ]
     },
-    "Krafs.Rimworld.Ref/1.6.4633": {
-      "sha512": "wbUZCLBFHnNJ9IT4ighta1wrsBI9i/gRrfixPNfsMLlPvd/lksz+yv8H3Os7EIpT3O3wOkXgN3LGt8UHncWpzQ==",
+    "Krafs.Rimworld.Ref/1.6.4759-beta": {
+      "sha512": "n1H4DpucdYoaac5TogDrl0KRRy8O6giEK2/WcV/6kBxNWuZW2Lx3JLvMz869qrxTn1C1VQI9d4Aohdxrm/gxTg==",
       "type": "package",
-      "path": "krafs.rimworld.ref/1.6.4633",
+      "path": "krafs.rimworld.ref/1.6.4759-beta",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.md",
         "README.md",
         "icon.png",
-        "krafs.rimworld.ref.1.6.4633.nupkg.sha512",
+        "krafs.rimworld.ref.1.6.4759-beta.nupkg.sha512",
         "krafs.rimworld.ref.nuspec",
         "ref/net472/Assembly-CSharp-firstpass.dll",
         "ref/net472/Assembly-CSharp.dll",
@@ -281,18 +281,21 @@
         "ref/net472/netstandard.dll"
       ]
     },
-    "Lib.Harmony/2.4.1": {
-      "sha512": "iLTZi/kKKB18jYEIwReZSx2xXyVUh4J1swReMgvYBBBn4tzA1Nd0PJlVyntY5BDdSiXSxzmvjc/3OYfFs0YwFg==",
+    "Lib.Harmony/2.4.2": {
+      "sha512": "D2X9ojVjqbqdqWVK3VQETrEb56yVoXxtEp6tP5UvW0PP+bA4uJiswqOxF8GhH02ECwyevUa9vwhwdLzyXfksbw==",
       "type": "package",
-      "path": "lib.harmony/2.4.1",
+      "path": "lib.harmony/2.4.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "HarmonyLogo.png",
         "LICENSE",
         "README.md",
-        "lib.harmony.2.4.1.nupkg.sha512",
+        "lib.harmony.2.4.2.nupkg.sha512",
         "lib.harmony.nuspec",
+        "lib/net10.0/0Harmony.dll",
+        "lib/net10.0/0Harmony.pdb",
+        "lib/net10.0/0Harmony.xml",
         "lib/net35/0Harmony.dll",
         "lib/net35/0Harmony.pdb",
         "lib/net35/0Harmony.xml",
@@ -398,7 +401,7 @@
             "version": "[2.*, )"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.310\\RuntimeIdentifierGraph.json"
       }
     }
   }
