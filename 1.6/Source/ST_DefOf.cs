@@ -33,6 +33,7 @@ namespace SimsTraits
         public static ExpectationDef SkyHigh;
         public static InspirationDef Inspired_Creativity;
         
+        public static IncidentDef PsychicSoothe, AmbrosiaSprout, Aurora, ResourcePodCrash, VisitorGroup;
         [MayRequireIdeology]
         public static HediffDef WorkDrive;
     }

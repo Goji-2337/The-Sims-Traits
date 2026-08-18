@@ -54,19 +54,27 @@ namespace SimsTraits
                                 __instance.pawn.psychicEntropy.currentPsyfocus = Mathf.Clamp(__instance.pawn.psychicEntropy.currentPsyfocus + 0.1f, 0f, 1f);
                             }
 
-                            if (Rand.Chance(1f / 15f))
+                            var lastEventTick = Pawn_ExposeData_Patch.lastDevoutPrayerEvent.Get(__instance.pawn);
+                            if (lastEventTick == 0 || Find.TickManager.TicksGame >= lastEventTick + GenDate.TicksPerQuadrum)
                             {
-                                var positiveEvents = DefDatabase<IncidentDef>.AllDefsListForReading
-                                    .Where(inc => inc.letterDef == LetterDefOf.PositiveEvent)
-                                    .ToList();
-
-                                if (positiveEvents.Any())
+                                if (Rand.Chance(1f / 15f))
                                 {
-                                    var incidentDef = positiveEvents.RandomElement();
-                                    var parms = StorytellerUtility.DefaultParmsNow(incidentDef.category, Find.AnyPlayerHomeMap);
-                                    if (incidentDef.Worker.TryExecute(parms))
+                                    var eventPool = new List<IncidentDef>
                                     {
-                                        __instance.pawn.ageTracker.AgeBiologicalTicks += GenDate.TicksPerQuadrum;
+                                        ST_DefOf.PsychicSoothe,
+                                        ST_DefOf.AmbrosiaSprout,
+                                        ST_DefOf.Aurora,
+                                        ST_DefOf.ResourcePodCrash,
+                                        ST_DefOf.VisitorGroup
+                                    };
+                                    var validEvents = eventPool.ToList();
+                                    if (validEvents.TryRandomElement(out var incidentDef))
+                                    {
+                                        var parms = StorytellerUtility.DefaultParmsNow(incidentDef.category, Find.AnyPlayerHomeMap);
+                                        if (incidentDef.Worker.CanFireNow(parms) && incidentDef.Worker.TryExecute(parms))
+                                        {
+                                            Pawn_ExposeData_Patch.lastDevoutPrayerEvent.Set(__instance.pawn, Find.TickManager.TicksGame);
+                                        }
                                     }
                                 }
                             }

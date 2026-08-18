@@ -7,6 +7,15 @@ namespace SimsTraits
     [HarmonyPatch(typeof(MentalStateHandler), "TryStartMentalState")]
     public static class MentalStateHandler_TryStartMentalState_Patch
     {
+        public static bool Prefix(Pawn ___pawn, MentalStateDef stateDef)
+        {
+            if (stateDef == ST_DefOf.ST_GoofballGiggling?.mentalState && MentalFitDef_CalculateMTBDays_Patch.IsBusyInSpecialEvent(___pawn))
+            {
+                return false;
+            }
+            return true;
+        }
+
         public static void Postfix(Pawn ___pawn, bool __result)
         {
             if (__result)

@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     ".NETFramework,Version=v4.8": {
-      "Krafs.Publicizer/2.3.0": {
+      "Krafs.Publicizer/2.3.2": {
         "type": "package",
         "contentFiles": {
           "contentfiles/cs/any/Publicizer/IgnoresAccessChecksToAttribute.cs": {
@@ -16,7 +16,7 @@
           "build/Krafs.Publicizer.targets": {}
         }
       },
-      "Krafs.Rimworld.Ref/1.6.4759-beta": {
+      "Krafs.Rimworld.Ref/1.6.4871": {
         "type": "package",
         "compile": {
           "ref/net472/Assembly-CSharp-firstpass.dll": {},
@@ -143,35 +143,36 @@
     }
   },
   "libraries": {
-    "Krafs.Publicizer/2.3.0": {
-      "sha512": "DjktTgctwxUMhMkWKrRECer3LR1lHzanCOlE4mpinAiY8SfWJq4DG/QitP5h1A+WBjyWHzQSOG+204i3VpO1FA==",
+    "Krafs.Publicizer/2.3.2": {
+      "sha512": "SPk1Bv/k8yX3L0PLNSxeYg+tLB3o9Iyd9wEBb9tFEYHqMu+/x9N8kjEbwW55B7RGEu+cm7ly/7hwRmCnVCjgVw==",
       "type": "package",
-      "path": "krafs.publicizer/2.3.0",
+      "path": "krafs.publicizer/2.3.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
         "build/Krafs.Publicizer.props",
         "build/Krafs.Publicizer.targets",
-        "build/net472/Publicizer.dll",
-        "build/net472/dnlib.dll",
+        "build/netstandard2.0/Publicizer.dll",
+        "build/netstandard2.0/Publicizer.xml",
+        "build/netstandard2.0/dnlib.dll",
         "contentfiles/cs/any/Publicizer/IgnoresAccessChecksToAttribute.cs",
         "icon.png",
-        "krafs.publicizer.2.3.0.nupkg.sha512",
+        "krafs.publicizer.2.3.2.nupkg.sha512",
         "krafs.publicizer.nuspec"
       ]
     },
-    "Krafs.Rimworld.Ref/1.6.4759-beta": {
-      "sha512": "n1H4DpucdYoaac5TogDrl0KRRy8O6giEK2/WcV/6kBxNWuZW2Lx3JLvMz869qrxTn1C1VQI9d4Aohdxrm/gxTg==",
+    "Krafs.Rimworld.Ref/1.6.4871": {
+      "sha512": "aKebbihZfq47VI9UgyEdrnYslEDeMK3l9+QwC21zL6noJCOLlr5D4+jvhP/F5UA9q+9YVkuTx3NH3eJ03/ivlA==",
       "type": "package",
-      "path": "krafs.rimworld.ref/1.6.4759-beta",
+      "path": "krafs.rimworld.ref/1.6.4871",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.md",
         "README.md",
         "icon.png",
-        "krafs.rimworld.ref.1.6.4759-beta.nupkg.sha512",
+        "krafs.rimworld.ref.1.6.4871.nupkg.sha512",
         "krafs.rimworld.ref.nuspec",
         "ref/net472/Assembly-CSharp-firstpass.dll",
         "ref/net472/Assembly-CSharp.dll",
@@ -401,7 +402,7 @@
             "version": "[2.*, )"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.310\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.316\\RuntimeIdentifierGraph.json"
       }
     }
   }

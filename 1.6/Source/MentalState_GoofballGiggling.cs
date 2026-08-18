@@ -24,6 +24,11 @@ namespace SimsTraits
         public override void MentalStateTick(int delta)
         {
             base.MentalStateTick(delta);
+            if (MentalFitDef_CalculateMTBDays_Patch.IsBusyInSpecialEvent(pawn))
+            {
+                RecoverFromState();
+                return;
+            }
             if ((float)Find.TickManager.TicksGame <= lastScreamTick + 150f || pawn.IsWorldPawn() || pawn.Drafted)
             {
                 return;

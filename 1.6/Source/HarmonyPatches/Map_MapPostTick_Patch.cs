@@ -23,39 +23,27 @@ namespace SimsTraits
                 if (hour == 0 && day == 0)
                 {
                     var nonCommitalPawns = __instance.GetPawns(ST_DefOf.ST_NonCommital);
-                    var range = new IntRange(1, 2);
                     foreach (var pawn in nonCommitalPawns)
                     {
-                        var passionsToLose = range.RandomInRange;
-                        for (var i = 0; i < passionsToLose; i++)
+                        var passionsToLose = Rand.RangeInclusive(0, 2);
+                        var skillsWithPassion = pawn.skills.skills.Where(s => s.passion != Passion.None).InRandomOrder().ToList();
+                        for (var i = 0; i < passionsToLose && i < skillsWithPassion.Count; i++)
                         {
-                            foreach (var skill in pawn.skills.skills.InRandomOrder())
-                            {
-                                if (skill.passion != Passion.None)
-                                {
-                                    skill.passion = Passion.None;
-                                    break;
-                                }
-                            }
+                            skillsWithPassion[i].passion = Passion.None;
                         }
-                        var passionsToGain = range.RandomInRange;
-                        for (var i = 0; i < passionsToGain; i++)
+
+                        var passionsToGain = Rand.RangeInclusive(1, 2);
+                        var skillsToGain = pawn.skills.skills.Where(s => !s.TotallyDisabled && s.passion != Passion.Major).InRandomOrder().ToList();
+                        for (var i = 0; i < passionsToGain && i < skillsToGain.Count; i++)
                         {
-                            foreach (var skill in pawn.skills.skills.InRandomOrder())
+                            var skill = skillsToGain[i];
+                            if (skill.passion == Passion.None)
                             {
-                                if (skill.TotallyDisabled is false)
-                                {
-                                    if (skill.passion == Passion.Minor)
-                                    {
-                                        skill.passion = Passion.Major;
-                                        break;
-                                    }
-                                    else if (skill.passion != Passion.Major)
-                                    {
-                                        skill.passion = Rand.Bool ? Passion.Minor : Passion.Major;
-                                        break;
-                                    }
-                                }
+                                skill.passion = Passion.Minor;
+                            }
+                            else if (skill.passion == Passion.Minor)
+                            {
+                                skill.passion = Passion.Major;
                             }
                         }
                     }

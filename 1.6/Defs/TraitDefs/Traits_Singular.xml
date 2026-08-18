@@ -45,7 +45,7 @@
 		<commonality>0.7</commonality>
 		<degreeDatas>
 			<li>
-				<label>narcissist</label>
+				<label>vain</label>
 				<description>{PAWN_nameDef} believes in pretty privilege. {PAWN_pronoun} is desperate to achieve flawless beauty by any means.</description>
 			</li>
 		</degreeDatas>
@@ -56,7 +56,7 @@
 		<commonality>0.3</commonality>
 		<degreeDatas>
 			<li>
-				<label>health Nut</label>
+				<label>health nut</label>
 				<description>{PAWN_nameDef}’s body is a temple, {PAWN_pronoun} only eats food to survive. {PAWN_pronoun} is here for a long time, not a good time.</description>
 			</li>
 		</degreeDatas>
