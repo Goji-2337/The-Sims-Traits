@@ -12,11 +12,11 @@ namespace SimsTraits
             if (__result.Active && other.HasTrait(ST_DefOf.ST_Narcissist))
             {
                 float statValue = other.GetStatValue(StatDefOf.PawnBeauty);
-                if (statValue >= 5f) 
+                if (statValue >= 3f)
                 {
                     __result = ThoughtState.ActiveAtStage(2);
                 }
-                if (statValue >= 7f)
+                if (statValue >= 4f)
                 {
                     __result = ThoughtState.ActiveAtStage(3);
                 }

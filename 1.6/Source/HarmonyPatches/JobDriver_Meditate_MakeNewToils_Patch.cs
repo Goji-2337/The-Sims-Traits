@@ -74,6 +74,7 @@ namespace SimsTraits
                                         if (incidentDef.Worker.CanFireNow(parms) && incidentDef.Worker.TryExecute(parms))
                                         {
                                             Pawn_ExposeData_Patch.lastDevoutPrayerEvent.Set(__instance.pawn, Find.TickManager.TicksGame);
+                                            __instance.pawn.ageTracker.AgeBiologicalTicks += 15 * GenDate.TicksPerDay;
                                         }
                                     }
                                 }
