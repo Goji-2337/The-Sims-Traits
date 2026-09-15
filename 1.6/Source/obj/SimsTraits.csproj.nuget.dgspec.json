@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\The-Sims-Traits\\1.6\\Source\\SimsTraits.csproj": {}
+    "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\The-Sims-Traits\\1.6\\Source\\SimsTraits.csproj": {}
   },
   "projects": {
-    "c:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\The-Sims-Traits\\1.6\\Source\\SimsTraits.csproj": {
+    "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\The-Sims-Traits\\1.6\\Source\\SimsTraits.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\The-Sims-Traits\\1.6\\Source\\SimsTraits.csproj",
+        "projectUniqueName": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\The-Sims-Traits\\1.6\\Source\\SimsTraits.csproj",
         "projectName": "SimsTraits",
-        "projectPath": "c:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\The-Sims-Traits\\1.6\\Source\\SimsTraits.csproj",
+        "projectPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\The-Sims-Traits\\1.6\\Source\\SimsTraits.csproj",
         "packagesPath": "C:\\Users\\Vova\\.nuget\\packages\\",
-        "outputPath": "c:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\The-Sims-Traits\\1.6\\Source\\obj\\",
+        "outputPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\The-Sims-Traits\\1.6\\Source\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Vova\\AppData\\Roaming\\NuGet\\NuGet.Config",

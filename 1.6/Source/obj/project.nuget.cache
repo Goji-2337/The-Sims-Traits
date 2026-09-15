@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3BJuEmh4Eno=",
+  "dgSpecHash": "fPj/Spm3nDQ=",
   "success": true,
-  "projectFilePath": "c:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\The-Sims-Traits\\1.6\\Source\\SimsTraits.csproj",
+  "projectFilePath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\The-Sims-Traits\\1.6\\Source\\SimsTraits.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Vova\\.nuget\\packages\\krafs.publicizer\\2.3.2\\krafs.publicizer.2.3.2.nupkg.sha512",
     "C:\\Users\\Vova\\.nuget\\packages\\krafs.rimworld.ref\\1.6.4871\\krafs.rimworld.ref.1.6.4871.nupkg.sha512",
