@@ -26,7 +26,10 @@ namespace SimsTraits
                         || let.def.arriveSound == ST_DefOf.LetterArrive_BadUrgentSmall
                         || let.def.arriveSound == ST_DefOf.LetterArrive_BadUrgentBig)
                     {
-                        pawn.health.AddHediff(ST_DefOf.ST_AdrenalineRush);
+                        if (!pawn.health.ShouldBeDead())
+                        {
+                            pawn.health.AddHediff(ST_DefOf.ST_AdrenalineRush);
+                        }
                     }
                     else if (let.def.arriveSound == ST_DefOf.LetterArrive_Good)
                     {
