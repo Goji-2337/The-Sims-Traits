@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Biotech</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs</xpath>
+					<value>
+
+						<MentalFitDef>
+							<defName>ST_GoofballGiggling</defName>
+							<label>giggling</label>
+							<mentalState>ST_GoofballGiggling</mentalState>
+							<developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+							<mtbDaysMoodCurve>
+								<points>
+									<li>(0, 8)</li>
+									<li>(0.25, 4)</li>
+									<li>(0.50, 1)</li>
+									<li>(0.75, 0.5)</li>
+									<li>(1.00, 0.25)</li>
+								</points>
+							</mtbDaysMoodCurve>
+						</MentalFitDef>
+
+						<MentalStateDef ParentName="BaseBabyMentalFit">
+							<defName>ST_GoofballGiggling</defName>
+							<stateClass>SimsTraits.MentalState_GoofballGiggling</stateClass>
+							<baseInspectLine>Mental state: Giggling</baseInspectLine>
+							<stateEffecter>BabyGiggling</stateEffecter>
+							<category>Misc</category>
+							<downedCanDo>true</downedCanDo>
+							<inCaravanCanDo>true</inCaravanCanDo>
+							<unspawnedNotInCaravanCanDo>true</unspawnedNotInCaravanCanDo>
+							<requiredCapacities>
+								<li>Talking</li>
+							</requiredCapacities>
+							<recoverFromCollapsingExhausted>false</recoverFromCollapsingExhausted>
+							<recoverFromDowned>false</recoverFromDowned>
+							<recoverFromSleep>false</recoverFromSleep>
+							<minTicksBeforeRecovery>1200</minTicksBeforeRecovery>
+							<maxTicksBeforeRecovery>1200</maxTicksBeforeRecovery>
+							<recoveryMtbDays>Infinity</recoveryMtbDays>
+							<stopsJobs>false</stopsJobs>
+						</MentalStateDef>
+
+						<ThoughtDef ParentName="BaseHeardBaby">
+							<defName>ST_FunnyPerson</defName>
+							<icon>Things/Mote/Childcare/BabyGiggling/BabyGigglingIcon</icon>
+							<stages>
+								<li>
+									<label>Funny person</label>
+									<description>{OTHERPAWN_pronoun}'s so dorky!</description>
+									<baseMoodEffect>4</baseMoodEffect>
+								</li>
+							</stages>
+						</ThoughtDef>
+
+					</value>
+				</li>
+				
+				<li Class="PatchOperationConditional">
+					<xpath>Defs/MemeDef[defName="Bloodfeeding"]/disagreeableTraits</xpath>
+					<match Class="PatchOperationAdd">
+						<xpath>Defs/MemeDef[defName="Bloodfeeding"]/disagreeableTraits</xpath>
+						<value>
+							<li>ST_Vegan</li>
+						</value>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>Defs/MemeDef[defName="Bloodfeeding"]</xpath>
+						<value>
+							<disagreeableTraits>
+								<li>ST_Vegan</li>
+							</disagreeableTraits>
+						</value>
+					</nomatch>
+				</li>
+				
+			</operations>
+		</match>
+	</Operation>
+</Patch>

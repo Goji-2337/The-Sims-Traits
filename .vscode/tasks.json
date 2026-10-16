@@ -13,7 +13,7 @@
             "command": "dotnet",
             "args": [
                 "build",
-                "${workspaceFolder}/1.6/Source/SimsTraits.csproj"
+                "${workspaceFolder}/1.7/Source/SimsTraits.csproj"
             ],
             "problemMatcher": "$msCompile",
             "group": {
